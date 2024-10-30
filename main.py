@@ -32,8 +32,6 @@ torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 from torch.utils.tensorboard import SummaryWriter
 import os
-import os
-import os 
 #os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  #（保证程序cuda序号与实际cuda序号对应）
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 os.environ["NCCL_SHM_DISABLE "] = "1"
@@ -128,8 +126,9 @@ def main(root_Repo:str, device:int):
         #                 artifact_dict=artifact_dict, device=device,
         #                 running_type=running_type, embedding_model = embedding_model)
         '''BAAI-bge'''
-        pro = processer_(embedding_type=LM_model_selected, repoName=repoName, artifacts=artifacts,          artifact_dict=artifact_dict, freeze=freeze, with_knowledge=with_knowledge, cat=cat,
-                        tokenizer=artifacts.tokenizer_NL, device=device, embedding_model=embedding_model,writer_tb_log_dir=writer_tb_log_dir)
+        pro = processer_(embedding_type=LM_model_selected, repoName=repoName, artifacts=artifacts,artifact_dict=artifact_dict, 
+                         freeze=freeze, with_knowledge=with_knowledge, gat=gat,
+                         tokenizer=artifacts.tokenizer_NL, device=device, embedding_model=embedding_model,writer_tb_log_dir=writer_tb_log_dir)
         # 这里转换一下数据，适配语义为基础的训练过程
         # 创建 TensorBoard 的 SummaryWriter
         train_hyperlink = Utils.getValidIndexFromList(train_set, artifact_dict)
@@ -146,7 +145,7 @@ def main(root_Repo:str, device:int):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     df = pd.DataFrame(results)
-    df.to_csv(f"{output_dir}/{repoName}_results_{str(freeze)}_{str(with_knowledge)}_{str(cat)}.csv", index=False)
+    df.to_csv(f"{output_dir}/{repoName}_results_{str(freeze)}_{str(with_knowledge)}_{str(gat)}.csv", index=False)
     print(df)
     print(f"The {repoName} results have been saved successfully!")
 
@@ -155,7 +154,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='The arguments set for GraphLinker')
     # 添加参数及其简写
     parser.add_argument('-r', '--repoName', type=str, default="Activiti", help='The repository name in the dataset. This is a required parameter.')
-    parser.add_argument('-c', '--cudaN', type=int, default=1, help='The GPU number to use. Default is 0.')
+    parser.add_argument('-c', '--cudaN', type=int, default=0, help='The GPU number to use. Default is 0.')
     parser.add_argument('-n', '--num_folds', type=int, default=5, help='The number of folds for cross-validation. Default is 5.')
     parser.add_argument('-t', '--test_ratio', type=float, default=0.2, help='The ratio of the test set. Default is 0.2.')
     parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
@@ -163,11 +162,14 @@ if __name__ == '__main__':
     # 增加三个对比实验参数，初始值设置为True
     parser.add_argument('--freeze', type=bool, default=True, help='Frozening The LLM when Training or not.')
     parser.add_argument('--with_knowledge', type=bool, default=True, help='Take the prior-knowledge into training or not.')
-    parser.add_argument('--cat', type=bool, default=False, help='Using the cat module for the input information or not.')
+    parser.add_argument('--GAT', type=bool, default=False, help='Using the cat module for the input information or not.')
 
     args = parser.parse_args()
     repoName = args.repoName
-    device = Utils.get_cuda_device(0)
+    torch.cuda.set_device(args.cudaN)
+    device = torch.cuda.current_device()
+
+    print("当前正在使用的GPU：", torch.cuda.current_device())
     root_path = "../dataset/hyperlink_npz"
     repopath = root_path + "/"+ repoName + ".npz"
     num_folds = args.num_folds
@@ -176,8 +178,8 @@ if __name__ == '__main__':
 
     freeze = args.freeze
     with_knowledge = args.with_knowledge
-    cat = args.cat
+    gat = args.GAT
 
-    print(freeze,with_knowledge,cat)
+    print(freeze,with_knowledge,gat)
 
     main(root_Repo=repopath, device=device)

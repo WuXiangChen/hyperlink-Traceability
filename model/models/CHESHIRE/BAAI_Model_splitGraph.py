@@ -2,18 +2,19 @@ import dgl
 import torch
 import torch.nn as nn
 from model.models.CHESHIRE.GAT_ResNet import GAT_Res
+from model.models.CHESHIRE.GCN_ResNet import GCN_Res
 from utils import Utils
 import torch.nn.functional as F
 from dgl.nn.pytorch import GATv2Conv, MaxPooling,GraphConv
 import networkx as nx
-from torch_geometric.nn import GATConv,global_mean_pool
+from torch_geometric.nn import GATConv,global_mean_pool, GCNConv
 from torch_geometric.data import Data,Batch
 from torch_geometric.utils import from_networkx
 import torch
 import torch.nn as nn
 
 class BAAI_model(nn.Module):
-    def __init__(self, artifacts_dict, artifacts, tokenizer, model, in_dim, freeze, with_knowledge):
+    def __init__(self, artifacts_dict, artifacts, tokenizer, model, in_dim, freeze, with_knowledge, gat):
         super(BAAI_model, self).__init__()
         self.model = model
         self.freeze = freeze
@@ -41,13 +42,23 @@ class BAAI_model(nn.Module):
             nn.ReLU(),
         )
         num_layers = 10 # step_layer的倍数+1
-        self.head_gconv_layers = GATConv(in_channels=in_dim, out_channels=hidden_dim, heads=8)
-        self.norm1 = nn.BatchNorm1d(hidden_dim*8)
-        self.neck_gconv_layers = GAT_Res(num_layers, hidden_dim)
-        self.tail_gconv_layers = GATConv(in_channels=hidden_dim*8, out_channels=hidden_dim, heads=1)
-        self.norm2 = nn.BatchNorm1d(hidden_dim)
-        self.classify1 = nn.Linear(hidden_dim, 1)
-        self.loss_fn = torch.nn.BCELoss()
+
+        if gat:
+            self.head_gconv_layers = GATConv(in_channels=in_dim, out_channels=hidden_dim, heads=8)
+            self.norm1 = nn.BatchNorm1d(hidden_dim*8)
+            self.neck_gconv_layers = GAT_Res(num_layers, hidden_dim)
+            self.tail_gconv_layers = GATConv(in_channels=hidden_dim*8, out_channels=hidden_dim, heads=1)
+            self.norm2 = nn.BatchNorm1d(hidden_dim)
+            self.classify1 = nn.Linear(hidden_dim, 1)
+            self.loss_fn = torch.nn.BCELoss()
+        else:
+            self.head_gconv_layers = GCNConv(in_channels=in_dim, out_channels=hidden_dim)
+            self.norm1 = nn.BatchNorm1d(hidden_dim)
+            self.neck_gconv_layers = GCN_Res(num_layers, hidden_dim)
+            self.tail_gconv_layers = GCNConv(in_channels=hidden_dim, out_channels=hidden_dim)
+            self.norm2 = nn.BatchNorm1d(hidden_dim)
+            self.classify1 = nn.Linear(hidden_dim, 1)
+            self.loss_fn = torch.nn.BCELoss()
 
     def graph_to_torch_geometric_data(self, nx_graph):
         # Get the edge list from the NetworkX graph

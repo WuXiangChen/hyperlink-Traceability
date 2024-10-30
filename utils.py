@@ -208,7 +208,7 @@ class Utils:
         if torch.cuda.is_available():
             device_count = torch.cuda.device_count()
             if 0 <= cuda_N < device_count:
-                device = torch.device(f'cuda:{cuda_N}')
+                device = torch.cuda.current_device()
                 print(f"Using CUDA device: {device}")
             else:
                 device = torch.device('cpu')

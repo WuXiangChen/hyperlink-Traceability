@@ -36,16 +36,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["NCCL_SHM_DISABLE "] = "1"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 # 这部分代码片段用于将train+test Artifacts转化成all Artifacts
-'''
-    test_artifacts = getDataSet(root_Repo, 'test')
-    all = train_artifacts + test_artifacts
-    artifact_set = {}
-    for artifact in all:
-        artifactId = artifact.artifact_id
-        artifact_set[artifactId] = artifact
-    # 将这部分的内容保持到文件中
-    utils.save_pickle(artifact_set, f"{root_Repo}/processed/all_artifacts.pkl")
-'''
+
 def main(root_Repo:str, device:int):
     # 读取数据
     data = np.load(root_Repo, allow_pickle=True)
