@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/root/workspace/hyperlink-work/hyperlink-Traceability/main.py", line 8, in <module>
-    import numpy as np
-ModuleNotFoundError: No module named 'numpy'

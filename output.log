@@ -1,8 +1,2 @@
 nohup: ignoring input
 Running with freeze=True, with_knowledge=True, cat=True. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_fTrue_kTrue_cTrue.log
-Running with freeze=True, with_knowledge=True, cat=False. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_fTrue_kTrue_cFalse.log
-LLM_Comparative_Experiments_Design.sh: line 7:  8540 Killed                  nohup python main.py --freeze $freeze --with_knowledge $with_knowledge --cat $cat -c 0 -n 5 -t 0.2 -type "LLM_Comparative_Experiment" > "$log_file" 2>&1
-LLM_Comparative_Experiments_Design.sh: line 7:  8544 Killed                  nohup python main.py --freeze $freeze --with_knowledge $with_knowledge --cat $cat -c 0 -n 5 -t 0.2 -type "LLM_Comparative_Experiment" > "$log_file" 2>&1
-Running with freeze=True, with_knowledge=False, cat=True. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_fTrue_kFalse_cTrue.log
-Running with freeze=True, with_knowledge=False, cat=False. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_fTrue_kFalse_cFalse.log
-ledge=False, cat=False. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_fFalse_kFalse_cFalse.log

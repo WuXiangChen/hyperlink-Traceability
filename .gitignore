@@ -1,5 +1,8 @@
 *.bin
 *.safetensors
-./CHESHIR/*
-./model/BAAI_bge_reranker_small/*
-./model/BAAI_bge-m3_small/*
+*.pt
+*.pth
+/CHESHIR/*
+/model/BAAI_bge_reranker_small/*
+/model/BAAI_bge-m3_small/*
+logsAndResults/logs/original_NSplited_node_LLM_Linear_Structure/events.*

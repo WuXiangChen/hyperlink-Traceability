@@ -1,87 +1,0 @@
-Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-Using CUDA device: cuda:0
-True True True
-文件夹 'CHESHIRE/LLM_Comparative_Experiment/Activiti' 不存在。
-Data has been loaded successfully for training!
-Start training!
-  0%|          | 0/465 [00:00<?, ?it/s]  0%|          | 1/465 [00:02<15:49,  2.05s/it]  0%|          | 2/465 [00:03<14:36,  1.89s/it]  1%|          | 3/465 [00:05<14:10,  1.84s/it]  1%|          | 4/465 [00:07<13:58,  1.82s/it]  1%|          | 5/465 [00:09<13:49,  1.80s/it]  1%|▏         | 6/465 [00:10<13:44,  1.80s/it]  2%|▏         | 7/465 [00:12<13:40,  1.79s/it]  2%|▏         | 8/465 [00:14<13:37,  1.79s/it]  2%|▏         | 9/465 [00:16<13:34,  1.79s/it]  2%|▏         | 10/465 [00:18<13:32,  1.78s/it]  2%|▏         | 11/465 [00:19<13:29,  1.78s/it]  3%|▎         | 12/465 [00:21<13:28,  1.78s/it]  3%|▎         | 13/465 [00:23<13:27,  1.79s/it]  3%|▎         | 14/465 [00:25<13:26,  1.79s/it]  3%|▎         | 15/465 [00:27<13:24,  1.79s/it]  3%|▎         | 16/465 [00:28<13:24,  1.79s/it]  4%|▎         | 17/465 [00:30<13:23,  1.79s/it]  4%|▍         | 18/465 [00:32<13:21,  1.79s/it]  4%|▍         | 19/465 [00:34<13:18,  1.79s/it]  4%|▍         | 20/465 [00:35<13:16,  1.79s/it]  5%|▍         | 21/465 [00:37<13:15,  1.79s/it]  5%|▍         | 22/465 [00:39<13:14,  1.79s/it]  5%|▍         | 23/465 [00:41<13:12,  1.79s/it]  5%|▌         | 24/465 [00:43<13:11,  1.80s/it]  5%|▌         | 25/465 [00:44<13:09,  1.79s/it]  6%|▌         | 26/465 [00:46<13:06,  1.79s/it]  6%|▌         | 27/465 [00:48<13:03,  1.79s/it]  6%|▌         | 28/465 [00:50<13:00,  1.79s/it]  6%|▌         | 29/465 [00:52<12:58,  1.79s/it]  6%|▋         | 30/465 [00:53<12:56,  1.79s/it]  7%|▋         | 31/465 [00:54<09:53,  1.37s/it]  7%|▋         | 32/465 [00:56<10:40,  1.48s/it]  7%|▋         | 33/465 [00:57<11:18,  1.57s/it]  7%|▋         | 34/465 [00:59<11:42,  1.63s/it]  8%|▊         | 35/465 [01:01<12:01,  1.68s/it]  8%|▊         | 36/465 [01:03<12:13,  1.71s/it]  8%|▊         | 37/465 [01:04<12:22,  1.73s/it]  8%|▊         | 38/465 [01:06<12:27,  1.75s/it]  8%|▊         | 39/465 [01:08<12:29,  1.76s/it]  9%|▊         | 40/465 [01:10<12:30,  1.77s/it]  9%|▉         | 41/465 [01:12<12:30,  1.77s/it]  9%|▉         | 42/465 [01:13<12:31,  1.78s/it]  9%|▉         | 43/465 [01:15<12:31,  1.78s/it]  9%|▉         | 44/465 [01:17<12:30,  1.78s/it] 10%|▉         | 45/465 [01:19<12:29,  1.78s/it] 10%|▉         | 46/465 [01:21<12:28,  1.79s/it] 10%|█         | 47/465 [01:22<12:28,  1.79s/it] 10%|█         | 48/465 [01:24<12:26,  1.79s/it] 11%|█         | 49/465 [01:26<12:26,  1.79s/it] 11%|█         | 50/465 [01:28<12:24,  1.79s/it] 11%|█         | 51/465 [01:29<12:22,  1.79s/it] 11%|█         | 52/465 [01:31<12:20,  1.79s/it] 11%|█▏        | 53/465 [01:33<12:18,  1.79s/it] 12%|█▏        | 54/465 [01:35<12:16,  1.79s/it] 12%|█▏        | 55/465 [01:37<12:12,  1.79s/it] 12%|█▏        | 56/465 [01:38<12:08,  1.78s/it] 12%|█▏        | 57/465 [01:40<12:08,  1.79s/it] 12%|█▏        | 58/465 [01:42<12:10,  1.79s/it] 13%|█▎        | 59/465 [01:44<12:07,  1.79s/it] 13%|█▎        | 60/465 [01:46<12:06,  1.79s/it] 13%|█▎        | 61/465 [01:47<12:04,  1.79s/it] 13%|█▎        | 62/465 [01:48<09:13,  1.37s/it] 14%|█▎        | 63/465 [01:50<09:57,  1.49s/it] 14%|█▍        | 64/465 [01:51<10:32,  1.58s/it]
-  0%|          | 0/8 [00:00<?, ?it/s][A
- 25%|██▌       | 2/8 [00:01<00:04,  1.32it/s][A
- 38%|███▊      | 3/8 [00:03<00:05,  1.16s/it][A
- 50%|█████     | 4/8 [00:04<00:05,  1.37s/it][A
- 62%|██████▎   | 5/8 [00:06<00:04,  1.49s/it][A
- 75%|███████▌  | 6/8 [00:08<00:03,  1.57s/it][A
- 88%|████████▊ | 7/8 [00:10<00:01,  1.62s/it][A
-100%|██████████| 8/8 [00:11<00:00,  1.66s/it][ATrainer is attempting to log a value of "[[0, 70], [0, 81]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
-Exception in thread Thread-1:
-Traceback (most recent call last):
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/threading.py", line 932, in _bootstrap_inner
-    self.run()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 244, in run
-    self._run()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 275, in _run
-    self._record_writer.write(data)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/record_writer.py", line 40, in write
-    self._writer.write(header + header_crc + data + footer_crc)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 773, in write
-    self.fs.append(self.filename, file_content, self.binary_mode)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 167, in append
-    self._write(filename, file_content, "ab" if binary_mode else "a")
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 171, in _write
-    with io.open(filename, mode, encoding=encoding) as f:
-FileNotFoundError: [Errno 2] No such file or directory: b'logsAndResults/logs/original_NSplited_node_LLM_Linear_Structure/events.out.tfevents.1730294763.a7dc54a48c09.17164.0'
-Traceback (most recent call last):
-  File "main.py", line 183, in <module>
-    main(root_Repo=repopath, device=device)
-  File "main.py", line 136, in main
-    result = pro.train((train_hyperlink, train_labels))
-  File "/root/workspace/hyperlink-work/hyperlink-Traceability/processerHook/processer_BAAI.py", line 32, in train
-    self.trainer.train()
-  File "/root/workspace/hyperlink-work/hyperlink-Traceability/model/models/trainer_hook.py", line 125, in train
-    trainer.train()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2052, in train
-    return inner_training_loop(
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2467, in _inner_training_loop
-    self._maybe_log_save_evaluate(tr_loss, grad_norm, model, trial, epoch, ignore_keys_for_eval)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2915, in _maybe_log_save_evaluate
-    metrics = self._evaluate(trial, ignore_keys_for_eval)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2872, in _evaluate
-    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3892, in evaluate
-    self.log(output.metrics)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3403, in log
-    self.control = self.callback_handler.on_log(self.args, self.state, self.control, logs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer_callback.py", line 509, in on_log
-    return self.call_event("on_log", args, state, control, logs=logs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer_callback.py", line 516, in call_event
-    result = getattr(callback, event)(
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/integrations/integration_utils.py", line 706, in on_log
-    self.tb_writer.flush()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/utils/tensorboard/writer.py", line 1233, in flush
-    writer.flush()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/utils/tensorboard/writer.py", line 146, in flush
-    self.event_writer.flush()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 125, in flush
-    self._async_writer.flush()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 194, in flush
-    self._check_worker_status()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 212, in _check_worker_status
-    raise exception
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/threading.py", line 932, in _bootstrap_inner
-    self.run()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 244, in run
-    self._run()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 275, in _run
-    self._record_writer.write(data)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/record_writer.py", line 40, in write
-    self._writer.write(header + header_crc + data + footer_crc)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 773, in write
-    self.fs.append(self.filename, file_content, self.binary_mode)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 167, in append
-    self._write(filename, file_content, "ab" if binary_mode else "a")
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 171, in _write
-    with io.open(filename, mode, encoding=encoding) as f:
-FileNotFoundError: [Errno 2] No such file or directory: b'logsAndResults/logs/original_NSplited_node_LLM_Linear_Structure/events.out.tfevents.1730294763.a7dc54a48c09.17164.0'
- 14%|█▍        | 64/465 [02:05<13:05,  1.96s/it]
-
-                                             [A

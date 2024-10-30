@@ -1,6 +1,7 @@
 #!/bin/bash
 source  activate mmseg
-max_jobs=2  # 最大并发任务数
+max_jobs=1  # 最大并发任务数
+export CUDA_VISIBLE_DEVICES=2  # 指定使用的GPU编号
 # 定义参数组合
 for freeze in True False; do
     for with_knowledge in True False; do

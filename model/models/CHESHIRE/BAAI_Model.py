@@ -10,7 +10,7 @@ class BAAI_model(nn.Module):
         self.freeze = freeze
         self.with_knowledge = with_knowledge
 
-        if freeze:
+        if not freeze:
             for param in self.model.parameters():
                param.requires_grad = False
         

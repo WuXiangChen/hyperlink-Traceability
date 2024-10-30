@@ -32,8 +32,6 @@ torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 from torch.utils.tensorboard import SummaryWriter
 import os
-import os
-import os 
 #os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  #（保证程序cuda序号与实际cuda序号对应）
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 os.environ["NCCL_SHM_DISABLE "] = "1"
@@ -122,11 +120,6 @@ def main(root_Repo:str, device:int):
         train_pos_index = np.where(train_labels == 1)[0]
         pos_set = train_set[:, train_pos_index]
         writer_tb_log_dir='logsAndResults/logs/original_NSplited_node_LLM_Linear_Structure/'
-        '''CHESHIRE'''
-        # pro = processerHook(pos_set=pos_set, config=config,
-        #                 repoName=repoName, artifacts = artifacts,
-        #                 artifact_dict=artifact_dict, device=device,
-        #                 running_type=running_type, embedding_model = embedding_model)
         '''BAAI-bge'''
         pro = processer_(embedding_type=LM_model_selected, repoName=repoName, artifacts=artifacts,          artifact_dict=artifact_dict, freeze=freeze, with_knowledge=with_knowledge, cat=cat,
                         tokenizer=artifacts.tokenizer_NL, device=device, embedding_model=embedding_model,writer_tb_log_dir=writer_tb_log_dir)
@@ -159,11 +152,10 @@ if __name__ == '__main__':
     parser.add_argument('-n', '--num_folds', type=int, default=5, help='The number of folds for cross-validation. Default is 5.')
     parser.add_argument('-t', '--test_ratio', type=float, default=0.2, help='The ratio of the test set. Default is 0.2.')
     parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
-    # 增加三个对比实验参数，冻结-非冻结，自带知识-无自带知识，cat-非cat
     # 增加三个对比实验参数，初始值设置为True
     parser.add_argument('--freeze', type=bool, default=True, help='Frozening The LLM when Training or not.')
     parser.add_argument('--with_knowledge', type=bool, default=True, help='Take the prior-knowledge into training or not.')
-    parser.add_argument('--cat', type=bool, default=False, help='Using the cat module for the input information or not.')
+    parser.add_argument('--cat', type=bool, default=True, help='Using the cat module for the input information or not.')
 
     args = parser.parse_args()
     repoName = args.repoName
