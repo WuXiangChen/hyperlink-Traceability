@@ -14,7 +14,7 @@ import torch.nn as nn
 # 这里加一个LSTM结构用以从word embedding中提取sentence embedding
 
 class SentenceEmbeddingLSTM(nn.Module):
-    def __init__(self, embedding_dim, hidden_dim, num_layers=3, bidirectional=True):
+    def __init__(self, embedding_dim, hidden_dim, num_layers=5, bidirectional=False, in_dim=512):
         super(SentenceEmbeddingLSTM, self).__init__()
         self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers=num_layers, bidirectional=bidirectional, batch_first=True)
         self.hidden_dim = hidden_dim
@@ -29,8 +29,7 @@ class SentenceEmbeddingLSTM(nn.Module):
             h_n = h_n[:, :, -1, :].mean(dim=2)  # 取双向最后一个隐藏状态的平均
         else:
             h_n = h_n[-1]  # 取最后一层的隐藏状态
-
-        return h_n  # 返回句子嵌入
+        return h_n.unsqueeze(0)  # 返回句子嵌入
 
 class BAAI_model(nn.Module):
     def __init__(self, artifacts_dict, artifacts, tokenizer, model, in_dim, freeze, with_knowledge):
@@ -58,10 +57,10 @@ class BAAI_model(nn.Module):
         self.artifacts_dict = {value: key for key, value in artifacts_dict.items()}
 
         self.linear = nn.Sequential(
-            nn.Linear(in_dim*2, hidden_dim),
+            nn.Linear(hidden_dim, hidden_dim),
             nn.ReLU(),
-            #  nn.Linear(hidden_dim, hidden_dim),
-            # nn.ReLU()
+             nn.Linear(hidden_dim, hidden_dim),
+            nn.ReLU()
         )
 
         self.pool = nn.AdaptiveAvgPool1d(1)
@@ -96,18 +95,16 @@ class BAAI_model(nn.Module):
                 atts_.append(encoded['attention_mask'])
             inputs.append(inputs_)
             attention_masks.append(atts_)
-
         # inputs = torch.cat(inputs, dim=0).to(self.model.device)
         # 这里需要根据输入内容进行合并
-
         sen_emb = []
         for k, input_ in enumerate(inputs):
-            att_ = attention_masks[k].to(self.model.device)
+            att_ = torch.cat(attention_masks[k]).to(self.model.device)
+            input_ = torch.cat(input_).to(self.model.device)
             x = self.model(input_ , att_).pooler_output
             sen_emb.append(self.senEmbLSTM(x))
-        sen_emb_ = torch.cat(sen_emb)
+        sen_emb_ = torch.cat(sen_emb, dim=0)
         outputs = self.linear(sen_emb_)
-        
         outputs = self.classify1(outputs)
         outputs = nn.Sigmoid()(outputs).squeeze(1)
         # 计算loss

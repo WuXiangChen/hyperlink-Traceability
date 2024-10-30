@@ -1,2 +1,5 @@
 *.bin
 *.safetensors
+./CHESHIR/*
+./model/BAAI_bge_reranker_small/*
+./model/BAAI_bge-m3_small/*

@@ -40,7 +40,7 @@ do
     fi
 
     # 检查当前运行的任务数量
-    while (( $(pgrep -f "python main" | wc -l) >= max_jobs )); do
+    while (( $(pgrep -f "python main" | wc -l) >= $max_jobs )); do
       sleep 30  # 等待30秒再检查
     done
   done

@@ -1,96 +1,0 @@
-Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-CUDA device index 3 is not invalid. Using CPU.
-文件夹 'CHESHIRE/hybird_LLM_GCN_ResNet_9E_6/tiny' 不存在。
-Data has been loaded successfully for training!
-Start training!
-  0%|          | 0/1400 [00:00<?, ?it/s]  0%|          | 1/1400 [00:01<37:10,  1.59s/it]  0%|          | 2/1400 [00:02<27:25,  1.18s/it]  0%|          | 3/1400 [00:04<32:57,  1.42s/it]  0%|          | 4/1400 [00:06<45:47,  1.97s/it]  0%|          | 5/1400 [00:11<1:04:32,  2.78s/it]  0%|          | 6/1400 [00:16<1:23:50,  3.61s/it]  0%|          | 7/1400 [00:17<1:01:28,  2.65s/it]  1%|          | 8/1400 [00:24<1:38:59,  4.27s/it]  1%|          | 9/1400 [00:32<2:03:30,  5.33s/it]  1%|          | 10/1400 [00:33<1:33:07,  4.02s/it]  1%|          | 11/1400 [00:34<1:11:25,  3.09s/it]  1%|          | 12/1400 [00:35<56:17,  2.43s/it]  
-  0%|          | 0/3 [00:00<?, ?it/s][A
- 67%|██████▋   | 2/3 [00:00<00:00,  3.55it/s][A
-100%|██████████| 3/3 [00:00<00:00,  3.78it/s][ATrainer is attempting to log a value of "[[0, 22], [0, 24]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
-                                                 
-                                             [A  1%|          | 12/1400 [00:37<56:17,  2.43s/it]
-100%|██████████| 3/3 [00:00<00:00,  3.78it/s][A
-                                             [A  1%|          | 13/1400 [00:45<1:48:09,  4.68s/it]  1%|          | 14/1400 [00:45<1:19:58,  3.46s/it]{'eval_loss': 0.7009555101394653, 'eval_acc': 0.5217391304347826, 'eval_auc': 0.32007575757575757, 'eval_precision': 0.5217391304347826, 'eval_recall': 1.0, 'eval_f1': 0.6857142857142856, 'eval_confusion_matrix': [[0, 22], [0, 24]], 'eval_runtime': 1.6277, 'eval_samples_per_second': 28.261, 'eval_steps_per_second': 1.843, 'epoch': 1.71}
-  1%|          | 15/1400 [00:54<1:52:14,  4.86s/it]  1%|          | 16/1400 [00:55<1:24:40,  3.67s/it]  1%|          | 17/1400 [00:55<1:05:23,  2.84s/it]  1%|▏         | 18/1400 [00:56<52:01,  2.26s/it]    1%|▏         | 19/1400 [01:01<1:09:59,  3.04s/it]  1%|▏         | 20/1400 [01:04<1:06:16,  2.88s/it]  2%|▏         | 21/1400 [01:04<50:13,  2.19s/it]    2%|▏         | 22/1400 [01:07<56:37,  2.47s/it]  2%|▏         | 23/1400 [01:10<1:00:42,  2.64s/it]  2%|▏         | 24/1400 [01:17<1:25:49,  3.74s/it]
-  0%|          | 0/3 [00:00<?, ?it/s][A
- 67%|██████▋   | 2/3 [00:00<00:00,  3.50it/s][A
-100%|██████████| 3/3 [00:00<00:00,  3.70it/s][ATrainer is attempting to log a value of "[[22, 0], [24, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
-                                                   
-                                             [A  2%|▏         | 24/1400 [01:18<1:25:49,  3.74s/it]
-100%|██████████| 3/3 [00:00<00:00,  3.70it/s][A
-                                             [A  2%|▏         | 25/1400 [01:31<2:41:13,  7.04s/it]  2%|▏         | 26/1400 [01:34<2:13:19,  5.82s/it]  2%|▏         | 27/1400 [01:37<1:50:56,  4.85s/it]  2%|▏         | 28/1400 [01:38<1:21:48,  3.58s/it]{'eval_loss': 0.7829488515853882, 'eval_acc': 0.4782608695652174, 'eval_auc': 0.39204545454545453, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[22, 0], [24, 0]], 'eval_runtime': 1.6467, 'eval_samples_per_second': 27.935, 'eval_steps_per_second': 1.822, 'epoch': 3.43}
-  2%|▏         | 29/1400 [01:39<1:08:11,  2.98s/it]  2%|▏         | 30/1400 [01:40<53:49,  2.36s/it]    2%|▏         | 31/1400 [01:41<43:51,  1.92s/it]  2%|▏         | 32/1400 [01:45<1:01:12,  2.68s/it]  2%|▏         | 33/1400 [01:53<1:33:22,  4.10s/it]  2%|▏         | 34/1400 [01:55<1:18:15,  3.44s/it]  2%|▎         | 35/1400 [01:55<56:30,  2.48s/it]    3%|▎         | 36/1400 [01:58<59:27,  2.62s/it]
-  0%|          | 0/3 [00:00<?, ?it/s][A
- 67%|██████▋   | 2/3 [00:01<00:00,  1.27it/s][A
-100%|██████████| 3/3 [00:01<00:00,  1.60it/s][ATrainer is attempting to log a value of "[[22, 0], [24, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
-                                                 
-                                             [A  3%|▎         | 36/1400 [02:01<59:27,  2.62s/it]
-100%|██████████| 3/3 [00:01<00:00,  1.60it/s][A
-                                             [A  3%|▎         | 37/1400 [02:10<2:05:33,  5.53s/it]  3%|▎         | 38/1400 [02:18<2:17:28,  6.06s/it]  3%|▎         | 39/1400 [02:20<1:50:37,  4.88s/it]  3%|▎         | 40/1400 [02:22<1:34:17,  4.16s/it]  3%|▎         | 41/1400 [02:28<1:45:26,  4.66s/it]  3%|▎         | 42/1400 [02:28<1:16:00,  3.36s/it]{'eval_loss': 0.7593892216682434, 'eval_acc': 0.4782608695652174, 'eval_auc': 0.44886363636363635, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[22, 0], [24, 0]], 'eval_runtime': 3.3112, 'eval_samples_per_second': 13.892, 'eval_steps_per_second': 0.906, 'epoch': 5.14}
-  3%|▎         | 43/1400 [02:29<1:00:26,  2.67s/it]  3%|▎         | 44/1400 [02:30<48:13,  2.13s/it]    3%|▎         | 45/1400 [02:37<1:19:44,  3.53s/it]  3%|▎         | 46/1400 [02:40<1:15:33,  3.35s/it]  3%|▎         | 47/1400 [02:48<1:44:14,  4.62s/it]  3%|▎         | 48/1400 [02:49<1:21:16,  3.61s/it]
-  0%|          | 0/3 [00:00<?, ?it/s][A
- 67%|██████▋   | 2/3 [00:00<00:00,  3.42it/s][A
-100%|██████████| 3/3 [00:00<00:00,  3.70it/s][ATrainer is attempting to log a value of "[[20, 2], [24, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
-                                                   
-                                             [A  3%|▎         | 48/1400 [02:51<1:21:16,  3.61s/it]
-100%|██████████| 3/3 [00:00<00:00,  3.70it/s][A
-                                             [A  4%|▎         | 49/1400 [02:57<1:51:08,  4.94s/it]{'eval_loss': 0.8317222595214844, 'eval_acc': 0.43478260869565216, 'eval_auc': 0.38257575757575757, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[20, 2], [24, 0]], 'eval_runtime': 1.799, 'eval_samples_per_second': 25.57, 'eval_steps_per_second': 1.668, 'epoch': 6.86}
-  4%|▎         | 50/1400 [02:59<1:34:09,  4.18s/it]  4%|▎         | 51/1400 [03:02<1:26:03,  3.83s/it]  4%|▎         | 52/1400 [03:09<1:45:32,  4.70s/it]  4%|▍         | 53/1400 [03:13<1:42:08,  4.55s/it]  4%|▍         | 54/1400 [03:14<1:17:25,  3.45s/it]  4%|▍         | 55/1400 [03:15<1:00:25,  2.70s/it]  4%|▍         | 56/1400 [03:15<44:25,  1.98s/it]    4%|▍         | 57/1400 [03:22<1:18:37,  3.51s/it]  4%|▍         | 58/1400 [03:23<1:00:27,  2.70s/it]  4%|▍         | 59/1400 [03:24<47:59,  2.15s/it]    4%|▍         | 60/1400 [03:25<40:08,  1.80s/it]
-  0%|          | 0/3 [00:00<?, ?it/s][A
- 67%|██████▋   | 2/3 [00:02<00:01,  1.02s/it][A
-100%|██████████| 3/3 [00:02<00:00,  1.02it/s][ATrainer is attempting to log a value of "[[17, 5], [21, 3]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
-                                                 
-                                             [A  4%|▍         | 60/1400 [03:30<40:08,  1.80s/it]
-100%|██████████| 3/3 [00:02<00:00,  1.02it/s][A
-                                             [A  4%|▍         | 61/1400 [03:41<2:17:12,  6.15s/it]  4%|▍         | 62/1400 [03:42<1:41:41,  4.56s/it]  4%|▍         | 63/1400 [03:43<1:12:54,  3.27s/it]{'eval_loss': 1.0212700366973877, 'eval_acc': 0.43478260869565216, 'eval_auc': 0.3560606060606061, 'eval_precision': 0.375, 'eval_recall': 0.125, 'eval_f1': 0.1875, 'eval_confusion_matrix': [[17, 5], [21, 3]], 'eval_runtime': 5.1758, 'eval_samples_per_second': 8.888, 'eval_steps_per_second': 0.58, 'epoch': 8.57}
-  5%|▍         | 64/1400 [03:44<58:39,  2.63s/it]    5%|▍         | 65/1400 [03:45<46:53,  2.11s/it]  5%|▍         | 66/1400 [03:45<38:43,  1.74s/it]  5%|▍         | 67/1400 [03:46<32:52,  1.48s/it]Traceback (most recent call last):
-  File "main.py", line 172, in <module>
-    main(root_Repo=repopath, device=device)
-  File "main.py", line 136, in main
-    result = pro.train((train_hyperlink, train_labels))
-  File "/root/workspace/hyperlink-Traceability/processerHook/processer_BAAI.py", line 27, in train
-    self.trainer.train()
-  File "/root/workspace/hyperlink-Traceability/model/models/trainer_hook.py", line 125, in train
-    trainer.train()
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2052, in train
-    return inner_training_loop(
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2388, in _inner_training_loop
-    tr_loss_step = self.training_step(model, inputs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3485, in training_step
-    loss = self.compute_loss(model, inputs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3532, in compute_loss
-    outputs = model(**inputs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/root/workspace/hyperlink-Traceability/model/models/CHESHIRE/BAAI_Model_splitGraph.py", line 157, in forward
-    x = self.head_gconv_layers(x, edge_index)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/conv/gat_conv.py", line 366, in forward
-    out = self.propagate(edge_index, x=x, alpha=alpha, size=size)
-  File "/tmp/torch_geometric.nn.conv.gat_conv_GATConv_propagate_68xby0p0.py", line 212, in propagate
-    out = self.aggregate(
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/conv/message_passing.py", line 594, in aggregate
-    return self.aggr_module(inputs, index, ptr=ptr, dim_size=dim_size,
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/experimental.py", line 117, in wrapper
-    return func(*args, **kwargs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/aggr/base.py", line 139, in __call__
-    raise e
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/aggr/base.py", line 131, in __call__
-    return super().__call__(x, index=index, ptr=ptr, dim_size=dim_size,
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/aggr/basic.py", line 22, in forward
-    return self.reduce(x, index, ptr, dim_size, dim, reduce='sum')
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/aggr/base.py", line 185, in reduce
-    return scatter(x, index, dim, dim_size, reduce)
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/utils/_scatter.py", line 75, in scatter
-    return src.new_zeros(size).scatter_add_(dim, index, src)
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.45 GiB. GPU 0 has a total capacty of 31.73 GiB of which 218.81 MiB is free. Process 18819 has 1.57 GiB memory in use. Process 5897 has 6.75 GiB memory in use. Process 7405 has 23.20 GiB memory in use. Of the allocated memory 21.67 GiB is allocated by PyTorch, and 471.35 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
-  5%|▍         | 67/1400 [03:53<1:17:29,  3.49s/it]

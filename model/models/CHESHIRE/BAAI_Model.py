@@ -4,7 +4,7 @@ from utils import Utils
 import torch.nn.functional as F
 
 class BAAI_model(nn.Module):
-    def __init__(self, artifacts_dict, artifacts, tokenizer, model, freeze, with_knowledge):
+    def __init__(self, artifacts_dict, artifacts, tokenizer, model, freeze, with_knowledge, in_dim):
         super(BAAI_model, self).__init__()
         self.model = model
         self.freeze = freeze
@@ -28,7 +28,7 @@ class BAAI_model(nn.Module):
         self.linear = nn.Sequential(
             # nn.Linear(384, 384),
             # nn.ReLU(),
-            nn.Linear(384, 1)
+            nn.Linear(in_dim, 1)
         )
         # self.linear = nn.Linear(1024, 1)
         self.loss_fn = torch.nn.BCELoss()
@@ -39,7 +39,7 @@ class BAAI_model(nn.Module):
         inputs = []
         attention_masks = []
         for NL_PL in node_sentence_list:
-            NL_PL = "".join(NL_PL[0:3])
+            NL_PL = "".join(NL_PL)
             encoded = self.tokenizer.encode_plus(
                 NL_PL,
                 return_tensors="pt",

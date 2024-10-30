@@ -7,7 +7,7 @@ from model.models.trainer_hook import ModelFineTuner
 from model.models.CHESHIRE.CHESHIRE import CHESHIRE
 
 class processer_:
-    def __init__(self, embedding_type, repoName, artifacts,artifact_dict, tokenizer, device, embedding_model, writer_tb_log_dir,  freeze, with_knowledge, cat):
+    def __init__(self, embedding_type, repoName, artifacts,artifact_dict, tokenizer, device, embedding_model, writer_tb_log_dir, freeze, with_knowledge, cat):
         self.repoName = repoName
         self.artifacts_dict = artifact_dict
         if embedding_type=="BAAI_bge-m3_small":

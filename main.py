@@ -35,7 +35,7 @@ import os
 import os
 import os 
 #os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  #（保证程序cuda序号与实际cuda序号对应）
-#os.environ["CUDA_VISIBLE_DEVICES"] = "2,3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 os.environ["NCCL_SHM_DISABLE "] = "1"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
@@ -146,7 +146,7 @@ def main(root_Repo:str, device:int):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     df = pd.DataFrame(results)
-    df.to_csv(f"logsAndResults/{output_dir}/{repoName}_results.csv", index=False)
+    df.to_csv(f"{output_dir}/{repoName}_results_{str(freeze)}_{str(with_knowledge)}_{str(cat)}.csv", index=False)
     print(df)
     print(f"The {repoName} results have been saved successfully!")
 
@@ -154,7 +154,7 @@ def main(root_Repo:str, device:int):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='The arguments set for GraphLinker')
     # 添加参数及其简写
-    parser.add_argument('-r', '--repoName', type=str, default="kubernetes", help='The repository name in the dataset. This is a required parameter.')
+    parser.add_argument('-r', '--repoName', type=str, default="Activiti", help='The repository name in the dataset. This is a required parameter.')
     parser.add_argument('-c', '--cudaN', type=int, default=1, help='The GPU number to use. Default is 0.')
     parser.add_argument('-n', '--num_folds', type=int, default=5, help='The number of folds for cross-validation. Default is 5.')
     parser.add_argument('-t', '--test_ratio', type=float, default=0.2, help='The ratio of the test set. Default is 0.2.')
@@ -163,7 +163,7 @@ if __name__ == '__main__':
     # 增加三个对比实验参数，初始值设置为True
     parser.add_argument('--freeze', type=bool, default=True, help='Frozening The LLM when Training or not.')
     parser.add_argument('--with_knowledge', type=bool, default=True, help='Take the prior-knowledge into training or not.')
-    parser.add_argument('--cat', type=bool, default=True, help='Using the cat module for the input information or not.')
+    parser.add_argument('--cat', type=bool, default=False, help='Using the cat module for the input information or not.')
 
     args = parser.parse_args()
     repoName = args.repoName
@@ -177,5 +177,7 @@ if __name__ == '__main__':
     freeze = args.freeze
     with_knowledge = args.with_knowledge
     cat = args.cat
+
+    print(freeze,with_knowledge,cat)
 
     main(root_Repo=repopath, device=device)
