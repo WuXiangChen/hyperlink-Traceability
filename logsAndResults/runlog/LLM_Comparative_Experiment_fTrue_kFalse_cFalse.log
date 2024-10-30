@@ -12,4 +12,76 @@ Start training!
  62%|██████▎   | 5/8 [00:06<00:04,  1.52s/it][A
  75%|███████▌  | 6/8 [00:08<00:03,  1.58s/it][A
  88%|████████▊ | 7/8 [00:10<00:01,  1.63s/it][A
-100%|██████████| 8/8 [00:11<00:00,  1.63s/it][A
+100%|██████████| 8/8 [00:11<00:00,  1.63s/it][ATrainer is attempting to log a value of "[[0, 70], [0, 81]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 244, in run
+    self._run()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 275, in _run
+    self._record_writer.write(data)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/record_writer.py", line 40, in write
+    self._writer.write(header + header_crc + data + footer_crc)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 773, in write
+    self.fs.append(self.filename, file_content, self.binary_mode)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 167, in append
+    self._write(filename, file_content, "ab" if binary_mode else "a")
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 171, in _write
+    with io.open(filename, mode, encoding=encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: b'logsAndResults/logs/original_NSplited_node_LLM_Linear_Structure/events.out.tfevents.1730294763.a7dc54a48c09.17168.0'
+Traceback (most recent call last):
+  File "main.py", line 183, in <module>
+    main(root_Repo=repopath, device=device)
+  File "main.py", line 136, in main
+    result = pro.train((train_hyperlink, train_labels))
+  File "/root/workspace/hyperlink-work/hyperlink-Traceability/processerHook/processer_BAAI.py", line 32, in train
+    self.trainer.train()
+  File "/root/workspace/hyperlink-work/hyperlink-Traceability/model/models/trainer_hook.py", line 125, in train
+    trainer.train()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2052, in train
+    return inner_training_loop(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2467, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, grad_norm, model, trial, epoch, ignore_keys_for_eval)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2915, in _maybe_log_save_evaluate
+    metrics = self._evaluate(trial, ignore_keys_for_eval)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2872, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3892, in evaluate
+    self.log(output.metrics)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3403, in log
+    self.control = self.callback_handler.on_log(self.args, self.state, self.control, logs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer_callback.py", line 509, in on_log
+    return self.call_event("on_log", args, state, control, logs=logs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer_callback.py", line 516, in call_event
+    result = getattr(callback, event)(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/integrations/integration_utils.py", line 706, in on_log
+    self.tb_writer.flush()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/utils/tensorboard/writer.py", line 1233, in flush
+    writer.flush()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/utils/tensorboard/writer.py", line 146, in flush
+    self.event_writer.flush()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 125, in flush
+    self._async_writer.flush()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 194, in flush
+    self._check_worker_status()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 212, in _check_worker_status
+    raise exception
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 244, in run
+    self._run()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 275, in _run
+    self._record_writer.write(data)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/summary/writer/record_writer.py", line 40, in write
+    self._writer.write(header + header_crc + data + footer_crc)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 773, in write
+    self.fs.append(self.filename, file_content, self.binary_mode)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 167, in append
+    self._write(filename, file_content, "ab" if binary_mode else "a")
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 171, in _write
+    with io.open(filename, mode, encoding=encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: b'logsAndResults/logs/original_NSplited_node_LLM_Linear_Structure/events.out.tfevents.1730294763.a7dc54a48c09.17168.0'
+ 14%|█▍        | 64/465 [02:05<13:07,  1.96s/it]
+
+                                             [A
