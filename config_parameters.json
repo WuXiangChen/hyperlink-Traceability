@@ -1,0 +1,12 @@
+{
+  "model_name": "bert-base-uncased",
+  "learning_rate": 9E-6,
+  "batch_size": 16,
+  "num_train_epochs": 20,
+  "weight_decay": 4E-5,
+  "evaluation_strategy": "steps",
+  "eval_steps": 500,
+  "logging_dir": "/path/to/logs",
+  "seed": 43,
+  "patience":8
+}

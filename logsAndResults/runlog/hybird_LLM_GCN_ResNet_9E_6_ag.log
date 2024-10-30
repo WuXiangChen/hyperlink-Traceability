@@ -1,0 +1,32 @@
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+CUDA device index 3 is not invalid. Using CPU.
+文件夹 'CHESHIRE/hybird_LLM_GCN_ResNet_9E_6/ag' 不存在。
+Data has been loaded successfully for training!
+Start training!
+  0%|          | 0/3400 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "main.py", line 172, in <module>
+    main(root_Repo=repopath, device=device)
+  File "main.py", line 136, in main
+    result = pro.train((train_hyperlink, train_labels))
+  File "/root/workspace/hyperlink-Traceability/processerHook/processer_BAAI.py", line 27, in train
+    self.trainer.train()
+  File "/root/workspace/hyperlink-Traceability/model/models/trainer_hook.py", line 125, in train
+    trainer.train()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2052, in train
+    return inner_training_loop(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2388, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3485, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3532, in compute_loss
+    outputs = model(**inputs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/workspace/hyperlink-Traceability/model/models/CHESHIRE/BAAI_Model_splitGraph.py", line 123, in forward
+    node_sentence_list, nodes_list = Utils.process_edges_data(self.artifacts, edges)
+  File "/root/workspace/hyperlink-Traceability/utils.py", line 327, in process_edges_data
+    node_sen = artifacts.artifact_dict[node_id]
+KeyError: 51
+  0%|          | 0/3400 [00:00<?, ?it/s]

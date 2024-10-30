@@ -1,0 +1,83 @@
+2024-10-26 06:46:27,107 INFO    StreamThr :24906 [internal.py:wandb_internal():86] W&B internal server running at pid: 24906, started at: 2024-10-26 06:46:27.106074
+2024-10-26 06:46:27,109 DEBUG   HandlerThread:24906 [handler.py:handle_request():146] handle_request: status
+2024-10-26 06:46:27,112 INFO    WriterThread:24906 [datastore.py:open_for_write():85] open: /root/workspace/hyperlink-Traceability/wandb/run-20241026_064627-5woepzaw/run-5woepzaw.wandb
+2024-10-26 06:46:27,116 DEBUG   SenderThread:24906 [sender.py:send():382] send: header
+2024-10-26 06:46:27,116 DEBUG   SenderThread:24906 [sender.py:send():382] send: run
+2024-10-26 06:46:32,115 DEBUG   HandlerThread:24906 [handler.py:handle_request():146] handle_request: keepalive
+2024-10-26 06:46:37,116 DEBUG   HandlerThread:24906 [handler.py:handle_request():146] handle_request: keepalive
+2024-10-26 06:46:42,117 DEBUG   HandlerThread:24906 [handler.py:handle_request():146] handle_request: keepalive
+2024-10-26 06:46:46,156 DEBUG   HandlerThread:24906 [handler.py:handle_request():146] handle_request: shutdown
+2024-10-26 06:46:46,157 INFO    HandlerThread:24906 [handler.py:finish():866] shutting down handler
+2024-10-26 06:46:47,117 INFO    WriterThread:24906 [datastore.py:close():294] close: /root/workspace/hyperlink-Traceability/wandb/run-20241026_064627-5woepzaw/run-5woepzaw.wandb
+2024-10-26 06:47:30,438 INFO    SenderThread:24906 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/connectionpool.py", line 775, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1044, in _prepare_proxy
+    conn.connect()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/connection.py", line 730, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/connectionpool.py", line 777, in urlopen
+    self._raise_timeout(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/urllib3/connectionpool.py", line 369, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/requests/adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=20)
+2024-10-26 08:17:34,294 INFO    SenderThread:24906 [dir_watcher.py:__init__():211] watching files in: /root/workspace/hyperlink-Traceability/wandb/run-20241026_064627-5woepzaw/files
+2024-10-26 08:17:34,294 INFO    SenderThread:24906 [sender.py:_start_run_threads():1136] run started: 5woepzaw with start time 1729925187.10551
+2024-10-26 08:17:34,294 INFO    SenderThread:24906 [sender.py:finish():1548] shutting down sender
+2024-10-26 08:17:34,294 INFO    SenderThread:24906 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-10-26 08:17:35,294 INFO    SenderThread:24906 [dir_watcher.py:finish():388] scan: /root/workspace/hyperlink-Traceability/wandb/run-20241026_064627-5woepzaw/files
+2024-10-26 08:17:35,295 INFO    SenderThread:24906 [dir_watcher.py:finish():402] scan save: /root/workspace/hyperlink-Traceability/wandb/run-20241026_064627-5woepzaw/files/config.yaml config.yaml
+2024-10-26 08:17:35,295 INFO    SenderThread:24906 [file_pusher.py:finish():175] shutting down file pusher
+2024-10-26 08:17:35,295 INFO    SenderThread:24906 [file_pusher.py:join():181] waiting for file pusher
+2024-10-26 08:17:37,585 INFO    wandb-upload_0:24906 [upload_job.py:push():131] Uploaded file /root/workspace/hyperlink-Traceability/wandb/run-20241026_064627-5woepzaw/files/config.yaml
+2024-10-26 08:17:37,799 INFO    SenderThread:24906 [file_stream.py:finish():595] file stream finish called
+2024-10-26 08:17:38,426 INFO    SenderThread:24906 [file_stream.py:finish():599] file stream finish is done

@@ -1,0 +1,56 @@
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Using CUDA device: cuda:0
+文件夹 'CHESHIRE/hybird_LLM_GCN_ResNet_9E_6/apache' 不存在。
+Data has been loaded successfully for training!
+Start training!
+  0%|          | 0/16600 [00:00<?, ?it/s]  0%|          | 1/16600 [00:02<9:53:38,  2.15s/it]  0%|          | 2/16600 [00:03<7:46:20,  1.69s/it]  0%|          | 3/16600 [00:05<7:27:08,  1.62s/it]  0%|          | 4/16600 [00:06<7:00:39,  1.52s/it]  0%|          | 5/16600 [00:07<6:42:54,  1.46s/it]  0%|          | 6/16600 [00:09<6:35:58,  1.43s/it]  0%|          | 7/16600 [00:10<6:30:37,  1.41s/it]  0%|          | 8/16600 [00:11<6:24:19,  1.39s/it]  0%|          | 9/16600 [00:13<6:24:03,  1.39s/it]  0%|          | 10/16600 [00:14<6:22:26,  1.38s/it]  0%|          | 11/16600 [00:15<6:22:00,  1.38s/it]  0%|          | 12/16600 [00:17<6:20:59,  1.38s/it]  0%|          | 13/16600 [00:18<6:18:09,  1.37s/it]  0%|          | 14/16600 [00:20<6:20:23,  1.38s/it]  0%|          | 15/16600 [00:21<6:19:54,  1.37s/it]  0%|          | 16/16600 [00:22<6:20:40,  1.38s/it]  0%|          | 17/16600 [00:24<6:19:10,  1.37s/it]  0%|          | 18/16600 [00:25<6:20:34,  1.38s/it]  0%|          | 19/16600 [00:26<6:19:11,  1.37s/it]  0%|          | 20/16600 [00:28<6:17:11,  1.36s/it]  0%|          | 21/16600 [00:29<6:17:12,  1.37s/it]  0%|          | 22/16600 [00:31<6:17:27,  1.37s/it]  0%|          | 23/16600 [00:32<6:18:59,  1.37s/it]  0%|          | 24/16600 [00:33<6:18:19,  1.37s/it]  0%|          | 25/16600 [00:35<6:18:58,  1.37s/it]  0%|          | 26/16600 [00:36<6:21:24,  1.38s/it]  0%|          | 27/16600 [00:38<6:29:55,  1.41s/it]  0%|          | 28/16600 [00:39<6:25:23,  1.40s/it]  0%|          | 29/16600 [00:40<6:22:25,  1.38s/it]  0%|          | 30/16600 [00:42<6:22:40,  1.39s/it]  0%|          | 31/16600 [00:43<6:23:43,  1.39s/it]  0%|          | 32/16600 [00:44<6:24:09,  1.39s/it]  0%|          | 33/16600 [00:46<6:23:52,  1.39s/it]  0%|          | 34/16600 [00:47<6:22:22,  1.38s/it]  0%|          | 35/16600 [00:49<6:20:42,  1.38s/it]  0%|          | 36/16600 [00:50<6:19:02,  1.37s/it]  0%|          | 37/16600 [00:51<6:16:34,  1.36s/it]  0%|          | 38/16600 [00:53<6:16:01,  1.36s/it]  0%|          | 39/16600 [00:54<6:17:04,  1.37s/it]  0%|          | 40/16600 [00:55<6:16:32,  1.36s/it]  0%|          | 41/16600 [00:57<6:16:12,  1.36s/it]  0%|          | 42/16600 [00:58<6:15:14,  1.36s/it]  0%|          | 43/16600 [00:59<6:13:56,  1.36s/it]  0%|          | 44/16600 [01:01<6:14:39,  1.36s/it]  0%|          | 45/16600 [01:02<6:15:56,  1.36s/it]  0%|          | 46/16600 [01:04<6:31:16,  1.42s/it]  0%|          | 47/16600 [01:05<6:28:55,  1.41s/it]  0%|          | 48/16600 [01:06<6:22:14,  1.39s/it]  0%|          | 49/16600 [01:08<6:23:54,  1.39s/it]  0%|          | 50/16600 [01:09<6:22:53,  1.39s/it]  0%|          | 51/16600 [01:11<6:22:49,  1.39s/it]  0%|          | 52/16600 [01:12<6:20:46,  1.38s/it]  0%|          | 53/16600 [01:13<6:21:15,  1.38s/it]  0%|          | 54/16600 [01:15<7:03:48,  1.54s/it]  0%|          | 55/16600 [01:17<6:41:42,  1.46s/it]  0%|          | 56/16600 [01:18<6:31:25,  1.42s/it]  0%|          | 57/16600 [01:19<6:25:27,  1.40s/it]  0%|          | 58/16600 [01:21<6:20:55,  1.38s/it]  0%|          | 59/16600 [01:22<6:19:10,  1.38s/it]  0%|          | 60/16600 [01:23<6:20:49,  1.38s/it]  0%|          | 61/16600 [01:25<6:24:34,  1.40s/it]  0%|          | 62/16600 [01:26<6:21:44,  1.38s/it]Traceback (most recent call last):
+  File "main.py", line 172, in <module>
+    main(root_Repo=repopath, device=device)
+  File "main.py", line 136, in main
+    result = pro.train((train_hyperlink, train_labels))
+  File "/root/workspace/hyperlink-Traceability/processerHook/processer_BAAI.py", line 27, in train
+    self.trainer.train()
+  File "/root/workspace/hyperlink-Traceability/model/models/trainer_hook.py", line 125, in train
+    trainer.train()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2052, in train
+    return inner_training_loop(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2388, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3485, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3532, in compute_loss
+    outputs = model(**inputs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/workspace/hyperlink-Traceability/model/models/CHESHIRE/BAAI_Model_splitGraph.py", line 157, in forward
+    x = self.head_gconv_layers(x, edge_index)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/conv/gat_conv.py", line 366, in forward
+    out = self.propagate(edge_index, x=x, alpha=alpha, size=size)
+  File "/tmp/torch_geometric.nn.conv.gat_conv_GATConv_propagate_wtdu0_1i.py", line 212, in propagate
+    out = self.aggregate(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/conv/message_passing.py", line 594, in aggregate
+    return self.aggr_module(inputs, index, ptr=ptr, dim_size=dim_size,
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/experimental.py", line 117, in wrapper
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/aggr/base.py", line 139, in __call__
+    raise e
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/aggr/base.py", line 131, in __call__
+    return super().__call__(x, index=index, ptr=ptr, dim_size=dim_size,
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/aggr/basic.py", line 22, in forward
+    return self.reduce(x, index, ptr, dim_size, dim, reduce='sum')
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/nn/aggr/base.py", line 185, in reduce
+    return scatter(x, index, dim, dim_size, reduce)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch_geometric/utils/_scatter.py", line 75, in scatter
+    return src.new_zeros(size).scatter_add_(dim, index, src)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.77 GiB. GPU 0 has a total capacty of 31.73 GiB of which 17.73 GiB is free. Process 18819 has 1.57 GiB memory in use. Process 33515 has 12.43 GiB memory in use. Of the allocated memory 11.29 GiB is allocated by PyTorch, and 81.55 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+  0%|          | 62/16600 [01:37<7:14:28,  1.58s/it]

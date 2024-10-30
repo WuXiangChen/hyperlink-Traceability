@@ -1,0 +1,334 @@
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Using CUDA device: cuda:0
+文件夹 'CHESHIRE/hybird_LLM_GCN_ResNet_9E_6/rauchg' 不存在。
+Data has been loaded successfully for training!
+Start training!
+  0%|          | 0/600 [00:00<?, ?it/s]  0%|          | 1/600 [00:02<21:24,  2.14s/it]  0%|          | 2/600 [00:04<20:05,  2.02s/it]  0%|          | 3/600 [00:04<13:53,  1.40s/it]  1%|          | 4/600 [00:06<14:26,  1.45s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[9, 0], [9, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                               
+                                     [A  1%|          | 4/600 [00:07<14:26,  1.45s/it]
+100%|██████████| 1/1 [00:00<00:00, 64.46it/s][A
+                                             [A  1%|          | 5/600 [00:13<33:56,  3.42s/it]  1%|          | 6/600 [00:13<23:42,  2.39s/it]{'eval_loss': 0.711851954460144, 'eval_acc': 0.5, 'eval_auc': 0.30864197530864196, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[9, 0], [9, 0]], 'eval_runtime': 1.2149, 'eval_samples_per_second': 14.816, 'eval_steps_per_second': 0.823, 'epoch': 1.33}
+  1%|          | 7/600 [00:14<18:59,  1.92s/it]  1%|▏         | 8/600 [00:15<15:36,  1.58s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[9, 0], [9, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                               
+                                     [A  1%|▏         | 8/600 [00:16<15:36,  1.58s/it]
+100%|██████████| 1/1 [00:00<00:00, 72.09it/s][A
+                                             [A  2%|▏         | 9/600 [00:21<30:48,  3.13s/it]{'eval_loss': 0.7027248740196228, 'eval_acc': 0.5, 'eval_auc': 0.45679012345679015, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[9, 0], [9, 0]], 'eval_runtime': 0.8807, 'eval_samples_per_second': 20.439, 'eval_steps_per_second': 1.135, 'epoch': 2.67}
+  2%|▏         | 10/600 [00:23<26:16,  2.67s/it]  2%|▏         | 11/600 [00:24<21:59,  2.24s/it]  2%|▏         | 12/600 [00:25<18:11,  1.86s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[9, 0], [9, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                
+                                     [A  2%|▏         | 12/600 [00:27<18:11,  1.86s/it]
+100%|██████████| 1/1 [00:00<00:00, 78.60it/s][A
+                                             [A{'eval_loss': 0.7152221202850342, 'eval_acc': 0.5, 'eval_auc': 0.3827160493827161, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[9, 0], [9, 0]], 'eval_runtime': 1.3493, 'eval_samples_per_second': 13.341, 'eval_steps_per_second': 0.741, 'epoch': 4.0}
+  2%|▏         | 13/600 [00:34<39:50,  4.07s/it]  2%|▏         | 14/600 [00:36<31:46,  3.25s/it]  2%|▎         | 15/600 [00:37<25:38,  2.63s/it]  3%|▎         | 16/600 [00:38<22:06,  2.27s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[9, 0], [9, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                
+                                     [A  3%|▎         | 16/600 [00:40<22:06,  2.27s/it]
+100%|██████████| 1/1 [00:00<00:00, 73.12it/s][A
+                                             [A  3%|▎         | 17/600 [00:47<41:08,  4.23s/it]  3%|▎         | 18/600 [00:48<30:20,  3.13s/it]{'eval_loss': 0.7351759672164917, 'eval_acc': 0.5, 'eval_auc': 0.345679012345679, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[9, 0], [9, 0]], 'eval_runtime': 1.4881, 'eval_samples_per_second': 12.096, 'eval_steps_per_second': 0.672, 'epoch': 5.33}
+  3%|▎         | 19/600 [00:49<24:18,  2.51s/it]  3%|▎         | 20/600 [00:50<18:52,  1.95s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[9, 0], [9, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                
+                                     [A  3%|▎         | 20/600 [00:50<18:52,  1.95s/it]
+100%|██████████| 1/1 [00:00<00:00, 68.81it/s][A
+                                             [A  4%|▎         | 21/600 [00:57<34:53,  3.62s/it]{'eval_loss': 0.7229956984519958, 'eval_acc': 0.5, 'eval_auc': 0.3580246913580247, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[9, 0], [9, 0]], 'eval_runtime': 0.8747, 'eval_samples_per_second': 20.579, 'eval_steps_per_second': 1.143, 'epoch': 6.67}
+  4%|▎         | 22/600 [00:59<29:06,  3.02s/it]  4%|▍         | 23/600 [01:00<24:33,  2.55s/it]  4%|▍         | 24/600 [01:01<18:38,  1.94s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[9, 0], [9, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                
+                                     [A  4%|▍         | 24/600 [01:02<18:38,  1.94s/it]
+100%|██████████| 1/1 [00:00<00:00, 58.30it/s][A
+                                             [A{'eval_loss': 0.7248049378395081, 'eval_acc': 0.5, 'eval_auc': 0.3580246913580247, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[9, 0], [9, 0]], 'eval_runtime': 0.9431, 'eval_samples_per_second': 19.085, 'eval_steps_per_second': 1.06, 'epoch': 8.0}
+  4%|▍         | 25/600 [01:09<36:38,  3.82s/it]  4%|▍         | 26/600 [01:10<29:56,  3.13s/it]  4%|▍         | 27/600 [01:11<24:04,  2.52s/it]  5%|▍         | 28/600 [01:13<22:21,  2.35s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[9, 0], [9, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                
+                                     [A  5%|▍         | 28/600 [01:15<22:21,  2.35s/it]
+100%|██████████| 1/1 [00:00<00:00, 69.68it/s][A
+                                             [A  5%|▍         | 29/600 [01:21<38:10,  4.01s/it]  5%|▌         | 30/600 [01:22<27:46,  2.92s/it]{'eval_loss': 0.7553730607032776, 'eval_acc': 0.5, 'eval_auc': 0.3580246913580247, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[9, 0], [9, 0]], 'eval_runtime': 1.6081, 'eval_samples_per_second': 11.193, 'eval_steps_per_second': 0.622, 'epoch': 9.33}
+  5%|▌         | 31/600 [01:23<22:28,  2.37s/it]  5%|▌         | 32/600 [01:23<17:37,  1.86s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[9, 0], [9, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                
+                                     [A  5%|▌         | 32/600 [01:25<17:37,  1.86s/it]
+100%|██████████| 1/1 [00:00<00:00, 68.53it/s][A
+                                             [A                                                  5%|▌         | 32/600 [01:32<17:37,  1.86s/it]  5%|▌         | 32/600 [01:32<27:13,  2.88s/it]
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 0.7798134684562683, 'eval_acc': 0.5, 'eval_auc': 0.30864197530864196, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[9, 0], [9, 0]], 'eval_runtime': 1.5847, 'eval_samples_per_second': 11.358, 'eval_steps_per_second': 0.631, 'epoch': 10.67}
+{'train_runtime': 92.0572, 'train_samples_per_second': 152.079, 'train_steps_per_second': 6.518, 'train_loss': 0.44723570346832275, 'epoch': 10.67}
+Data has been loaded successfully for testing!
+Start testing!
+  0%|          | 0/3 [00:00<?, ?it/s] 67%|██████▋   | 2/3 [00:00<00:00,  3.55it/s]100%|██████████| 3/3 [00:00<00:00,  3.10it/s]Trainer is attempting to log a value of "[[36, 0], [15, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+100%|██████████| 3/3 [00:00<00:00,  3.13it/s]
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 0.6437274217605591, 'eval_acc': 0.7058823529411765, 'eval_auc': 0.5611111111111111, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[36, 0], [15, 0]]}
+文件夹 'CHESHIRE/hybird_LLM_GCN_ResNet_9E_6/rauchg' 不存在。
+Data has been loaded successfully for training!
+Start training!
+  0%|          | 0/600 [00:00<?, ?it/s]  0%|          | 1/600 [00:01<10:09,  1.02s/it]  0%|          | 2/600 [00:02<13:56,  1.40s/it]  0%|          | 3/600 [00:03<12:03,  1.21s/it]  1%|          | 4/600 [00:05<13:53,  1.40s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[1, 10], [1, 6]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                               
+100%|██████████| 1/1 [00:00<00:00, 68.16it/s][A  1%|          | 4/600 [00:06<13:53,  1.40s/it]
+                                             [A  1%|          | 5/600 [00:16<47:30,  4.79s/it]  1%|          | 6/600 [00:16<32:39,  3.30s/it]{'eval_loss': 0.7000682950019836, 'eval_acc': 0.3888888888888889, 'eval_auc': 0.5194805194805194, 'eval_precision': 0.375, 'eval_recall': 0.8571428571428571, 'eval_f1': 0.5217391304347825, 'eval_confusion_matrix': [[1, 10], [1, 6]], 'eval_runtime': 1.4179, 'eval_samples_per_second': 12.695, 'eval_steps_per_second': 0.705, 'epoch': 1.33}
+  1%|          | 7/600 [00:17<25:11,  2.55s/it]  1%|▏         | 8/600 [00:19<22:07,  2.24s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                               
+100%|██████████| 1/1 [00:00<00:00, 55.21it/s][A  1%|▏         | 8/600 [00:20<22:07,  2.24s/it]
+                                             [A  2%|▏         | 9/600 [00:27<39:58,  4.06s/it]{'eval_loss': 0.6741878986358643, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.4935064935064935, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.251, 'eval_samples_per_second': 14.388, 'eval_steps_per_second': 0.799, 'epoch': 2.67}
+  2%|▏         | 10/600 [00:28<31:06,  3.16s/it]  2%|▏         | 11/600 [00:29<24:08,  2.46s/it]  2%|▏         | 12/600 [00:29<18:09,  1.85s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 77.38it/s][A  2%|▏         | 12/600 [00:30<18:09,  1.85s/it]
+                                             [A{'eval_loss': 0.6702045202255249, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.4675324675324675, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 0.7525, 'eval_samples_per_second': 23.921, 'eval_steps_per_second': 1.329, 'epoch': 4.0}
+  2%|▏         | 13/600 [00:38<38:12,  3.91s/it]  2%|▏         | 14/600 [00:40<31:56,  3.27s/it]  2%|▎         | 15/600 [00:40<24:24,  2.50s/it]  3%|▎         | 16/600 [00:42<22:43,  2.33s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 68.50it/s][A  3%|▎         | 16/600 [00:44<22:43,  2.33s/it]
+                                             [A  3%|▎         | 17/600 [00:51<40:46,  4.20s/it]  3%|▎         | 18/600 [00:51<29:51,  3.08s/it]{'eval_loss': 0.6859411001205444, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.2727272727272727, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.2875, 'eval_samples_per_second': 13.981, 'eval_steps_per_second': 0.777, 'epoch': 5.33}
+  3%|▎         | 19/600 [00:53<26:22,  2.72s/it]  3%|▎         | 20/600 [00:54<21:56,  2.27s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 67.61it/s][A  3%|▎         | 20/600 [00:56<21:56,  2.27s/it]
+                                             [A  4%|▎         | 21/600 [01:02<38:44,  4.01s/it]{'eval_loss': 0.6959456205368042, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.12987012987012986, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.4797, 'eval_samples_per_second': 12.165, 'eval_steps_per_second': 0.676, 'epoch': 6.67}
+  4%|▎         | 22/600 [01:04<30:44,  3.19s/it]  4%|▍         | 23/600 [01:04<23:22,  2.43s/it]  4%|▍         | 24/600 [01:05<17:28,  1.82s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[9, 2], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 73.59it/s][A  4%|▍         | 24/600 [01:06<17:28,  1.82s/it]
+                                             [A{'eval_loss': 0.7244501113891602, 'eval_acc': 0.5, 'eval_auc': 0.025974025974025965, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[9, 2], [7, 0]], 'eval_runtime': 0.7516, 'eval_samples_per_second': 23.95, 'eval_steps_per_second': 1.331, 'epoch': 8.0}
+  4%|▍         | 25/600 [01:13<35:28,  3.70s/it]  4%|▍         | 26/600 [01:14<29:12,  3.05s/it]  4%|▍         | 27/600 [01:16<23:35,  2.47s/it]  5%|▍         | 28/600 [01:17<20:39,  2.17s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[5, 6], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 69.12it/s][A  5%|▍         | 28/600 [01:18<20:39,  2.17s/it]
+                                             [A  5%|▍         | 29/600 [01:27<41:49,  4.40s/it]  5%|▌         | 30/600 [01:27<31:10,  3.28s/it]{'eval_loss': 0.7499592304229736, 'eval_acc': 0.2777777777777778, 'eval_auc': 0.06493506493506493, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[5, 6], [7, 0]], 'eval_runtime': 0.9499, 'eval_samples_per_second': 18.949, 'eval_steps_per_second': 1.053, 'epoch': 9.33}
+  5%|▌         | 31/600 [01:29<25:40,  2.71s/it]  5%|▌         | 32/600 [01:30<22:29,  2.38s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 69.29it/s][A  5%|▌         | 32/600 [01:31<22:29,  2.38s/it]
+                                             [A  6%|▌         | 33/600 [01:42<48:04,  5.09s/it]{'eval_loss': 0.7532926797866821, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.06493506493506493, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.0889, 'eval_samples_per_second': 16.531, 'eval_steps_per_second': 0.918, 'epoch': 10.67}
+  6%|▌         | 34/600 [01:43<38:27,  4.08s/it]  6%|▌         | 35/600 [01:45<32:14,  3.42s/it]  6%|▌         | 36/600 [01:46<24:23,  2.59s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 75.70it/s][A  6%|▌         | 36/600 [01:47<24:23,  2.59s/it]
+                                             [A                                                  6%|▌         | 36/600 [01:53<24:23,  2.59s/it]  6%|▌         | 36/600 [01:53<29:42,  3.16s/it]
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 0.7833871841430664, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.06493506493506493, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.1529, 'eval_samples_per_second': 15.613, 'eval_steps_per_second': 0.867, 'epoch': 12.0}
+{'train_runtime': 113.7743, 'train_samples_per_second': 126.566, 'train_steps_per_second': 5.274, 'train_loss': 0.4045816792382134, 'epoch': 12.0}
+Data has been loaded successfully for testing!
+Start testing!
+  0%|          | 0/3 [00:00<?, ?it/s] 67%|██████▋   | 2/3 [00:00<00:00,  4.77it/s]100%|██████████| 3/3 [00:00<00:00,  4.57it/s]Trainer is attempting to log a value of "[[33, 0], [14, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+100%|██████████| 3/3 [00:00<00:00,  4.51it/s]
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 0.6491571664810181, 'eval_acc': 0.7021276595744681, 'eval_auc': 0.38744588744588737, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[33, 0], [14, 0]]}
+文件夹 'CHESHIRE/hybird_LLM_GCN_ResNet_9E_6/rauchg' 不存在。
+Data has been loaded successfully for training!
+Start training!
+  0%|          | 0/600 [00:00<?, ?it/s]  0%|          | 1/600 [00:01<15:04,  1.51s/it]  0%|          | 2/600 [00:03<16:09,  1.62s/it]  0%|          | 3/600 [00:03<11:45,  1.18s/it]  1%|          | 4/600 [00:05<12:59,  1.31s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[0, 11], [1, 6]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                               
+100%|██████████| 1/1 [00:00<00:00, 67.77it/s][A  1%|          | 4/600 [00:06<12:59,  1.31s/it]
+                                             [A  1%|          | 5/600 [00:13<38:23,  3.87s/it]  1%|          | 6/600 [00:14<26:42,  2.70s/it]{'eval_loss': 0.7072924375534058, 'eval_acc': 0.3333333333333333, 'eval_auc': 0.5324675324675324, 'eval_precision': 0.35294117647058826, 'eval_recall': 0.8571428571428571, 'eval_f1': 0.5, 'eval_confusion_matrix': [[0, 11], [1, 6]], 'eval_runtime': 1.1837, 'eval_samples_per_second': 15.206, 'eval_steps_per_second': 0.845, 'epoch': 1.33}
+  1%|          | 7/600 [00:15<21:06,  2.13s/it]  1%|▏         | 8/600 [00:16<19:25,  1.97s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                               
+100%|██████████| 1/1 [00:00<00:00, 61.09it/s][A  1%|▏         | 8/600 [00:18<19:25,  1.97s/it]
+                                             [A  2%|▏         | 9/600 [00:25<38:47,  3.94s/it]{'eval_loss': 0.681885838508606, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.36363636363636365, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.1943, 'eval_samples_per_second': 15.071, 'eval_steps_per_second': 0.837, 'epoch': 2.67}
+  2%|▏         | 10/600 [00:26<29:46,  3.03s/it]  2%|▏         | 11/600 [00:26<23:06,  2.35s/it]  2%|▏         | 12/600 [00:27<17:12,  1.76s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 73.19it/s][A  2%|▏         | 12/600 [00:28<17:12,  1.76s/it]
+                                             [A{'eval_loss': 0.6863569021224976, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.24675324675324672, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 0.977, 'eval_samples_per_second': 18.423, 'eval_steps_per_second': 1.023, 'epoch': 4.0}
+  2%|▏         | 13/600 [00:35<37:33,  3.84s/it]  2%|▏         | 14/600 [00:37<31:08,  3.19s/it]  2%|▎         | 15/600 [00:38<24:31,  2.52s/it]  3%|▎         | 16/600 [00:40<22:54,  2.35s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 67.24it/s][A  3%|▎         | 16/600 [00:42<22:54,  2.35s/it]
+                                             [A  3%|▎         | 17/600 [00:50<44:41,  4.60s/it]  3%|▎         | 18/600 [00:51<33:53,  3.49s/it]{'eval_loss': 0.6855582594871521, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.2597402597402597, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.5837, 'eval_samples_per_second': 11.366, 'eval_steps_per_second': 0.631, 'epoch': 5.33}
+  3%|▎         | 19/600 [00:53<29:44,  3.07s/it]  3%|▎         | 20/600 [00:54<24:16,  2.51s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 67.42it/s][A  3%|▎         | 20/600 [00:55<24:16,  2.51s/it]
+                                             [A  4%|▎         | 21/600 [01:03<42:11,  4.37s/it]{'eval_loss': 0.688913106918335, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.20779220779220778, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.2399, 'eval_samples_per_second': 14.518, 'eval_steps_per_second': 0.807, 'epoch': 6.67}
+  4%|▎         | 22/600 [01:04<32:50,  3.41s/it]  4%|▍         | 23/600 [01:05<24:50,  2.58s/it]  4%|▍         | 24/600 [01:05<18:30,  1.93s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 77.82it/s][A  4%|▍         | 24/600 [01:06<18:30,  1.93s/it]
+                                             [A{'eval_loss': 0.6967766880989075, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.22077922077922077, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.0098, 'eval_samples_per_second': 17.826, 'eval_steps_per_second': 0.99, 'epoch': 8.0}
+  4%|▍         | 25/600 [01:13<34:44,  3.63s/it]  4%|▍         | 26/600 [01:13<26:40,  2.79s/it]  4%|▍         | 27/600 [01:14<19:54,  2.08s/it]  5%|▍         | 28/600 [01:16<18:43,  1.96s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[10, 1], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 67.23it/s][A  5%|▍         | 28/600 [01:17<18:43,  1.96s/it]
+                                             [A  5%|▍         | 29/600 [01:25<39:20,  4.13s/it]  5%|▌         | 30/600 [01:25<28:50,  3.04s/it]{'eval_loss': 0.7088181376457214, 'eval_acc': 0.5555555555555556, 'eval_auc': 0.2857142857142857, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[10, 1], [7, 0]], 'eval_runtime': 1.2539, 'eval_samples_per_second': 14.355, 'eval_steps_per_second': 0.797, 'epoch': 9.33}
+  5%|▌         | 31/600 [01:26<23:11,  2.45s/it]  5%|▌         | 32/600 [01:27<18:39,  1.97s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[7, 4], [6, 1]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 73.76it/s][A  5%|▌         | 32/600 [01:28<18:39,  1.97s/it]
+                                             [A  6%|▌         | 33/600 [01:35<36:30,  3.86s/it]{'eval_loss': 0.7230184674263, 'eval_acc': 0.4444444444444444, 'eval_auc': 0.2857142857142857, 'eval_precision': 0.2, 'eval_recall': 0.14285714285714285, 'eval_f1': 0.16666666666666666, 'eval_confusion_matrix': [[7, 4], [6, 1]], 'eval_runtime': 0.9794, 'eval_samples_per_second': 18.379, 'eval_steps_per_second': 1.021, 'epoch': 10.67}
+  6%|▌         | 34/600 [01:37<29:24,  3.12s/it]  6%|▌         | 35/600 [01:38<25:02,  2.66s/it]  6%|▌         | 36/600 [01:39<20:21,  2.17s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[6, 5], [5, 2]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 77.78it/s][A  6%|▌         | 36/600 [01:41<20:21,  2.17s/it]
+                                             [A                                                  6%|▌         | 36/600 [01:50<20:21,  2.17s/it]  6%|▌         | 36/600 [01:50<28:51,  3.07s/it]
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 0.7587292790412903, 'eval_acc': 0.4444444444444444, 'eval_auc': 0.24675324675324672, 'eval_precision': 0.2857142857142857, 'eval_recall': 0.2857142857142857, 'eval_f1': 0.2857142857142857, 'eval_confusion_matrix': [[6, 5], [5, 2]], 'eval_runtime': 1.2825, 'eval_samples_per_second': 14.035, 'eval_steps_per_second': 0.78, 'epoch': 12.0}
+{'train_runtime': 110.509, 'train_samples_per_second': 130.306, 'train_steps_per_second': 5.429, 'train_loss': 0.4102339479658339, 'epoch': 12.0}
+Data has been loaded successfully for testing!
+Start testing!
+  0%|          | 0/3 [00:00<?, ?it/s] 67%|██████▋   | 2/3 [00:01<00:00,  1.91it/s]100%|██████████| 3/3 [00:01<00:00,  1.55it/s]Trainer is attempting to log a value of "[[33, 0], [14, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+100%|██████████| 3/3 [00:01<00:00,  1.60it/s]
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 0.6625072956085205, 'eval_acc': 0.7021276595744681, 'eval_auc': 0.4913419913419914, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[33, 0], [14, 0]]}
+文件夹 'CHESHIRE/hybird_LLM_GCN_ResNet_9E_6/rauchg' 不存在。
+Data has been loaded successfully for training!
+Start training!
+  0%|          | 0/600 [00:00<?, ?it/s]  0%|          | 1/600 [00:01<13:17,  1.33s/it]  0%|          | 2/600 [00:01<09:16,  1.07it/s]  0%|          | 3/600 [00:02<07:45,  1.28it/s]  1%|          | 4/600 [00:03<09:33,  1.04it/s]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[0, 11], [0, 7]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                               
+100%|██████████| 1/1 [00:00<00:00, 66.73it/s][A  1%|          | 4/600 [00:04<09:33,  1.04it/s]
+                                             [A  1%|          | 5/600 [00:11<34:55,  3.52s/it]  1%|          | 6/600 [00:12<26:00,  2.63s/it]{'eval_loss': 0.7058537006378174, 'eval_acc': 0.3888888888888889, 'eval_auc': 0.5584415584415584, 'eval_precision': 0.3888888888888889, 'eval_recall': 1.0, 'eval_f1': 0.56, 'eval_confusion_matrix': [[0, 11], [0, 7]], 'eval_runtime': 0.7874, 'eval_samples_per_second': 22.86, 'eval_steps_per_second': 1.27, 'epoch': 1.33}
+  1%|          | 7/600 [00:14<24:39,  2.49s/it]  1%|▏         | 8/600 [00:16<20:09,  2.04s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                               
+100%|██████████| 1/1 [00:00<00:00, 67.39it/s][A  1%|▏         | 8/600 [00:17<20:09,  2.04s/it]
+                                             [A  2%|▏         | 9/600 [00:23<37:10,  3.77s/it]{'eval_loss': 0.6848372220993042, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.46753246753246747, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 0.9633, 'eval_samples_per_second': 18.685, 'eval_steps_per_second': 1.038, 'epoch': 2.67}
+  2%|▏         | 10/600 [00:25<31:14,  3.18s/it]  2%|▏         | 11/600 [00:27<26:28,  2.70s/it]  2%|▏         | 12/600 [00:28<21:29,  2.19s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 73.72it/s][A  2%|▏         | 12/600 [00:29<21:29,  2.19s/it]
+                                             [A{'eval_loss': 0.6694129705429077, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.5064935064935064, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.0741, 'eval_samples_per_second': 16.758, 'eval_steps_per_second': 0.931, 'epoch': 4.0}
+  2%|▏         | 13/600 [00:35<36:56,  3.78s/it]  2%|▏         | 14/600 [00:36<27:45,  2.84s/it]  2%|▎         | 15/600 [00:37<21:40,  2.22s/it]  3%|▎         | 16/600 [00:38<19:04,  1.96s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 66.99it/s][A  3%|▎         | 16/600 [00:39<19:04,  1.96s/it]
+                                             [A  3%|▎         | 17/600 [00:46<36:19,  3.74s/it]  3%|▎         | 18/600 [00:46<27:24,  2.83s/it]{'eval_loss': 0.6684646010398865, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.5324675324675324, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 0.7524, 'eval_samples_per_second': 23.924, 'eval_steps_per_second': 1.329, 'epoch': 5.33}
+  3%|▎         | 19/600 [00:48<24:42,  2.55s/it]  3%|▎         | 20/600 [00:50<22:01,  2.28s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 63.62it/s][A  3%|▎         | 20/600 [00:51<22:01,  2.28s/it]
+                                             [A  4%|▎         | 21/600 [00:58<37:57,  3.93s/it]{'eval_loss': 0.6791712641716003, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.45454545454545453, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.3476, 'eval_samples_per_second': 13.357, 'eval_steps_per_second': 0.742, 'epoch': 6.67}
+  4%|▎         | 22/600 [00:59<29:25,  3.05s/it]  4%|▍         | 23/600 [01:00<24:31,  2.55s/it]  4%|▍         | 24/600 [01:02<21:10,  2.21s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 74.53it/s][A  4%|▍         | 24/600 [01:03<21:10,  2.21s/it]
+                                             [A{'eval_loss': 0.6950696706771851, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.35064935064935066, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 0.9212, 'eval_samples_per_second': 19.539, 'eval_steps_per_second': 1.086, 'epoch': 8.0}
+  4%|▍         | 25/600 [01:09<36:59,  3.86s/it]  4%|▍         | 26/600 [01:10<28:47,  3.01s/it]  4%|▍         | 27/600 [01:11<21:28,  2.25s/it]  5%|▍         | 28/600 [01:12<18:15,  1.92s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 68.91it/s][A  5%|▍         | 28/600 [01:13<18:15,  1.92s/it]
+                                             [A  5%|▍         | 29/600 [01:20<35:33,  3.74s/it]  5%|▌         | 30/600 [01:21<27:29,  2.89s/it]{'eval_loss': 0.709119439125061, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.35064935064935066, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 0.7763, 'eval_samples_per_second': 23.187, 'eval_steps_per_second': 1.288, 'epoch': 9.33}
+  5%|▌         | 31/600 [01:23<24:44,  2.61s/it]  5%|▌         | 32/600 [01:24<21:39,  2.29s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 67.57it/s][A  5%|▌         | 32/600 [01:26<21:39,  2.29s/it]
+                                             [A  6%|▌         | 33/600 [01:32<36:18,  3.84s/it]{'eval_loss': 0.7405630350112915, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.3246753246753247, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.3474, 'eval_samples_per_second': 13.359, 'eval_steps_per_second': 0.742, 'epoch': 10.67}
+  6%|▌         | 34/600 [01:33<28:13,  2.99s/it]  6%|▌         | 35/600 [01:34<22:05,  2.35s/it]  6%|▌         | 36/600 [01:34<17:08,  1.82s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[10, 1], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 72.49it/s][A  6%|▌         | 36/600 [01:35<17:08,  1.82s/it]
+                                             [A                                                  6%|▌         | 36/600 [01:43<17:08,  1.82s/it]  6%|▌         | 36/600 [01:43<27:01,  2.88s/it]
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 0.7640180587768555, 'eval_acc': 0.5555555555555556, 'eval_auc': 0.35064935064935066, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[10, 1], [7, 0]], 'eval_runtime': 0.7606, 'eval_samples_per_second': 23.667, 'eval_steps_per_second': 1.315, 'epoch': 12.0}
+{'train_runtime': 103.5164, 'train_samples_per_second': 139.108, 'train_steps_per_second': 5.796, 'train_loss': 0.3984643088446723, 'epoch': 12.0}
+Data has been loaded successfully for testing!
+Start testing!
+  0%|          | 0/3 [00:00<?, ?it/s] 67%|██████▋   | 2/3 [00:00<00:00,  4.14it/s]100%|██████████| 3/3 [00:00<00:00,  4.25it/s]Trainer is attempting to log a value of "[[33, 0], [14, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+100%|██████████| 3/3 [00:00<00:00,  4.14it/s]
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 0.6695522665977478, 'eval_acc': 0.7021276595744681, 'eval_auc': 0.4329004329004329, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[33, 0], [14, 0]]}
+文件夹 'CHESHIRE/hybird_LLM_GCN_ResNet_9E_6/rauchg' 不存在。
+Data has been loaded successfully for training!
+Start training!
+  0%|          | 0/600 [00:00<?, ?it/s]  0%|          | 1/600 [00:01<17:09,  1.72s/it]  0%|          | 2/600 [00:03<14:41,  1.47s/it]  0%|          | 3/600 [00:03<12:13,  1.23s/it]  1%|          | 4/600 [00:05<13:00,  1.31s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[0, 11], [1, 6]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                               
+100%|██████████| 1/1 [00:00<00:00, 67.17it/s][A  1%|          | 4/600 [00:06<13:00,  1.31s/it]
+                                             [A  1%|          | 5/600 [00:14<40:46,  4.11s/it]  1%|          | 6/600 [00:14<28:17,  2.86s/it]{'eval_loss': 0.7027186155319214, 'eval_acc': 0.3333333333333333, 'eval_auc': 0.5844155844155845, 'eval_precision': 0.35294117647058826, 'eval_recall': 0.8571428571428571, 'eval_f1': 0.5, 'eval_confusion_matrix': [[0, 11], [1, 6]], 'eval_runtime': 1.455, 'eval_samples_per_second': 12.371, 'eval_steps_per_second': 0.687, 'epoch': 1.33}
+  1%|          | 7/600 [00:15<22:15,  2.25s/it]  1%|▏         | 8/600 [00:17<19:43,  2.00s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                               
+100%|██████████| 1/1 [00:00<00:00, 69.11it/s][A  1%|▏         | 8/600 [00:18<19:43,  2.00s/it]
+                                             [A  2%|▏         | 9/600 [00:25<39:53,  4.05s/it]{'eval_loss': 0.6673262119293213, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.5324675324675324, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.2183, 'eval_samples_per_second': 14.775, 'eval_steps_per_second': 0.821, 'epoch': 2.67}
+  2%|▏         | 10/600 [00:27<31:09,  3.17s/it]  2%|▏         | 11/600 [00:27<23:39,  2.41s/it]  2%|▏         | 12/600 [00:28<17:45,  1.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 76.13it/s][A  2%|▏         | 12/600 [00:29<17:45,  1.81s/it]
+                                             [A{'eval_loss': 0.7058115601539612, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.44155844155844154, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 0.963, 'eval_samples_per_second': 18.691, 'eval_steps_per_second': 1.038, 'epoch': 4.0}
+  2%|▏         | 13/600 [00:37<38:30,  3.94s/it]  2%|▏         | 14/600 [00:38<31:09,  3.19s/it]  2%|▎         | 15/600 [00:39<24:58,  2.56s/it]  3%|▎         | 16/600 [00:41<22:14,  2.29s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 69.03it/s][A  3%|▎         | 16/600 [00:42<22:14,  2.29s/it]
+                                             [A  3%|▎         | 17/600 [00:50<41:22,  4.26s/it]  3%|▎         | 18/600 [00:50<30:06,  3.10s/it]{'eval_loss': 0.7818139791488647, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.35064935064935066, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.6439, 'eval_samples_per_second': 10.95, 'eval_steps_per_second': 0.608, 'epoch': 5.33}
+  3%|▎         | 19/600 [00:52<25:28,  2.63s/it]  3%|▎         | 20/600 [00:53<21:33,  2.23s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 69.09it/s][A  3%|▎         | 20/600 [00:54<21:33,  2.23s/it]
+                                             [A  4%|▎         | 21/600 [01:01<38:22,  3.98s/it]{'eval_loss': 0.7816336750984192, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.42857142857142855, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.2812, 'eval_samples_per_second': 14.049, 'eval_steps_per_second': 0.78, 'epoch': 6.67}
+  4%|▎         | 22/600 [01:02<29:42,  3.08s/it]  4%|▍         | 23/600 [01:03<22:42,  2.36s/it]  4%|▍         | 24/600 [01:03<17:08,  1.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 59.82it/s][A  4%|▍         | 24/600 [01:04<17:08,  1.79s/it]
+                                             [A{'eval_loss': 0.7607725262641907, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.40259740259740256, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 0.9553, 'eval_samples_per_second': 18.843, 'eval_steps_per_second': 1.047, 'epoch': 8.0}
+  4%|▍         | 25/600 [01:11<35:43,  3.73s/it]  4%|▍         | 26/600 [01:13<28:33,  2.99s/it]  4%|▍         | 27/600 [01:13<22:24,  2.35s/it]  5%|▍         | 28/600 [01:15<20:12,  2.12s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 68.15it/s][A  5%|▍         | 28/600 [01:16<20:12,  2.12s/it]
+                                             [A  5%|▍         | 29/600 [01:23<36:45,  3.86s/it]  5%|▌         | 30/600 [01:23<26:48,  2.82s/it]{'eval_loss': 0.7380906343460083, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.3506493506493506, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 1.0479, 'eval_samples_per_second': 17.177, 'eval_steps_per_second': 0.954, 'epoch': 9.33}
+  5%|▌         | 31/600 [01:24<21:34,  2.28s/it]  5%|▌         | 32/600 [01:25<17:00,  1.80s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 69.41it/s][A  5%|▌         | 32/600 [01:26<17:00,  1.80s/it]
+                                             [A  6%|▌         | 33/600 [01:33<34:48,  3.68s/it]{'eval_loss': 0.7576569318771362, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.4285714285714285, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 0.9372, 'eval_samples_per_second': 19.207, 'eval_steps_per_second': 1.067, 'epoch': 10.67}
+  6%|▌         | 34/600 [01:35<28:38,  3.04s/it]  6%|▌         | 35/600 [01:36<24:02,  2.55s/it]  6%|▌         | 36/600 [01:37<18:35,  1.98s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][ATrainer is attempting to log a value of "[[11, 0], [7, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+
+                                     [A                                                
+100%|██████████| 1/1 [00:00<00:00, 59.83it/s][A  6%|▌         | 36/600 [01:38<18:35,  1.98s/it]
+                                             [A                                                  6%|▌         | 36/600 [01:46<18:35,  1.98s/it]  6%|▌         | 36/600 [01:46<27:56,  2.97s/it]
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'eval_loss': 0.7930723428726196, 'eval_acc': 0.6111111111111112, 'eval_auc': 0.4155844155844156, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[11, 0], [7, 0]], 'eval_runtime': 0.9963, 'eval_samples_per_second': 18.068, 'eval_steps_per_second': 1.004, 'epoch': 12.0}
+{'train_runtime': 106.9908, 'train_samples_per_second': 134.591, 'train_steps_per_second': 5.608, 'train_loss': 0.4196586608886719, 'epoch': 12.0}
+Data has been loaded successfully for testing!
+Start testing!
+  0%|          | 0/3 [00:00<?, ?it/s] 67%|██████▋   | 2/3 [00:01<00:00,  1.28it/s]100%|██████████| 3/3 [00:02<00:00,  1.28it/s]Trainer is attempting to log a value of "[[33, 0], [14, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+100%|██████████| 3/3 [00:02<00:00,  1.27it/s]
+{'eval_loss': 0.6285192370414734, 'eval_acc': 0.7021276595744681, 'eval_auc': 0.5670995670995671, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[33, 0], [14, 0]]}
+   eval_loss  eval_acc  eval_auc  ...  eval_recall  eval_f1  eval_confusion_matrix
+0   0.643727  0.705882  0.561111  ...          0.0        0     [[36, 0], [15, 0]]
+1   0.649157  0.702128  0.387446  ...          0.0        0     [[33, 0], [14, 0]]
+2   0.662507  0.702128  0.491342  ...          0.0        0     [[33, 0], [14, 0]]
+3   0.669552  0.702128  0.432900  ...          0.0        0     [[33, 0], [14, 0]]
+4   0.628519  0.702128  0.567100  ...          0.0        0     [[33, 0], [14, 0]]
+
+[5 rows x 7 columns]
+The rauchg results have been saved successfully!
