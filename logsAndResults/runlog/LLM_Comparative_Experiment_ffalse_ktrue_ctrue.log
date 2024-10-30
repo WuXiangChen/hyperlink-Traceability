@@ -1,0 +1,65 @@
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Using CUDA device: cuda:0
+False False False
+文件夹 'CHESHIRE/LLM_Comparative_Experiment/Activiti' 不存在。
+Data has been loaded successfully for training!
+Start training!
+  0%|          | 0/570 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "main.py", line 182, in <module>
+    main(root_Repo=repopath, device=device)
+  File "main.py", line 129, in main
+    result = pro.train((train_hyperlink, train_labels))
+  File "/root/workspace/hyperlink-work/hyperlink-Traceability/processerHook/processer_BAAI.py", line 32, in train
+    self.trainer.train()
+  File "/root/workspace/hyperlink-work/hyperlink-Traceability/model/models/trainer_hook.py", line 125, in train
+    trainer.train()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2052, in train
+    return inner_training_loop(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 2388, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3485, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/trainer.py", line 3532, in compute_loss
+    outputs = model(**inputs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/workspace/hyperlink-work/hyperlink-Traceability/model/models/CHESHIRE/BAAI_Model_splitLinear.py", line 104, in forward
+    x = self.model(input_ , att_).pooler_output
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 1142, in forward
+    encoder_outputs = self.encoder(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 695, in forward
+    layer_outputs = layer_module(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 627, in forward
+    layer_output = apply_chunking_to_forward(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/pytorch_utils.py", line 248, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 639, in feed_forward_chunk
+    intermediate_output = self.intermediate(attention_output)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 540, in forward
+    hidden_states = self.intermediate_act_fn(hidden_states)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/activations.py", line 78, in forward
+    return self.act(input)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacty of 31.74 GiB of which 5.06 MiB is free. Process 18819 has 376.00 MiB memory in use. Process 347 has 31.35 GiB memory in use. Of the allocated memory 30.17 GiB is allocated by PyTorch, and 20.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+  0%|          | 0/570 [00:02<?, ?it/s]

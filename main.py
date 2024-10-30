@@ -148,27 +148,36 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='The arguments set for GraphLinker')
     # 添加参数及其简写
     parser.add_argument('-r', '--repoName', type=str, default="Activiti", help='The repository name in the dataset. This is a required parameter.')
-    parser.add_argument('-c', '--cudaN', type=int, default=1, help='The GPU number to use. Default is 0.')
+    parser.add_argument('-c', '--cudaN', type=int, default=0, help='The GPU number to use. Default is 0.')
     parser.add_argument('-n', '--num_folds', type=int, default=5, help='The number of folds for cross-validation. Default is 5.')
     parser.add_argument('-t', '--test_ratio', type=float, default=0.2, help='The ratio of the test set. Default is 0.2.')
     parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
     # 增加三个对比实验参数，初始值设置为True
-    parser.add_argument('--freeze', type=bool, default=True, help='Frozening The LLM when Training or not.')
-    parser.add_argument('--with_knowledge', type=bool, default=True, help='Take the prior-knowledge into training or not.')
-    parser.add_argument('--cat', type=bool, default=True, help='Using the cat module for the input information or not.')
+    parser.add_argument('--freeze', type=str, default="false", help='Frozening The LLM when Training or not.')
+    parser.add_argument('--with_knowledge', type=str, default="true", help='Take the prior-knowledge into training or not.')
+    parser.add_argument('--cat', type=str, default="false", help='Using the cat module for the input information or not.')
 
     args = parser.parse_args()
     repoName = args.repoName
-    device = Utils.get_cuda_device(0)
+    torch.cuda.set_device(args.cudaN)
+    device = torch.cuda.current_device()
+
     root_path = "../dataset/hyperlink_npz"
     repopath = root_path + "/"+ repoName + ".npz"
     num_folds = args.num_folds
     test_ratio = args.test_ratio
     running_type = args.running_type
 
-    freeze = args.freeze
-    with_knowledge = args.with_knowledge
-    cat = args.cat
+    if args.freeze=="true": freeze = True 
+    else: freeze = False
+
+    if args.with_knowledge=="true":
+        with_knowledge = True
+    else:with_knowledge = False
+
+    if args.cat=="true":
+        cat = True
+    else: cat = False
 
     print(freeze,with_knowledge,cat)
 

@@ -77,32 +77,36 @@ class BAAI_model(nn.Module):
     def forward(self, edges, labels=None):
         # 输出每一列中的非0元素的索引
         node_sentence_list, nodes_list = Utils.process_edges_data(self.artifacts, edges)
-        inputs = []
-        attention_masks = []
+        # 收集所有的 NL_PL
+        all_inputs = []
+        all_atts = []
         for NL_PLs in node_sentence_list:
-            inputs_ = []
-            atts_ = []
             for NL_PL in NL_PLs:
                 encoded = self.tokenizer.encode_plus(
                     NL_PL,
                     return_tensors="pt",
                     truncation=True,
                     padding='max_length',
-                    max_length=512,
+                    max_length=128,
                     return_attention_mask=True
                 )
-                inputs_.append(encoded['input_ids'])
-                atts_.append(encoded['attention_mask'])
-            inputs.append(inputs_)
-            attention_masks.append(atts_)
-        # inputs = torch.cat(inputs, dim=0).to(self.model.device)
-        # 这里需要根据输入内容进行合并
+                all_inputs.append(encoded['input_ids'])
+                all_atts.append(encoded['attention_mask'])
+
+        # 将所有的 NL_PL 进行 embedding
+        all_inputs = torch.cat(all_inputs).to(self.model.device)
+        all_atts = torch.cat(all_atts).to(self.model.device)
+        all_embeddings = self.model(all_inputs, all_atts).pooler_output
+
+        # 按照原 NL_PLs 的分布重新组织
         sen_emb = []
-        for k, input_ in enumerate(inputs):
-            att_ = torch.cat(attention_masks[k]).to(self.model.device)
-            input_ = torch.cat(input_).to(self.model.device)
-            x = self.model(input_ , att_).pooler_output
-            sen_emb.append(self.senEmbLSTM(x))
+        index = 0
+        for NL_PLs in node_sentence_list:
+            num_sentences = len(NL_PLs)
+            embeddings = all_embeddings[index:index + num_sentences]
+            index += num_sentences
+            sen_emb.append(self.senEmbLSTM(embeddings))
+
         sen_emb_ = torch.cat(sen_emb, dim=0)
         outputs = self.linear(sen_emb_)
         outputs = self.classify1(outputs)
