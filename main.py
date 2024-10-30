@@ -160,9 +160,9 @@ if __name__ == '__main__':
     parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
     # 增加三个对比实验参数，冻结-非冻结，自带知识-无自带知识，cat-非cat
     # 增加三个对比实验参数，初始值设置为True
-    parser.add_argument('--freeze', type=bool, default=True, help='Frozening The LLM when Training or not.')
-    parser.add_argument('--with_knowledge', type=bool, default=True, help='Take the prior-knowledge into training or not.')
-    parser.add_argument('--GAT', type=bool, default=False, help='Using the cat module for the input information or not.')
+    parser.add_argument('--freeze', type=str, default="false", help='Frozening The LLM when Training or not.')
+    parser.add_argument('--with_knowledge', type=str, default="true", help='Take the prior-knowledge into training or not.')
+    parser.add_argument('--gat', type=str, default="false", help='Using the gat module for the input information or not.')
 
     args = parser.parse_args()
     repoName = args.repoName
@@ -176,10 +176,17 @@ if __name__ == '__main__':
     test_ratio = args.test_ratio
     running_type = args.running_type
 
-    freeze = args.freeze
-    with_knowledge = args.with_knowledge
-    gat = args.GAT
+    if args.freeze=="true": freeze = True 
+    else: freeze = False
 
-    print(freeze,with_knowledge,gat)
+    if args.with_knowledge=="true":
+        with_knowledge = True
+    else:with_knowledge = False
+
+    if args.gat=="true":
+        gat = True
+    else: gat = False
+
+    print(freeze,with_knowledge, gat)
 
     main(root_Repo=repopath, device=device)
