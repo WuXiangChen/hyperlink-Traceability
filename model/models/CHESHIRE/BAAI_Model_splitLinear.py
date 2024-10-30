@@ -11,93 +11,59 @@ from torch_geometric.utils import from_networkx
 import torch
 import torch.nn as nn
 
-class MultiHeadAttention(nn.Module):
-    def __init__(self, input_dim, num_heads=3):
-        super(MultiHeadAttention, self).__init__()
-        self.num_heads = num_heads
-        self.head_dim = input_dim // num_heads
-        
-        assert (
-            input_dim % num_heads == 0
-        ), "input_dim must be divisible by num_heads"
+# 这里加一个LSTM结构用以从word embedding中提取sentence embedding
 
-        # 定义线性层用于生成查询、键和值
-        self.query_linear = nn.Linear(input_dim, input_dim)
-        self.key_linear = nn.Linear(input_dim, input_dim)
-        self.value_linear = nn.Linear(input_dim, input_dim)
-        
-        # 输出线性层
-        self.out_linear = nn.Linear(input_dim, input_dim)
+class SentenceEmbeddingLSTM(nn.Module):
+    def __init__(self, embedding_dim, hidden_dim, num_layers=3, bidirectional=True):
+        super(SentenceEmbeddingLSTM, self).__init__()
+        self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers=num_layers, bidirectional=bidirectional, batch_first=True)
+        self.hidden_dim = hidden_dim
+        self.bidirectional = bidirectional
 
     def forward(self, x):
-        # x 的形状是 (batch_size, seq_len, input_dim)
-        batch_size, seq_len, _ = x.size()
+        # x: (batch_size, seq_length, embedding_dim)
+        lstm_out, (h_n, c_n) = self.lstm(x)
+        # h_n: (num_layers * num_directions, batch_size, hidden_dim)
+        if self.bidirectional:
+            h_n = h_n.view(-1, x.size(0), 2, self.hidden_dim)
+            h_n = h_n[:, :, -1, :].mean(dim=2)  # 取双向最后一个隐藏状态的平均
+        else:
+            h_n = h_n[-1]  # 取最后一层的隐藏状态
 
-        # 生成查询、键和值
-        queries = self.query_linear(x)  # (batch_size, seq_len, input_dim)
-        keys = self.key_linear(x)        # (batch_size, seq_len, input_dim)
-        values = self.value_linear(x)    # (batch_size, seq_len, input_dim)
-
-        # 将它们重塑为多头形式
-        queries = queries.view(batch_size, seq_len, self.num_heads, self.head_dim).transpose(1, 2)  # (batch_size, num_heads, seq_len, head_dim)
-        keys = keys.view(batch_size, seq_len, self.num_heads, self.head_dim).transpose(1, 2)          # (batch_size, num_heads, seq_len, head_dim)
-        values = values.view(batch_size, seq_len, self.num_heads, self.head_dim).transpose(1, 2)      # (batch_size, num_heads, seq_len, head_dim)
-
-        # 计算注意力分数
-        scores = torch.matmul(queries, keys.transpose(-2, -1)) / (self.head_dim ** 0.5)  # (batch_size, num_heads, seq_len, seq_len)
-        attention_weights = torch.softmax(scores, dim=-1)  # 在 seq_len 上做 softmax
-
-        # 计算上下文向量
-        context = torch.bmm(attention_weights.reshape(batch_size * self.num_heads, seq_len, seq_len), values.reshape(batch_size * self.num_heads, seq_len, self.head_dim))  # (batch_size * num_heads, seq_len, head_dim)
-
-        # 重塑回原来的形状
-        context = context.view(batch_size, self.num_heads, seq_len, self.head_dim).transpose(1, 2)  # (batch_size, seq_len, num_heads, head_dim)
-        context = context.contiguous().view(batch_size, seq_len, -1)  # (batch_size, seq_len, input_dim)
-
-        # 通过输出线性层
-        output = self.out_linear(context)  # (batch_size, seq_len, input_dim)
-        return output
-
-class SimpleAttention(nn.Module):
-    def __init__(self, input_dim):
-        super(SimpleAttention, self).__init__()
-        self.attention_weights = nn.Parameter(torch.Tensor(input_dim, 1))
-        nn.init.xavier_uniform_(self.attention_weights)
-
-    def forward(self, x):
-        # x 的形状是 (batch_size, seq_len, input_dim)
-        scores = torch.matmul(x, self.attention_weights)  # (batch_size, seq_len, 1)
-        attention_weights = torch.softmax(scores, dim=1)  # 在 seq_len 上做 softmax
-        context = torch.bmm(attention_weights.transpose(1, 2), x)  # (batch_size, 1, input_dim)
-        return context
+        return h_n  # 返回句子嵌入
 
 class BAAI_model(nn.Module):
-    def __init__(self, artifacts_dict, artifacts, tokenizer, model):
+    def __init__(self, artifacts_dict, artifacts, tokenizer, model, in_dim, freeze, with_knowledge):
         super(BAAI_model, self).__init__()
+        hidden_dim =256
         self.model = model
-        # for param in self.model.parameters():
-        #    param.requires_grad = False
+        self.freeze = freeze
+        self.with_knowledge = with_knowledge
+        self.senEmbLSTM = SentenceEmbeddingLSTM(embedding_dim=in_dim, hidden_dim=hidden_dim)
+
+        if freeze:
+            for param in self.model.parameters():
+               param.requires_grad = False
+        
+        # 这里待测试
+        if not self.with_knowledge:
+            for layer in self.model.children():
+                if hasattr(layer, 'weight'):
+                    torch.nn.init.xavier_uniform_(layer.weight)
+                if hasattr(layer, 'bias') and layer.bias is not None:
+                    torch.nn.init.zeros_(layer.bias)
+        
         self.artifacts = artifacts
         self.tokenizer = tokenizer
         self.artifacts_dict = {value: key for key, value in artifacts_dict.items()}
-        in_dim = 384
-        hidden_dim =256
+
         self.linear = nn.Sequential(
             nn.Linear(in_dim*2, hidden_dim),
             nn.ReLU(),
             #  nn.Linear(hidden_dim, hidden_dim),
             # nn.ReLU()
         )
-        self.gconv_layers = nn.ModuleList([
-            GATConv(in_channels=in_dim, out_channels=hidden_dim, heads=2),
-            # GATConv(in_channels=hidden_dim*2, out_channels=hidden_dim, heads=3),
-            GATConv(in_channels=hidden_dim*2, out_channels=hidden_dim // 2, heads=1)
-        ])
-        self.batchnorm_layers = nn.ModuleList([
-            nn.BatchNorm1d(hidden_dim * 2),
-            # nn.BatchNorm1d(hidden_dim * 3),
-            nn.BatchNorm1d(hidden_dim // 2)
-        ])
+
         self.pool = nn.AdaptiveAvgPool1d(1)
         self.classify1 = nn.Linear(hidden_dim, 1)
         self.loss_fn = torch.nn.BCELoss()
@@ -115,7 +81,8 @@ class BAAI_model(nn.Module):
         inputs = []
         attention_masks = []
         for NL_PLs in node_sentence_list:
-            # NL_PL = "".join(NL_PL)
+            inputs_ = []
+            atts_ = []
             for NL_PL in NL_PLs:
                 encoded = self.tokenizer.encode_plus(
                     NL_PL,
@@ -125,62 +92,22 @@ class BAAI_model(nn.Module):
                     max_length=512,
                     return_attention_mask=True
                 )
-                inputs.append(encoded['input_ids'])
-                attention_masks.append(encoded['attention_mask'])
+                inputs_.append(encoded['input_ids'])
+                atts_.append(encoded['attention_mask'])
+            inputs.append(inputs_)
+            attention_masks.append(atts_)
 
-        inputs = torch.cat(inputs, dim=0).to(self.model.device)
-        attention_masks = torch.cat(attention_masks, dim=0).to(self.model.device)
-        x = self.model(inputs,attention_masks).pooler_output
-        #x = self.linear(x)
-        # 这里接graph 
-        all_connected_graph = Utils.get_fully_network(edges)
-        # 接着 为这里每个graph赋值
-        outputs = []
-        for c_graph in all_connected_graph:
-            fea = []
-            for node in list(c_graph.nodes())[0:2]:
-                index = nodes_list.index(node)
-                #ft = x[index,:].detach()
-                #ft = self.linear(ft)
-                #c_graph.nodes[node]["ft"] = ft
-                fea.append(x[index,:].detach().unsqueeze(0))
-            fea_ = torch.cat(fea, dim=1).to(self.model.device)
-            # fea_ = fea_.permute(1, 0)
-            # output = self.pool(fea_)
-            # output = output.permute(1, 0)
-            outputs.append(fea_)
-        # outputs = torch.stack(outputs,dim=1)
-        outputs = torch.cat(outputs)
-        # attention_layer = SimpleAttention(input_dim=384).to(self.model.device)
-        # outputs = attention_layer(outputs).squeeze(1)  # 形状将变为 (25, 1, 384)
-        outputs = self.linear(outputs)
-        # outputs = self.linear(outputs)
-        # outputs = self.classify1(outputs)
-        # # 创建一个列表来存储转换后的 DGL 图
-        # dgl_graphs = []
+        # inputs = torch.cat(inputs, dim=0).to(self.model.device)
+        # 这里需要根据输入内容进行合并
 
-        # # 将每个 nx.Graph 转换为 DGL 图
-        # for c_graph in all_connected_graph:
-        #     dgl_graph = dgl.from_networkx(c_graph, node_attrs=["ft"])
-        #     dgl_graphs.append(dgl_graph)
-        # # 使用 dgl.batch() 合并所有 DGL 图
-        # all_graph = dgl.batch(dgl_graphs)
-        # all_graph = all_graph.to(self.linear[0].weight.device)
-
-        # torch_geometric_graphs = []
-        # for c_graph in all_connected_graph:
-        #     torch_geometric_graph = from_networkx(c_graph, group_node_attrs=["ft"])
-        #     torch_geometric_graphs.append(torch_geometric_graph)
-        # data = Batch.from_data_list(torch_geometric_graphs).to(self.linear[0].weight.device)
-        # # data = Data(x=x, edge_index=edge_index).to(self.linear[0].weight.device)
-        # x, edge_index = data.x, data.edge_index
-        # for i, gconv in enumerate(self.gconv_layers):
-        #     x = gconv(x, edge_index)
-        #     x = F.relu(x)
-        #     x = self.batchnorm_layers[i](x)
+        sen_emb = []
+        for k, input_ in enumerate(inputs):
+            att_ = attention_masks[k].to(self.model.device)
+            x = self.model(input_ , att_).pooler_output
+            sen_emb.append(self.senEmbLSTM(x))
+        sen_emb_ = torch.cat(sen_emb)
+        outputs = self.linear(sen_emb_)
         
-        # # Global pooling
-        # x = global_mean_pool(x, data.batch)  # Use global mean pooling
         outputs = self.classify1(outputs)
         outputs = nn.Sigmoid()(outputs).squeeze(1)
         # 计算loss

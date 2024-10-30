@@ -2,12 +2,12 @@
 import numpy as np
 import torch
 from xgboost.dask import train
-from model.models.CHESHIRE.BAAI_Model_splitGraph import BAAI_model
+
 from model.models.trainer_hook import ModelFineTuner
 from model.models.CHESHIRE.CHESHIRE import CHESHIRE
 
 class processer_:
-    def __init__(self, embedding_type, repoName, artifacts,artifact_dict, tokenizer, device, embedding_model, writer_tb_log_dir):
+    def __init__(self, embedding_type, repoName, artifacts,artifact_dict, tokenizer, device, embedding_model, writer_tb_log_dir,  freeze, with_knowledge, cat):
         self.repoName = repoName
         self.artifacts_dict = artifact_dict
         if embedding_type=="BAAI_bge-m3_small":
@@ -16,7 +16,12 @@ class processer_:
             in_dim = 384
         else:
             in_dim = 512
-        self.model = BAAI_model(artifacts_dict=artifact_dict, artifacts=artifacts, model=embedding_model, tokenizer=tokenizer,in_dim=in_dim)
+        if not cat:
+            from model.models.CHESHIRE.BAAI_Model_splitLinear import BAAI_model
+            self.model = BAAI_model(artifacts_dict=artifact_dict, artifacts=artifacts, model=embedding_model, tokenizer=tokenizer,in_dim=in_dim, freeze=freeze, with_knowledge=with_knowledge)
+        else:
+            from model.models.CHESHIRE.BAAI_Model import BAAI_model
+            self.model = BAAI_model(artifacts_dict=artifact_dict, artifacts=artifacts, model=embedding_model, tokenizer=tokenizer,in_dim=in_dim, freeze=freeze, with_knowledge=with_knowledge)
         self.trainer = ModelFineTuner(self.model, device, num_labels=2, writer_tb_log_dir=writer_tb_log_dir)
         self.artifacts = artifacts
 

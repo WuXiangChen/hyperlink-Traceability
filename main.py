@@ -63,8 +63,8 @@ def main(root_Repo:str, device:int):
     negHyperlink = negHyperlink[:, indices]
     config = parse()
     # 在这里需要注册Artifact和GroundTruth Graph的信息
-    repos_connnect_info_path = "dataset/other_repo_connect_info"
-    repos_artifact_info_path = "dataset/other_repos_artifact_info"
+    repos_connnect_info_path = "../dataset/other_repo_connect_info"
+    repos_artifact_info_path = "../dataset/other_repos_artifact_info"
     repo_connect_info = Utils.getnearsetFile(repoName, repos_connnect_info_path, "json")
     repo_artifact_info = Utils.getnearsetFile(repoName, repos_artifact_info_path, "json")
     # 生成超链接数据集
@@ -86,7 +86,7 @@ def main(root_Repo:str, device:int):
             continue
         i+=1
         # Generate train data and labels
-        shutil.copytree(f"text_LM_model/{LM_model_selected}/", fine_tune_model_path, dirs_exist_ok=True)
+        shutil.copytree(f"../text_LM_model/{LM_model_selected}/", fine_tune_model_path, dirs_exist_ok=True)
         # 在冻结LLM有效的情况下 这里就不用进行替换了
         # 删除CHESHIRE路径下的reponame文件
         saved_model_safetensor = f"CHESHIRE/{running_type}/{repoName}"
@@ -121,14 +121,14 @@ def main(root_Repo:str, device:int):
 
         train_pos_index = np.where(train_labels == 1)[0]
         pos_set = train_set[:, train_pos_index]
-        writer_tb_log_dir='logs/original_NSplited_node_LLM_Linear_Structure/'
+        writer_tb_log_dir='logsAndResults/logs/original_NSplited_node_LLM_Linear_Structure/'
         '''CHESHIRE'''
         # pro = processerHook(pos_set=pos_set, config=config,
         #                 repoName=repoName, artifacts = artifacts,
         #                 artifact_dict=artifact_dict, device=device,
         #                 running_type=running_type, embedding_model = embedding_model)
         '''BAAI-bge'''
-        pro = processer_(embedding_type=LM_model_selected, repoName=repoName, artifacts=artifacts, artifact_dict=artifact_dict,
+        pro = processer_(embedding_type=LM_model_selected, repoName=repoName, artifacts=artifacts,          artifact_dict=artifact_dict, freeze=freeze, with_knowledge=with_knowledge, cat=cat,
                         tokenizer=artifacts.tokenizer_NL, device=device, embedding_model=embedding_model,writer_tb_log_dir=writer_tb_log_dir)
         # 这里转换一下数据，适配语义为基础的训练过程
         # 创建 TensorBoard 的 SummaryWriter
@@ -141,12 +141,12 @@ def main(root_Repo:str, device:int):
         results.append(result)
 
     # ==============Save the results================
-    output_dir = f"saved_results/{running_type}/"
+    output_dir = f"logsAndResults/saved_results/{running_type}/"
     # 检查目录是否存在，如果不存在则创建
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     df = pd.DataFrame(results)
-    df.to_csv(f"{output_dir}/{repoName}_results.csv", index=False)
+    df.to_csv(f"logsAndResults/{output_dir}/{repoName}_results.csv", index=False)
     print(df)
     print(f"The {repoName} results have been saved successfully!")
 
@@ -158,15 +158,24 @@ if __name__ == '__main__':
     parser.add_argument('-c', '--cudaN', type=int, default=1, help='The GPU number to use. Default is 0.')
     parser.add_argument('-n', '--num_folds', type=int, default=5, help='The number of folds for cross-validation. Default is 5.')
     parser.add_argument('-t', '--test_ratio', type=float, default=0.2, help='The ratio of the test set. Default is 0.2.')
-    parser.add_argument('-type', '--running_type', type=str, default="semantic",
-                        help='The running choice for the whole project. Default is structure.')
+    parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
+    # 增加三个对比实验参数，冻结-非冻结，自带知识-无自带知识，cat-非cat
+    # 增加三个对比实验参数，初始值设置为True
+    parser.add_argument('--freeze', type=bool, default=True, help='Frozening The LLM when Training or not.')
+    parser.add_argument('--with_knowledge', type=bool, default=True, help='Take the prior-knowledge into training or not.')
+    parser.add_argument('--cat', type=bool, default=True, help='Using the cat module for the input information or not.')
+
     args = parser.parse_args()
-    
     repoName = args.repoName
     device = Utils.get_cuda_device(0)
-    root_path = "dataset/hyperlink_npz"
+    root_path = "../dataset/hyperlink_npz"
     repopath = root_path + "/"+ repoName + ".npz"
     num_folds = args.num_folds
     test_ratio = args.test_ratio
     running_type = args.running_type
+
+    freeze = args.freeze
+    with_knowledge = args.with_knowledge
+    cat = args.cat
+
     main(root_Repo=repopath, device=device)

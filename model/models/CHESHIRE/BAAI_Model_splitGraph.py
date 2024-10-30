@@ -13,11 +13,24 @@ import torch
 import torch.nn as nn
 
 class BAAI_model(nn.Module):
-    def __init__(self, artifacts_dict, artifacts, tokenizer, model, in_dim):
+    def __init__(self, artifacts_dict, artifacts, tokenizer, model, in_dim, freeze, with_knowledge):
         super(BAAI_model, self).__init__()
         self.model = model
-        # for param in self.model.parameters():
-        #    param.requires_grad = False
+        self.freeze = freeze
+        self.with_knowledge = with_knowledge
+
+        if freeze:
+            for param in self.model.parameters():
+               param.requires_grad = False
+        
+        # 这里待测试
+        if not self.with_knowledge:
+            for layer in self.model.children():
+                if hasattr(layer, 'weight'):
+                    torch.nn.init.xavier_uniform_(layer.weight)
+                if hasattr(layer, 'bias') and layer.bias is not None:
+                    torch.nn.init.zeros_(layer.bias)
+
         self.artifacts = artifacts
         self.tokenizer = tokenizer
         self.artifacts_dict = {value: key for key, value in artifacts_dict.items()}
