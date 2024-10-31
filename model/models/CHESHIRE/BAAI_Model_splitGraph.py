@@ -26,11 +26,12 @@ class BAAI_model(nn.Module):
         
         # 这里待测试
         if not self.with_knowledge:
-            for layer in self.model.children():
-                if hasattr(layer, 'weight'):
-                    torch.nn.init.xavier_uniform_(layer.weight)
-                if hasattr(layer, 'bias') and layer.bias is not None:
-                    torch.nn.init.zeros_(layer.bias)
+            for module_ in self.model.named_modules(): 
+                if module_[0].startswith("encoder") and hasattr(module_[1], "weight"):
+                    module_[1].weight.data.normal_(mean=0.0, std=model.config.initializer_range)
+                elif module_[0].startswith("encoder") and hasattr(module_[1], "weight"):
+                    module_[1].bias.data.zero_()
+                
 
         self.artifacts = artifacts
         self.tokenizer = tokenizer

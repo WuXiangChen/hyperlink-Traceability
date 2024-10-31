@@ -7,7 +7,7 @@ for freeze in false true; do
     for with_knowledge in true false; do
         for gat in true false; do
             # 创建日志文件名
-            log_file="logsAndResults/runlog/LLM_Comparative_Experiment_f${freeze}_k${with_knowledge}_c${cat}.log"
+            log_file="logsAndResults/runlog/LLM_Comparative_Experiment_f${freeze}_k${with_knowledge}_c${gat}.log"
             
             # 执行 Python 脚本
             nohup bash -c "CUDA_VISIBLE_DEVICES=3 python main.py --freeze $freeze --with_knowledge $with_knowledge --gat $gat -c 0 -n 5 -t 0.2 -type 'LLM_Comparative_Experiment_2'" > "$log_file" 2>&1 &

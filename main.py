@@ -13,7 +13,6 @@ from transformers import BertForSequenceClassification, AutoModel
 from utils import Utils
 from DataStructure._1_HyperlinkGenerate import generateHyperLinkDataset
 from processerHook.processer_BAAI import processer_
-from model.models.CHESHIRE.cheshire_config import parse
 from model._0_Artifact import Artifacts
 from model._0_GroundTruthGraph import GroundTruthGraph
 import shutil
@@ -59,7 +58,6 @@ def main(root_Repo:str, device:int):
     posHyperlink = posHyperlink[:, indices]
     indices = np.random.permutation(negHyperlink.shape[1])
     negHyperlink = negHyperlink[:, indices]
-    config = parse()
     # 在这里需要注册Artifact和GroundTruth Graph的信息
     repos_connnect_info_path = "../dataset/other_repo_connect_info"
     repos_artifact_info_path = "../dataset/other_repos_artifact_info"
