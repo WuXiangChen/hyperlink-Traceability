@@ -1,3 +1,0 @@
-nohup: ignoring input
-Running with freeze=True, with_knowledge=True, cat=True. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_fTrue_kTrue_cTrue.log
-Running with freeze=True, with_knowledge=True, cat=False. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_fTrue_kTrue_cFalse.log
