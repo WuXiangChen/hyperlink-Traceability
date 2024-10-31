@@ -86,8 +86,8 @@ def main(root_Repo:str, device:int):
             print(f"文件夹 '{saved_model_safetensor}' 已成功删除。")
         else:
             print(f"文件夹 '{saved_model_safetensor}' 不存在。")
-            
-        embedding_model = AutoModel.from_pretrained(fine_tune_model_path)
+        # 以半精度的方式加载 attn_implementation attention的计算方法
+        embedding_model = AutoModel.from_pretrained(fine_tune_model_path, torch_dtype=torch.float16, attn_implementation="sdpa")
         # ====================== 构建训练与测试数据集 ===================
         train_pos_set, train_neg_set = posHyperlink[:, train_index], negHyperlink[:, train_index]
         train_set = np.concatenate([train_pos_set, train_neg_set], axis=1)
@@ -142,9 +142,9 @@ if __name__ == '__main__':
     parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
     # 增加三个对比实验参数，冻结-非冻结，自带知识-无自带知识，cat-非cat
     # 增加三个对比实验参数，初始值设置为True
-    parser.add_argument('--freeze', type=bool, default=True, help='Frozening The LLM when Training or not.')
-    parser.add_argument('--with_knowledge', type=bool, default=True, help='Take the prior-knowledge into training or not.')
-    parser.add_argument('--cat', type=bool, default=False, help='Using the cat module for the input information or not.')
+    parser.add_argument('--freeze', type=str, default="true", help='Frozening The LLM when Training or not.')
+    parser.add_argument('--with_knowledge', type=str, default="true", help='Take the prior-knowledge into training or not.')
+    parser.add_argument('--cat', type=str, default="true", help='Using the cat module for the input information or not.')
 
     args = parser.parse_args()
     repoName = args.repoName
