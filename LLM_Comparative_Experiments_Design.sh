@@ -3,7 +3,7 @@ source  activate mmseg
 max_jobs=1  # 最大并发任务数
 export CUDA_VISIBLE_DEVICES=3  # 指定使用的GPU编号
 # 定义参数组合
-for freeze in false true; do
+for freeze in true false; do
     for with_knowledge in true false; do
         for gat in true false; do
             # 创建日志文件名

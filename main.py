@@ -185,6 +185,6 @@ if __name__ == '__main__':
         gat = True
     else: gat = False
 
-    print(freeze,with_knowledge, gat)
+    print(freeze, with_knowledge, gat)
 
     main(root_Repo=repopath, device=device)
