@@ -11,13 +11,13 @@ class BAAI_model(nn.Module):
         self.freeze = freeze
         self.with_knowledge = with_knowledge
 
-        if not freeze:
+        if freeze:
             for param in self.model.parameters():
                param.requires_grad = False
         
         # 这里待测试
         # 如果module_[0].startwith(encoder) and 'weight' in moudle_[1]的关键字中 就随机初始化 weight
-        if not self.with_knowledge:
+        if self.with_knowledge:
             for module_ in self.model.named_modules(): 
                 if module_[0].startswith("encoder") and hasattr(module_[1], "weight"):
                     module_[1].weight.data.normal_(mean=0.0, std=model.config.initializer_range)
