@@ -14,7 +14,7 @@ import torch.nn as nn
 # 这里加一个LSTM结构用以从word embedding中提取sentence embedding
 
 class SentenceEmbeddingLSTM(nn.Module):
-    def __init__(self, embedding_dim, hidden_dim, num_layers=5, bidirectional=False, in_dim=512):
+    def __init__(self, embedding_dim, hidden_dim, num_layers=10, bidirectional=False, in_dim=512):
         super(SentenceEmbeddingLSTM, self).__init__()
         self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers=num_layers, bidirectional=bidirectional, batch_first=True)
         self.hidden_dim = hidden_dim
@@ -46,7 +46,7 @@ class BAAI_model(nn.Module):
         
         # 这里待测试
         # 如果module_[0].startwith(encoder) and 'weight' in moudle_[1]的关键字中 就随机初始化 weight
-        if self.with_knowledge:
+        if not self.with_knowledge:
             for module_ in self.model.named_modules(): 
                 if module_[0].startswith("encoder") and hasattr(module_[1], "weight"):
                     module_[1].weight.data.normal_(mean=0.0, std=model.config.initializer_range)

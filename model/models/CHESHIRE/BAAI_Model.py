@@ -17,15 +17,13 @@ class BAAI_model(nn.Module):
         
         # 这里待测试
         # 如果module_[0].startwith(encoder) and 'weight' in moudle_[1]的关键字中 就随机初始化 weight
-        if self.with_knowledge:
+        if not self.with_knowledge:
             for module_ in self.model.named_modules(): 
                 if module_[0].startswith("encoder") and hasattr(module_[1], "weight"):
                     module_[1].weight.data.normal_(mean=0.0, std=model.config.initializer_range)
                 elif module_[0].startswith("encoder") and hasattr(module_[1], "weight"):
                     module_[1].bias.data.zero_()
                 
-                    
-                    
         self.artifacts = artifacts
         self.tokenizer = tokenizer
         self.artifacts_dict = {value: key for key, value in artifacts_dict.items()}

@@ -155,7 +155,7 @@ if __name__ == '__main__':
     parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
     # 增加三个对比实验参数，初始值设置为True
     parser.add_argument('--freeze', type=str, default="true", help='Frozening The LLM when Training or not.')
-    parser.add_argument('--with_knowledge', type=str, default="false", help='Take the prior-knowledge into training or not.')
+    parser.add_argument('--with_knowledge', type=str, default="true", help='Take the prior-knowledge into training or not.')
     parser.add_argument('--cat', type=str, default="true", help='Using the cat module for the input information or not.')
 
     args = parser.parse_args()
