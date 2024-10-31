@@ -13,7 +13,6 @@ from transformers import BertForSequenceClassification, AutoModel
 from utils import Utils
 from DataStructure._1_HyperlinkGenerate import generateHyperLinkDataset
 from processerHook.processer_BAAI import processer_
-from model.models.CHESHIRE.cheshire_config import parse
 from model._0_Artifact import Artifacts
 from model._0_GroundTruthGraph import GroundTruthGraph
 import shutil
@@ -40,16 +39,7 @@ os.environ["NCCL_SHM_DISABLE "] = "1"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
 # 这部分代码片段用于将train+test Artifacts转化成all Artifacts
-'''
-    test_artifacts = getDataSet(root_Repo, 'test')
-    all = train_artifacts + test_artifacts
-    artifact_set = {}
-    for artifact in all:
-        artifactId = artifact.artifact_id
-        artifact_set[artifactId] = artifact
-    # 将这部分的内容保持到文件中
-    utils.save_pickle(artifact_set, f"{root_Repo}/processed/all_artifacts.pkl")
-'''
+
 def main(root_Repo:str, device:int):
     # 读取数据
     data = np.load(root_Repo, allow_pickle=True)
@@ -61,7 +51,6 @@ def main(root_Repo:str, device:int):
     posHyperlink = posHyperlink[:, indices]
     indices = np.random.permutation(negHyperlink.shape[1])
     negHyperlink = negHyperlink[:, indices]
-    config = parse()
     # 在这里需要注册Artifact和GroundTruth Graph的信息
     repos_connnect_info_path = "../dataset/other_repo_connect_info"
     repos_artifact_info_path = "../dataset/other_repos_artifact_info"
@@ -108,9 +97,6 @@ def main(root_Repo:str, device:int):
         train_set = train_set[:, indices]
         train_labels = train_labels[indices]
 
-        # Generate test data and labels
-        # test_neg_all_index = list(set(range(len(negHyperlink.T))) - set(train_index))
-        # test_neg_index = np.random.choice(test_neg_all_index, int(len(test_index)*num_folds), replace=False)
         test_pos_set, test_neg_set = posHyperlink[:, test_index], negHyperlink[:, test_index]
         another_neg_set_incidence_matrix = Utils.getAnotherNegSet(test_pos_set)
         test_neg_set = np.concatenate([test_neg_set, another_neg_set_incidence_matrix], axis=1)
@@ -120,15 +106,10 @@ def main(root_Repo:str, device:int):
         test_labels = np.concatenate([np.ones(test_pos_set.shape[1]), np.zeros(test_neg_set.shape[1])])
 
         train_pos_index = np.where(train_labels == 1)[0]
-        pos_set = train_set[:, train_pos_index]
         writer_tb_log_dir='logsAndResults/logs/original_NSplited_node_LLM_Linear_Structure/'
-        '''CHESHIRE'''
-        # pro = processerHook(pos_set=pos_set, config=config,
-        #                 repoName=repoName, artifacts = artifacts,
-        #                 artifact_dict=artifact_dict, device=device,
-        #                 running_type=running_type, embedding_model = embedding_model)
+
         '''BAAI-bge'''
-        pro = processer_(embedding_type=LM_model_selected, repoName=repoName, artifacts=artifacts,          artifact_dict=artifact_dict, freeze=freeze, with_knowledge=with_knowledge, cat=cat,
+        pro = processer_(embedding_type=LM_model_selected, repoName=repoName, artifacts=artifacts,artifact_dict=artifact_dict, freeze=freeze, with_knowledge=with_knowledge, cat=cat,
                         tokenizer=artifacts.tokenizer_NL, device=device, embedding_model=embedding_model,writer_tb_log_dir=writer_tb_log_dir)
         # 这里转换一下数据，适配语义为基础的训练过程
         # 创建 TensorBoard 的 SummaryWriter
@@ -177,7 +158,5 @@ if __name__ == '__main__':
     freeze = args.freeze
     with_knowledge = args.with_knowledge
     cat = args.cat
-
     print(freeze,with_knowledge,cat)
-
     main(root_Repo=repopath, device=device)
