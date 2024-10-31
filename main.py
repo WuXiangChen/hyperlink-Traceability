@@ -5,6 +5,7 @@
 '''
 import argparse
 import os
+import time
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import KFold
@@ -13,7 +14,7 @@ from transformers import BertForSequenceClassification, AutoModel
 from utils import Utils
 from DataStructure._1_HyperlinkGenerate import generateHyperLinkDataset
 from processerHook.processer_BAAI import processer_
-from model.models.CHESHIRE.cheshire_config import parse
+# from model.models.CHESHIRE.cheshire_config import parse
 from model._0_Artifact import Artifacts
 from model._0_GroundTruthGraph import GroundTruthGraph
 import shutil
@@ -59,7 +60,7 @@ def main(root_Repo:str, device:int):
     posHyperlink = posHyperlink[:, indices]
     indices = np.random.permutation(negHyperlink.shape[1])
     negHyperlink = negHyperlink[:, indices]
-    config = parse()
+    # config = parse()
     # 在这里需要注册Artifact和GroundTruth Graph的信息
     repos_connnect_info_path = "../dataset/other_repo_connect_info"
     repos_artifact_info_path = "../dataset/other_repos_artifact_info"
@@ -139,7 +140,7 @@ def main(root_Repo:str, device:int):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     df = pd.DataFrame(results)
-    df.to_csv(f"{output_dir}/{repoName}_results_{str(freeze)}_{str(with_knowledge)}_{str(cat)}.csv", index=False)
+    df.to_csv(f"{output_dir}/{repoName}_results_f{str(freeze)}_k{str(with_knowledge)}_c{str(cat)}.csv", index=False)
     print(df)
     print(f"The {repoName} results have been saved successfully!")
 
@@ -153,14 +154,15 @@ if __name__ == '__main__':
     parser.add_argument('-t', '--test_ratio', type=float, default=0.2, help='The ratio of the test set. Default is 0.2.')
     parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
     # 增加三个对比实验参数，初始值设置为True
-    parser.add_argument('--freeze', type=str, default="false", help='Frozening The LLM when Training or not.')
-    parser.add_argument('--with_knowledge', type=str, default="true", help='Take the prior-knowledge into training or not.')
-    parser.add_argument('--cat', type=str, default="false", help='Using the cat module for the input information or not.')
+    parser.add_argument('--freeze', type=str, default="true", help='Frozening The LLM when Training or not.')
+    parser.add_argument('--with_knowledge', type=str, default="false", help='Take the prior-knowledge into training or not.')
+    parser.add_argument('--cat', type=str, default="true", help='Using the cat module for the input information or not.')
 
     args = parser.parse_args()
     repoName = args.repoName
     torch.cuda.set_device(args.cudaN)
     device = torch.cuda.current_device()
+
 
     root_path = "../dataset/hyperlink_npz"
     repopath = root_path + "/"+ repoName + ".npz"
@@ -180,5 +182,5 @@ if __name__ == '__main__':
     else: cat = False
 
     print(freeze,with_knowledge,cat)
-
+    print("程序运行时间：", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     main(root_Repo=repopath, device=device)

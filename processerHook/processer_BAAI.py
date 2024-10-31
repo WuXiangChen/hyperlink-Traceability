@@ -4,7 +4,6 @@ import torch
 from xgboost.dask import train
 
 from model.models.trainer_hook import ModelFineTuner
-from model.models.CHESHIRE.CHESHIRE import CHESHIRE
 
 class processer_:
     def __init__(self, embedding_type, repoName, artifacts,artifact_dict, tokenizer, device, embedding_model, writer_tb_log_dir, freeze, with_knowledge, cat):

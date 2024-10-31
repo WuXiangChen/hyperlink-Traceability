@@ -1,0 +1,1327 @@
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+False False False
+文件夹 'CHESHIRE/LLM_Comparative_Experiment/Activiti' 不存在。
+Data has been loaded successfully for training!
+Start training!
+  0%|          | 0/1140 [00:00<?, ?it/s]  0%|          | 1/1140 [00:01<22:19,  1.18s/it]  0%|          | 2/1140 [00:01<13:59,  1.36it/s]  0%|          | 3/1140 [00:02<12:06,  1.57it/s]  0%|          | 4/1140 [00:02<10:41,  1.77it/s]  0%|          | 5/1140 [00:03<09:54,  1.91it/s]  1%|          | 6/1140 [00:03<09:56,  1.90it/s]  1%|          | 7/1140 [00:03<09:19,  2.03it/s]  1%|          | 8/1140 [00:04<09:07,  2.07it/s]  1%|          | 9/1140 [00:04<09:18,  2.02it/s]  1%|          | 10/1140 [00:05<09:03,  2.08it/s]  1%|          | 11/1140 [00:05<08:53,  2.11it/s]  1%|          | 12/1140 [00:06<08:37,  2.18it/s]  1%|          | 13/1140 [00:06<08:20,  2.25it/s]  1%|          | 14/1140 [00:07<08:22,  2.24it/s]  1%|▏         | 15/1140 [00:07<08:24,  2.23it/s]  1%|▏         | 16/1140 [00:08<08:51,  2.12it/s]  1%|▏         | 17/1140 [00:08<08:50,  2.12it/s]  2%|▏         | 18/1140 [00:09<08:34,  2.18it/s]  2%|▏         | 19/1140 [00:09<09:04,  2.06it/s]  2%|▏         | 20/1140 [00:10<08:55,  2.09it/s]  2%|▏         | 21/1140 [00:10<08:45,  2.13it/s]  2%|▏         | 22/1140 [00:10<08:31,  2.19it/s]  2%|▏         | 23/1140 [00:11<08:28,  2.19it/s]  2%|▏         | 24/1140 [00:11<08:13,  2.26it/s]  2%|▏         | 25/1140 [00:12<08:19,  2.23it/s]  2%|▏         | 26/1140 [00:12<08:48,  2.11it/s]  2%|▏         | 27/1140 [00:13<08:45,  2.12it/s]  2%|▏         | 28/1140 [00:13<08:23,  2.21it/s]  3%|▎         | 29/1140 [00:14<08:22,  2.21it/s]  3%|▎         | 30/1140 [00:14<08:21,  2.21it/s]  3%|▎         | 31/1140 [00:15<08:20,  2.21it/s]  3%|▎         | 32/1140 [00:15<08:46,  2.11it/s]  3%|▎         | 33/1140 [00:15<08:24,  2.19it/s]  3%|▎         | 34/1140 [00:16<08:08,  2.26it/s]  3%|▎         | 35/1140 [00:16<08:14,  2.23it/s]  3%|▎         | 36/1140 [00:17<08:37,  2.14it/s]  3%|▎         | 37/1140 [00:17<08:54,  2.07it/s]  3%|▎         | 38/1140 [00:18<08:42,  2.11it/s]  3%|▎         | 39/1140 [00:18<08:34,  2.14it/s]  4%|▎         | 40/1140 [00:19<08:31,  2.15it/s]  4%|▎         | 41/1140 [00:19<08:30,  2.15it/s]  4%|▎         | 42/1140 [00:20<08:25,  2.17it/s]  4%|▍         | 43/1140 [00:20<08:16,  2.21it/s]  4%|▍         | 44/1140 [00:20<08:03,  2.27it/s]  4%|▍         | 45/1140 [00:21<08:09,  2.24it/s]  4%|▍         | 46/1140 [00:21<07:58,  2.29it/s]  4%|▍         | 47/1140 [00:22<08:31,  2.14it/s]  4%|▍         | 48/1140 [00:22<08:31,  2.13it/s]  4%|▍         | 49/1140 [00:23<08:31,  2.13it/s]  4%|▍         | 50/1140 [00:23<08:16,  2.19it/s]  4%|▍         | 51/1140 [00:24<08:15,  2.20it/s]  5%|▍         | 52/1140 [00:24<08:20,  2.17it/s]  5%|▍         | 53/1140 [00:25<08:38,  2.10it/s]  5%|▍         | 54/1140 [00:25<08:17,  2.18it/s]  5%|▍         | 55/1140 [00:26<08:20,  2.17it/s]  5%|▍         | 56/1140 [00:26<08:42,  2.08it/s]  5%|▌         | 57/1140 [00:27<09:02,  2.00it/s]  5%|▌         | 58/1140 [00:27<08:52,  2.03it/s]  5%|▌         | 59/1140 [00:28<08:25,  2.14it/s]  5%|▌         | 60/1140 [00:28<10:19,  1.74it/s]  5%|▌         | 61/1140 [00:29<09:25,  1.91it/s]  5%|▌         | 62/1140 [00:29<08:49,  2.04it/s]  6%|▌         | 63/1140 [00:30<08:39,  2.07it/s]  6%|▌         | 64/1140 [00:30<08:32,  2.10it/s]  6%|▌         | 65/1140 [00:31<08:27,  2.12it/s]  6%|▌         | 66/1140 [00:31<08:42,  2.05it/s]  6%|▌         | 67/1140 [00:32<08:30,  2.10it/s]  6%|▌         | 68/1140 [00:32<08:24,  2.12it/s]  6%|▌         | 69/1140 [00:32<08:17,  2.15it/s]  6%|▌         | 70/1140 [00:33<08:18,  2.15it/s]  6%|▌         | 71/1140 [00:33<08:18,  2.14it/s]  6%|▋         | 72/1140 [00:34<08:04,  2.20it/s]  6%|▋         | 73/1140 [00:34<07:53,  2.25it/s]  6%|▋         | 74/1140 [00:35<07:55,  2.24it/s]  7%|▋         | 75/1140 [00:35<08:26,  2.10it/s]  7%|▋         | 76/1140 [00:36<07:27,  2.38it/s]training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6902, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6872, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6962, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6870, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6868, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6966, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6864, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7037, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7004, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7001, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6863, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6931, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6864, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7001, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6999, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6866, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6866, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6966, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6899, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7000, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6931, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6931, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6931, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6830, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7034, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6999, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6864, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6964, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6898, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6899, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7033, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6898, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6965, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6836, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6964, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6897, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6929, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6966, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6934, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7029, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6864, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6865, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6900, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6900, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6969, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6900, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7031, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7001, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6964, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6931, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6898, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6870, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6928, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6804, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6901, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6963, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6965, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6888, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+  7%|▋         | 77/1140 [00:36<08:57,  1.98it/s]  7%|▋         | 78/1140 [00:37<08:39,  2.04it/s]  7%|▋         | 79/1140 [00:37<08:27,  2.09it/s]  7%|▋         | 80/1140 [00:38<08:21,  2.11it/s]  7%|▋         | 81/1140 [00:38<08:05,  2.18it/s]  7%|▋         | 82/1140 [00:38<07:54,  2.23it/s]  7%|▋         | 83/1140 [00:39<07:55,  2.22it/s]  7%|▋         | 84/1140 [00:39<08:16,  2.13it/s]  7%|▋         | 85/1140 [00:40<08:45,  2.01it/s]  8%|▊         | 86/1140 [00:40<08:29,  2.07it/s]  8%|▊         | 87/1140 [00:41<08:10,  2.15it/s]  8%|▊         | 88/1140 [00:41<07:57,  2.20it/s]  8%|▊         | 89/1140 [00:42<07:42,  2.27it/s]  8%|▊         | 90/1140 [00:42<07:46,  2.25it/s]  8%|▊         | 91/1140 [00:43<07:52,  2.22it/s]  8%|▊         | 92/1140 [00:43<07:52,  2.22it/s]  8%|▊         | 93/1140 [00:44<07:52,  2.22it/s]  8%|▊         | 94/1140 [00:44<07:55,  2.20it/s]  8%|▊         | 95/1140 [00:44<07:55,  2.20it/s]  8%|▊         | 96/1140 [00:45<08:47,  1.98it/s]  9%|▊         | 97/1140 [00:46<08:31,  2.04it/s]  9%|▊         | 98/1140 [00:46<08:18,  2.09it/s]  9%|▊         | 99/1140 [00:46<08:16,  2.10it/s]  9%|▉         | 100/1140 [00:47<07:58,  2.17it/s]  9%|▉         | 101/1140 [00:47<08:19,  2.08it/s]  9%|▉         | 102/1140 [00:48<08:14,  2.10it/s]  9%|▉         | 103/1140 [00:48<08:06,  2.13it/s]  9%|▉         | 104/1140 [00:49<07:53,  2.19it/s]  9%|▉         | 105/1140 [00:49<08:38,  2.00it/s]  9%|▉         | 106/1140 [00:50<08:46,  1.97it/s]  9%|▉         | 107/1140 [00:50<08:15,  2.08it/s]  9%|▉         | 108/1140 [00:51<08:41,  1.98it/s] 10%|▉         | 109/1140 [00:51<08:23,  2.05it/s] 10%|▉         | 110/1140 [00:52<08:10,  2.10it/s] 10%|▉         | 111/1140 [00:52<08:27,  2.03it/s] 10%|▉         | 112/1140 [00:53<08:00,  2.14it/s] 10%|▉         | 113/1140 [00:53<07:55,  2.16it/s] 10%|█         | 114/1140 [00:54<07:51,  2.17it/s] 10%|█         | 115/1140 [00:54<07:50,  2.18it/s] 10%|█         | 116/1140 [00:54<07:48,  2.19it/s] 10%|█         | 117/1140 [00:55<07:32,  2.26it/s] 10%|█         | 118/1140 [00:55<07:35,  2.25it/s] 10%|█         | 119/1140 [00:56<07:57,  2.14it/s] 11%|█         | 120/1140 [00:56<07:52,  2.16it/s] 11%|█         | 121/1140 [00:57<08:12,  2.07it/s] 11%|█         | 122/1140 [00:57<08:06,  2.09it/s] 11%|█         | 123/1140 [00:58<08:01,  2.11it/s] 11%|█         | 124/1140 [00:58<07:54,  2.14it/s] 11%|█         | 125/1140 [00:59<07:55,  2.14it/s] 11%|█         | 126/1140 [00:59<07:53,  2.14it/s] 11%|█         | 127/1140 [01:00<07:42,  2.19it/s] 11%|█         | 128/1140 [01:00<07:44,  2.18it/s] 11%|█▏        | 129/1140 [01:00<07:30,  2.25it/s] 11%|█▏        | 130/1140 [01:01<07:52,  2.14it/s] 11%|█▏        | 131/1140 [01:01<07:51,  2.14it/s] 12%|█▏        | 132/1140 [01:02<08:11,  2.05it/s] 12%|█▏        | 133/1140 [01:02<08:00,  2.10it/s] 12%|█▏        | 134/1140 [01:03<08:15,  2.03it/s] 12%|█▏        | 135/1140 [01:03<08:02,  2.08it/s] 12%|█▏        | 136/1140 [01:04<08:17,  2.02it/s] 12%|█▏        | 137/1140 [01:04<08:24,  1.99it/s] 12%|█▏        | 138/1140 [01:05<08:00,  2.08it/s] 12%|█▏        | 139/1140 [01:05<07:52,  2.12it/s] 12%|█▏        | 140/1140 [01:06<07:34,  2.20it/s] 12%|█▏        | 141/1140 [01:06<08:01,  2.07it/s] 12%|█▏        | 142/1140 [01:07<07:53,  2.11it/s] 13%|█▎        | 143/1140 [01:07<08:20,  1.99it/s] 13%|█▎        | 144/1140 [01:08<07:56,  2.09it/s] 13%|█▎        | 145/1140 [01:08<07:51,  2.11it/s] 13%|█▎        | 146/1140 [01:09<08:03,  2.06it/s] 13%|█▎        | 147/1140 [01:09<07:56,  2.08it/s] 13%|█▎        | 148/1140 [01:10<07:47,  2.12it/s] 13%|█▎        | 149/1140 [01:10<07:43,  2.14it/s] 13%|█▎        | 150/1140 [01:11<07:37,  2.16it/s] 13%|█▎        | 151/1140 [01:11<07:21,  2.24it/s] 13%|█▎        | 152/1140 [01:11<06:36,  2.49it/s]training: tensor(0.6897, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6935, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6931, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7039, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6969, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6894, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6822, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6901, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7004, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6934, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6968, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6931, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6935, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6931, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7000, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6893, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6966, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6929, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6967, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6968, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6957, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6894, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6929, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6902, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6928, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6929, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6906, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7031, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6929, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7003, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6963, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6870, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6900, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6900, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6900, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6874, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6929, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6867, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6929, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6867, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6938, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6961, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6891, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6998, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7003, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6999, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6899, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6893, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6830, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6851, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6893, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6928, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6892, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6928, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7021, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6973, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6964, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6895, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7023, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6927, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6836, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6936, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6893, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6999, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6852, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6864, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6856, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7088, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 13%|█▎        | 153/1140 [01:12<08:09,  2.01it/s] 14%|█▎        | 154/1140 [01:12<07:56,  2.07it/s] 14%|█▎        | 155/1140 [01:13<07:52,  2.08it/s] 14%|█▎        | 156/1140 [01:13<07:36,  2.16it/s] 14%|█▍        | 157/1140 [01:14<07:33,  2.17it/s] 14%|█▍        | 158/1140 [01:14<08:15,  1.98it/s] 14%|█▍        | 159/1140 [01:15<07:59,  2.05it/s] 14%|█▍        | 160/1140 [01:15<08:08,  2.01it/s]training: tensor(0.6968, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6848, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7011, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6897, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7057, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6838, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6964, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6922, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6916, device='cuda:0')
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:01,  5.64it/s][A
+ 38%|███▊      | 3/8 [00:00<00:01,  4.31it/s][A
+ 50%|█████     | 4/8 [00:00<00:01,  3.81it/s][A
+ 62%|██████▎   | 5/8 [00:01<00:01,  2.94it/s][A
+ 75%|███████▌  | 6/8 [00:01<00:00,  2.79it/s][A
+ 88%|████████▊ | 7/8 [00:02<00:00,  2.84it/s][A
+100%|██████████| 8/8 [00:02<00:00,  3.02it/s][ATrainer is attempting to log a value of "[[70, 0], [81, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                  
+                                             [A 14%|█▍        | 160/1140 [01:18<08:08,  2.01it/s]
+100%|██████████| 8/8 [00:02<00:00,  3.02it/s][A
+                                             [A 14%|█▍        | 161/1140 [01:26<1:00:06,  3.68s/it] 14%|█▍        | 162/1140 [01:27<44:15,  2.72s/it]   14%|█▍        | 163/1140 [01:27<33:02,  2.03s/it] 14%|█▍        | 164/1140 [01:28<25:19,  1.56s/it] 14%|█▍        | 165/1140 [01:28<19:54,  1.23s/it] 15%|█▍        | 166/1140 [01:29<16:00,  1.01it/s] 15%|█▍        | 167/1140 [01:29<13:11,  1.23it/s] 15%|█▍        | 168/1140 [01:30<11:14,  1.44it/s] 15%|█▍        | 169/1140 [01:30<09:50,  1.64it/s] 15%|█▍        | 170/1140 [01:30<09:05,  1.78it/s] 15%|█▌        | 171/1140 [01:31<08:37,  1.87it/s] 15%|█▌        | 172/1140 [01:31<08:16,  1.95it/s] 15%|█▌        | 173/1140 [01:32<07:46,  2.07it/s] 15%|█▌        | 174/1140 [01:32<08:05,  1.99it/s] 15%|█▌        | 175/1140 [01:33<07:55,  2.03it/s] 15%|█▌        | 176/1140 [01:33<07:44,  2.08it/s] 16%|█▌        | 177/1140 [01:34<07:27,  2.15it/s] 16%|█▌        | 178/1140 [01:34<07:28,  2.14it/s] 16%|█▌        | 179/1140 [01:35<07:46,  2.06it/s] 16%|█▌        | 180/1140 [01:35<07:39,  2.09it/s] 16%|█▌        | 181/1140 [01:36<07:36,  2.10it/s] 16%|█▌        | 182/1140 [01:36<07:56,  2.01it/s] 16%|█▌        | 183/1140 [01:37<07:42,  2.07it/s] 16%|█▌        | 184/1140 [01:37<07:33,  2.11it/s] 16%|█▌        | 185/1140 [01:37<07:14,  2.20it/s] 16%|█▋        | 186/1140 [01:38<07:32,  2.11it/s] 16%|█▋        | 187/1140 [01:38<07:26,  2.13it/s] 16%|█▋        | 188/1140 [01:39<07:14,  2.19it/s] 17%|█▋        | 189/1140 [01:39<07:13,  2.19it/s] 17%|█▋        | 190/1140 [01:40<07:44,  2.04it/s] 17%|█▋        | 191/1140 [01:40<07:22,  2.14it/s] 17%|█▋        | 192/1140 [01:41<07:07,  2.22it/s] 17%|█▋        | 193/1140 [01:41<07:50,  2.01it/s] 17%|█▋        | 194/1140 [01:42<07:40,  2.06it/s] 17%|█▋        | 195/1140 [01:42<07:32,  2.09it/s] 17%|█▋        | 196/1140 [01:43<07:28,  2.11it/s] 17%|█▋        | 197/1140 [01:43<07:41,  2.04it/s] 17%|█▋        | 198/1140 [01:44<07:31,  2.09it/s] 17%|█▋        | 199/1140 [01:44<07:23,  2.12it/s] 18%|█▊        | 200/1140 [01:45<07:44,  2.02it/s] 18%|█▊        | 201/1140 [01:45<08:05,  1.93it/s] 18%|█▊        | 202/1140 [01:46<07:53,  1.98it/s] 18%|█▊        | 203/1140 [01:46<07:43,  2.02it/s] 18%|█▊        | 204/1140 [01:47<08:04,  1.93it/s] 18%|█▊        | 205/1140 [01:47<07:45,  2.01it/s] 18%|█▊        | 206/1140 [01:48<07:32,  2.06it/s] 18%|█▊        | 207/1140 [01:48<07:15,  2.14it/s] 18%|█▊        | 208/1140 [01:49<07:11,  2.16it/s] 18%|█▊        | 209/1140 [01:49<07:11,  2.16it/s] 18%|█▊        | 210/1140 [01:50<07:30,  2.06it/s] 19%|█▊        | 211/1140 [01:50<07:25,  2.08it/s] 19%|█▊        | 212/1140 [01:51<07:36,  2.03it/s] 19%|█▊        | 213/1140 [01:51<07:30,  2.06it/s] 19%|█▉        | 214/1140 [01:51<07:09,  2.16it/s] 19%|█▉        | 215/1140 [01:52<06:58,  2.21it/s] 19%|█▉        | 216/1140 [01:52<07:19,  2.10it/s] 19%|█▉        | 217/1140 [01:53<07:15,  2.12it/s] 19%|█▉        | 218/1140 [01:53<07:31,  2.04it/s] 19%|█▉        | 219/1140 [01:54<07:20,  2.09it/s] 19%|█▉        | 220/1140 [01:54<07:00,  2.19it/s] 19%|█▉        | 221/1140 [01:55<07:01,  2.18it/s] 19%|█▉        | 222/1140 [01:55<07:04,  2.16it/s] 20%|█▉        | 223/1140 [01:56<07:00,  2.18it/s] 20%|█▉        | 224/1140 [01:56<07:03,  2.16it/s] 20%|█▉        | 225/1140 [01:56<06:47,  2.24it/s] 20%|█▉        | 226/1140 [01:57<06:51,  2.22it/s] 20%|█▉        | 227/1140 [01:57<06:44,  2.26it/s] 20%|██        | 228/1140 [01:58<06:02,  2.51it/s]training: tensor(0.6917, device='cuda:0')
+training: tensor(0.6980, device='cuda:0')
+training: tensor(0.6930, device='cuda:0')
+training: tensor(0.6947, device='cuda:0')
+training: tensor(0.6996, device='cuda:0')
+training: tensor(0.6944, device='cuda:0')
+training: tensor(0.6906, device='cuda:0')
+{'eval_loss': 0.6944052577018738, 'eval_acc': 0.46357615894039733, 'eval_auc': 0.49241622574955907, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[70, 0], [81, 0]], 'eval_runtime': 3.081, 'eval_samples_per_second': 49.011, 'eval_steps_per_second': 2.597, 'epoch': 2.11}
+training: tensor(0.6857, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6964, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7051, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6925, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6850, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6936, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6895, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7007, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6813, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6891, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6966, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6895, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6929, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6971, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6924, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6976, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7028, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6867, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6852, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6838, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6908, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7020, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6884, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6894, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6840, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6962, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6979, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7026, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6950, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7014, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6805, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6927, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6887, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6927, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6793, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6920, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6945, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6992, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6997, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6864, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6948, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6820, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6919, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6918, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6984, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7005, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6999, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6886, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6773, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6985, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6890, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7028, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6958, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6881, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6794, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6829, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6889, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7012, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6758, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7001, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6890, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6886, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7018, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6897, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7128, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 20%|██        | 229/1140 [01:58<07:27,  2.04it/s] 20%|██        | 230/1140 [01:59<07:21,  2.06it/s] 20%|██        | 231/1140 [01:59<07:06,  2.13it/s] 20%|██        | 232/1140 [02:00<07:21,  2.06it/s] 20%|██        | 233/1140 [02:00<07:53,  1.92it/s] 21%|██        | 234/1140 [02:01<07:33,  2.00it/s] 21%|██        | 235/1140 [02:01<07:41,  1.96it/s] 21%|██        | 236/1140 [02:02<07:13,  2.08it/s] 21%|██        | 237/1140 [02:02<07:31,  2.00it/s] 21%|██        | 238/1140 [02:03<07:18,  2.06it/s] 21%|██        | 239/1140 [02:03<07:14,  2.08it/s] 21%|██        | 240/1140 [02:04<07:26,  2.01it/s] 21%|██        | 241/1140 [02:04<07:14,  2.07it/s] 21%|██        | 242/1140 [02:05<07:06,  2.11it/s] 21%|██▏       | 243/1140 [02:05<07:00,  2.13it/s] 21%|██▏       | 244/1140 [02:06<06:58,  2.14it/s] 21%|██▏       | 245/1140 [02:06<06:57,  2.15it/s] 22%|██▏       | 246/1140 [02:07<06:56,  2.15it/s] 22%|██▏       | 247/1140 [02:07<07:13,  2.06it/s] 22%|██▏       | 248/1140 [02:08<06:53,  2.16it/s] 22%|██▏       | 249/1140 [02:08<06:55,  2.14it/s] 22%|██▏       | 250/1140 [02:08<06:54,  2.15it/s] 22%|██▏       | 251/1140 [02:09<07:09,  2.07it/s] 22%|██▏       | 252/1140 [02:09<07:18,  2.02it/s] 22%|██▏       | 253/1140 [02:10<07:00,  2.11it/s] 22%|██▏       | 254/1140 [02:10<06:54,  2.14it/s] 22%|██▏       | 255/1140 [02:11<06:55,  2.13it/s] 22%|██▏       | 256/1140 [02:11<06:38,  2.22it/s] 23%|██▎       | 257/1140 [02:12<06:44,  2.18it/s] 23%|██▎       | 258/1140 [02:12<06:35,  2.23it/s] 23%|██▎       | 259/1140 [02:13<07:19,  2.00it/s] 23%|██▎       | 260/1140 [02:13<06:56,  2.11it/s] 23%|██▎       | 261/1140 [02:14<06:44,  2.17it/s] 23%|██▎       | 262/1140 [02:14<06:41,  2.19it/s] 23%|██▎       | 263/1140 [02:14<06:33,  2.23it/s] 23%|██▎       | 264/1140 [02:15<06:38,  2.20it/s] 23%|██▎       | 265/1140 [02:15<06:30,  2.24it/s] 23%|██▎       | 266/1140 [02:16<06:25,  2.27it/s] 23%|██▎       | 267/1140 [02:16<06:28,  2.25it/s] 24%|██▎       | 268/1140 [02:17<06:23,  2.27it/s] 24%|██▎       | 269/1140 [02:17<06:26,  2.25it/s] 24%|██▎       | 270/1140 [02:18<06:33,  2.21it/s] 24%|██▍       | 271/1140 [02:18<06:33,  2.21it/s] 24%|██▍       | 272/1140 [02:18<06:21,  2.27it/s] 24%|██▍       | 273/1140 [02:19<06:24,  2.26it/s] 24%|██▍       | 274/1140 [02:19<06:15,  2.31it/s] 24%|██▍       | 275/1140 [02:20<06:19,  2.28it/s] 24%|██▍       | 276/1140 [02:20<06:16,  2.30it/s] 24%|██▍       | 277/1140 [02:21<06:25,  2.24it/s] 24%|██▍       | 278/1140 [02:21<06:29,  2.21it/s] 24%|██▍       | 279/1140 [02:22<06:32,  2.19it/s] 25%|██▍       | 280/1140 [02:22<06:31,  2.20it/s] 25%|██▍       | 281/1140 [02:23<06:33,  2.18it/s] 25%|██▍       | 282/1140 [02:23<06:26,  2.22it/s] 25%|██▍       | 283/1140 [02:23<06:43,  2.12it/s] 25%|██▍       | 284/1140 [02:24<06:27,  2.21it/s] 25%|██▌       | 285/1140 [02:24<06:32,  2.18it/s] 25%|██▌       | 286/1140 [02:25<06:50,  2.08it/s] 25%|██▌       | 287/1140 [02:25<06:36,  2.15it/s] 25%|██▌       | 288/1140 [02:26<06:53,  2.06it/s] 25%|██▌       | 289/1140 [02:26<06:50,  2.07it/s] 25%|██▌       | 290/1140 [02:27<06:31,  2.17it/s] 26%|██▌       | 291/1140 [02:27<06:18,  2.24it/s] 26%|██▌       | 292/1140 [02:28<07:28,  1.89it/s] 26%|██▌       | 293/1140 [02:28<07:25,  1.90it/s] 26%|██▌       | 294/1140 [02:29<07:07,  1.98it/s] 26%|██▌       | 295/1140 [02:29<06:44,  2.09it/s] 26%|██▌       | 296/1140 [02:30<06:38,  2.12it/s] 26%|██▌       | 297/1140 [02:30<06:36,  2.12it/s] 26%|██▌       | 298/1140 [02:31<06:32,  2.15it/s] 26%|██▌       | 299/1140 [02:31<06:28,  2.17it/s] 26%|██▋       | 300/1140 [02:32<06:18,  2.22it/s] 26%|██▋       | 301/1140 [02:32<06:37,  2.11it/s] 26%|██▋       | 302/1140 [02:32<06:20,  2.20it/s] 27%|██▋       | 303/1140 [02:33<06:53,  2.03it/s] 27%|██▋       | 304/1140 [02:33<06:04,  2.29it/s]training: tensor(0.7005, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7077, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6945, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6773, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6914, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6865, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6774, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6922, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6907, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6790, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6897, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6905, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6951, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7011, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6917, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7028, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7032, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6740, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6886, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6888, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6867, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6879, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6878, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6951, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6945, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6856, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7034, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6852, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7003, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6689, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7056, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6936, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6905, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6785, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7006, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7007, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6783, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6958, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6879, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6879, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6778, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6782, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6926, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7041, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6762, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7021, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7068, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7030, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7152, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6923, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7183, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6961, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7118, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6887, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6779, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6730, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6999, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6785, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6783, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6976, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6846, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6895, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6887, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6937, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6979, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7076, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6723, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6781, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7032, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7006, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6654, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7075, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6564, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6870, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 27%|██▋       | 305/1140 [02:34<07:01,  1.98it/s] 27%|██▋       | 306/1140 [02:34<06:41,  2.08it/s] 27%|██▋       | 307/1140 [02:35<07:11,  1.93it/s] 27%|██▋       | 308/1140 [02:35<06:44,  2.06it/s] 27%|██▋       | 309/1140 [02:36<06:25,  2.16it/s] 27%|██▋       | 310/1140 [02:36<06:46,  2.04it/s] 27%|██▋       | 311/1140 [02:37<07:05,  1.95it/s] 27%|██▋       | 312/1140 [02:37<06:53,  2.00it/s] 27%|██▋       | 313/1140 [02:38<06:41,  2.06it/s] 28%|██▊       | 314/1140 [02:38<06:22,  2.16it/s] 28%|██▊       | 315/1140 [02:39<06:47,  2.03it/s] 28%|██▊       | 316/1140 [02:39<06:41,  2.05it/s] 28%|██▊       | 317/1140 [02:40<06:26,  2.13it/s] 28%|██▊       | 318/1140 [02:40<06:22,  2.15it/s] 28%|██▊       | 319/1140 [02:41<06:19,  2.17it/s] 28%|██▊       | 320/1140 [02:41<06:17,  2.17it/s]training: tensor(0.6885, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7112, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6840, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6983, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6884, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6958, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7023, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6893, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6861, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6983, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6497, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6638, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6967, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6910, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6804, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6694, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6895, device='cuda:0')
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:01,  5.64it/s][A
+ 38%|███▊      | 3/8 [00:00<00:01,  4.31it/s][A
+ 50%|█████     | 4/8 [00:00<00:01,  3.81it/s][A
+ 62%|██████▎   | 5/8 [00:01<00:01,  2.93it/s][A
+ 75%|███████▌  | 6/8 [00:01<00:00,  2.78it/s][A
+ 88%|████████▊ | 7/8 [00:02<00:00,  2.83it/s][A
+100%|██████████| 8/8 [00:02<00:00,  3.04it/s][ATrainer is attempting to log a value of "[[70, 0], [81, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                  
+                                             [A 28%|██▊       | 320/1140 [02:44<06:17,  2.17it/s]
+100%|██████████| 8/8 [00:02<00:00,  3.04it/s][A
+                                             [A 28%|██▊       | 321/1140 [02:50<39:56,  2.93s/it] 28%|██▊       | 322/1140 [02:50<29:54,  2.19s/it] 28%|██▊       | 323/1140 [02:51<22:42,  1.67s/it] 28%|██▊       | 324/1140 [02:51<17:43,  1.30s/it] 29%|██▊       | 325/1140 [02:52<14:18,  1.05s/it] 29%|██▊       | 326/1140 [02:52<11:53,  1.14it/s] 29%|██▊       | 327/1140 [02:53<10:31,  1.29it/s] 29%|██▉       | 328/1140 [02:53<09:01,  1.50it/s] 29%|██▉       | 329/1140 [02:54<08:27,  1.60it/s] 29%|██▉       | 330/1140 [02:54<08:16,  1.63it/s] 29%|██▉       | 331/1140 [02:55<07:26,  1.81it/s] 29%|██▉       | 332/1140 [02:55<07:02,  1.91it/s] 29%|██▉       | 333/1140 [02:56<06:45,  1.99it/s] 29%|██▉       | 334/1140 [02:56<06:36,  2.03it/s] 29%|██▉       | 335/1140 [02:56<06:30,  2.06it/s] 29%|██▉       | 336/1140 [02:57<06:37,  2.02it/s] 30%|██▉       | 337/1140 [02:57<06:17,  2.13it/s] 30%|██▉       | 338/1140 [02:58<06:02,  2.21it/s] 30%|██▉       | 339/1140 [02:58<06:07,  2.18it/s] 30%|██▉       | 340/1140 [02:59<06:07,  2.18it/s] 30%|██▉       | 341/1140 [02:59<06:11,  2.15it/s] 30%|███       | 342/1140 [03:00<06:13,  2.14it/s] 30%|███       | 343/1140 [03:00<06:09,  2.16it/s] 30%|███       | 344/1140 [03:01<05:55,  2.24it/s] 30%|███       | 345/1140 [03:01<06:11,  2.14it/s] 30%|███       | 346/1140 [03:02<06:23,  2.07it/s] 30%|███       | 347/1140 [03:02<06:31,  2.02it/s] 31%|███       | 348/1140 [03:03<06:39,  1.98it/s] 31%|███       | 349/1140 [03:03<06:17,  2.10it/s] 31%|███       | 350/1140 [03:04<06:30,  2.03it/s] 31%|███       | 351/1140 [03:04<06:13,  2.11it/s] 31%|███       | 352/1140 [03:04<06:10,  2.13it/s] 31%|███       | 353/1140 [03:05<06:05,  2.15it/s] 31%|███       | 354/1140 [03:05<06:02,  2.17it/s] 31%|███       | 355/1140 [03:06<05:53,  2.22it/s] 31%|███       | 356/1140 [03:06<05:57,  2.19it/s] 31%|███▏      | 357/1140 [03:07<05:56,  2.20it/s] 31%|███▏      | 358/1140 [03:07<06:22,  2.05it/s] 31%|███▏      | 359/1140 [03:08<06:15,  2.08it/s] 32%|███▏      | 360/1140 [03:08<05:59,  2.17it/s] 32%|███▏      | 361/1140 [03:09<05:51,  2.22it/s] 32%|███▏      | 362/1140 [03:09<05:53,  2.20it/s] 32%|███▏      | 363/1140 [03:10<05:46,  2.24it/s] 32%|███▏      | 364/1140 [03:10<05:52,  2.20it/s] 32%|███▏      | 365/1140 [03:10<05:54,  2.19it/s] 32%|███▏      | 366/1140 [03:11<05:47,  2.23it/s] 32%|███▏      | 367/1140 [03:11<05:50,  2.20it/s] 32%|███▏      | 368/1140 [03:12<05:54,  2.18it/s] 32%|███▏      | 369/1140 [03:12<05:47,  2.22it/s] 32%|███▏      | 370/1140 [03:13<05:48,  2.21it/s] 33%|███▎      | 371/1140 [03:13<05:48,  2.21it/s] 33%|███▎      | 372/1140 [03:14<05:50,  2.19it/s] 33%|███▎      | 373/1140 [03:14<06:11,  2.06it/s] 33%|███▎      | 374/1140 [03:15<05:54,  2.16it/s] 33%|███▎      | 375/1140 [03:15<06:21,  2.01it/s] 33%|███▎      | 376/1140 [03:16<06:14,  2.04it/s] 33%|███▎      | 377/1140 [03:16<06:20,  2.01it/s] 33%|███▎      | 378/1140 [03:17<05:59,  2.12it/s] 33%|███▎      | 379/1140 [03:17<05:54,  2.15it/s] 33%|███▎      | 380/1140 [03:17<05:15,  2.41it/s]training: tensor(0.6910, device='cuda:0')
+training: tensor(0.7016, device='cuda:0')
+training: tensor(0.6902, device='cuda:0')
+training: tensor(0.6949, device='cuda:0')
+training: tensor(0.7187, device='cuda:0')
+training: tensor(0.6908, device='cuda:0')
+training: tensor(0.6767, device='cuda:0')
+{'eval_loss': 0.6952128410339355, 'eval_acc': 0.46357615894039733, 'eval_auc': 0.49241622574955907, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[70, 0], [81, 0]], 'eval_runtime': 3.0702, 'eval_samples_per_second': 49.183, 'eval_steps_per_second': 2.606, 'epoch': 4.21}
+training: tensor(0.7003, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7085, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6835, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6738, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6766, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7174, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6715, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6935, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6724, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6889, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6990, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6731, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6840, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6881, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6977, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6890, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6934, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6828, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7076, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6823, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6679, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6523, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6826, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6988, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6810, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6639, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7064, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7015, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7053, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6621, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6993, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6743, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7240, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6742, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7054, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7039, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6744, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6290, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6969, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6767, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6993, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6909, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6938, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6911, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6904, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7048, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6901, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7064, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7039, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6699, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7039, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7176, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7141, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6892, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6788, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6574, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7034, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6895, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6809, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6780, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 33%|███▎      | 381/1140 [03:18<06:11,  2.04it/s] 34%|███▎      | 382/1140 [03:18<05:56,  2.12it/s] 34%|███▎      | 383/1140 [03:19<05:52,  2.15it/s] 34%|███▎      | 384/1140 [03:19<05:39,  2.23it/s] 34%|███▍      | 385/1140 [03:20<05:39,  2.22it/s] 34%|███▍      | 386/1140 [03:20<05:40,  2.22it/s] 34%|███▍      | 387/1140 [03:21<06:14,  2.01it/s] 34%|███▍      | 388/1140 [03:21<06:18,  1.98it/s] 34%|███▍      | 389/1140 [03:22<06:21,  1.97it/s] 34%|███▍      | 390/1140 [03:22<06:08,  2.03it/s] 34%|███▍      | 391/1140 [03:23<06:21,  1.96it/s] 34%|███▍      | 392/1140 [03:23<06:13,  2.00it/s] 34%|███▍      | 393/1140 [03:24<06:04,  2.05it/s] 35%|███▍      | 394/1140 [03:24<06:00,  2.07it/s] 35%|███▍      | 395/1140 [03:25<06:14,  1.99it/s] 35%|███▍      | 396/1140 [03:25<05:54,  2.10it/s] 35%|███▍      | 397/1140 [03:26<05:39,  2.19it/s] 35%|███▍      | 398/1140 [03:26<05:32,  2.23it/s] 35%|███▌      | 399/1140 [03:26<05:35,  2.21it/s] 35%|███▌      | 400/1140 [03:27<05:37,  2.19it/s] 35%|███▌      | 401/1140 [03:27<05:38,  2.18it/s] 35%|███▌      | 402/1140 [03:28<05:54,  2.08it/s] 35%|███▌      | 403/1140 [03:28<05:51,  2.10it/s] 35%|███▌      | 404/1140 [03:29<06:03,  2.02it/s] 36%|███▌      | 405/1140 [03:29<05:45,  2.12it/s] 36%|███▌      | 406/1140 [03:30<05:42,  2.15it/s] 36%|███▌      | 407/1140 [03:30<05:32,  2.20it/s] 36%|███▌      | 408/1140 [03:31<05:25,  2.25it/s] 36%|███▌      | 409/1140 [03:31<05:47,  2.10it/s] 36%|███▌      | 410/1140 [03:32<06:02,  2.01it/s] 36%|███▌      | 411/1140 [03:32<05:56,  2.04it/s] 36%|███▌      | 412/1140 [03:33<05:41,  2.13it/s] 36%|███▌      | 413/1140 [03:33<05:40,  2.13it/s] 36%|███▋      | 414/1140 [03:34<05:27,  2.22it/s] 36%|███▋      | 415/1140 [03:34<05:44,  2.11it/s] 36%|███▋      | 416/1140 [03:35<05:41,  2.12it/s] 37%|███▋      | 417/1140 [03:35<05:57,  2.03it/s] 37%|███▋      | 418/1140 [03:36<05:48,  2.07it/s] 37%|███▋      | 419/1140 [03:36<05:35,  2.15it/s] 37%|███▋      | 420/1140 [03:36<05:26,  2.21it/s] 37%|███▋      | 421/1140 [03:37<05:42,  2.10it/s] 37%|███▋      | 422/1140 [03:37<05:31,  2.16it/s] 37%|███▋      | 423/1140 [03:38<05:31,  2.16it/s] 37%|███▋      | 424/1140 [03:38<06:05,  1.96it/s] 37%|███▋      | 425/1140 [03:39<05:43,  2.08it/s] 37%|███▋      | 426/1140 [03:39<05:27,  2.18it/s] 37%|███▋      | 427/1140 [03:40<05:30,  2.16it/s] 38%|███▊      | 428/1140 [03:40<05:30,  2.16it/s] 38%|███▊      | 429/1140 [03:41<05:31,  2.15it/s] 38%|███▊      | 430/1140 [03:41<05:32,  2.14it/s] 38%|███▊      | 431/1140 [03:42<05:22,  2.20it/s] 38%|███▊      | 432/1140 [03:42<05:22,  2.20it/s] 38%|███▊      | 433/1140 [03:42<05:15,  2.24it/s] 38%|███▊      | 434/1140 [03:43<05:16,  2.23it/s] 38%|███▊      | 435/1140 [03:43<05:10,  2.27it/s] 38%|███▊      | 436/1140 [03:44<05:03,  2.32it/s] 38%|███▊      | 437/1140 [03:44<05:10,  2.26it/s] 38%|███▊      | 438/1140 [03:45<05:16,  2.22it/s] 39%|███▊      | 439/1140 [03:45<05:16,  2.21it/s] 39%|███▊      | 440/1140 [03:46<05:11,  2.25it/s] 39%|███▊      | 441/1140 [03:46<05:16,  2.21it/s] 39%|███▉      | 442/1140 [03:47<05:32,  2.10it/s] 39%|███▉      | 443/1140 [03:47<05:26,  2.13it/s] 39%|███▉      | 444/1140 [03:47<05:24,  2.14it/s] 39%|███▉      | 445/1140 [03:48<05:23,  2.15it/s] 39%|███▉      | 446/1140 [03:48<05:22,  2.15it/s] 39%|███▉      | 447/1140 [03:49<05:38,  2.05it/s] 39%|███▉      | 448/1140 [03:49<05:30,  2.09it/s] 39%|███▉      | 449/1140 [03:50<05:27,  2.11it/s] 39%|███▉      | 450/1140 [03:50<05:25,  2.12it/s] 40%|███▉      | 451/1140 [03:51<05:25,  2.11it/s] 40%|███▉      | 452/1140 [03:51<05:20,  2.14it/s] 40%|███▉      | 453/1140 [03:52<05:19,  2.15it/s] 40%|███▉      | 454/1140 [03:52<05:16,  2.17it/s] 40%|███▉      | 455/1140 [03:53<05:08,  2.22it/s] 40%|████      | 456/1140 [03:53<04:35,  2.48it/s]training: tensor(0.6854, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6981, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6799, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7020, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7007, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6883, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7018, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7010, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6656, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6742, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6918, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6901, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6843, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6432, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6535, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7040, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7096, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7108, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6732, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6995, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6887, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6392, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6503, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6374, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6985, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6597, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6957, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7182, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6627, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6436, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6482, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7022, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6877, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6993, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6121, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6751, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6238, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6767, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6977, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7183, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7826, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7114, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6861, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6673, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6820, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6989, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6465, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6844, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6514, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6935, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7123, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6696, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7067, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7153, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7018, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7004, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6753, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6922, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6716, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6975, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6440, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7597, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6716, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6735, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6730, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6751, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6839, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6660, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6839, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7542, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6388, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6600, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6811, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7062, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7042, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6876, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 40%|████      | 457/1140 [03:54<05:34,  2.04it/s] 40%|████      | 458/1140 [03:54<05:29,  2.07it/s] 40%|████      | 459/1140 [03:55<05:42,  1.99it/s] 40%|████      | 460/1140 [03:55<06:12,  1.82it/s] 40%|████      | 461/1140 [03:56<05:52,  1.92it/s] 41%|████      | 462/1140 [03:56<05:40,  1.99it/s] 41%|████      | 463/1140 [03:57<05:30,  2.05it/s] 41%|████      | 464/1140 [03:57<05:38,  2.00it/s] 41%|████      | 465/1140 [03:58<05:31,  2.03it/s] 41%|████      | 466/1140 [03:58<05:15,  2.14it/s] 41%|████      | 467/1140 [03:58<05:03,  2.22it/s] 41%|████      | 468/1140 [03:59<05:07,  2.18it/s] 41%|████      | 469/1140 [03:59<04:59,  2.24it/s] 41%|████      | 470/1140 [04:00<05:01,  2.22it/s] 41%|████▏     | 471/1140 [04:00<04:53,  2.28it/s] 41%|████▏     | 472/1140 [04:01<04:56,  2.25it/s] 41%|████▏     | 473/1140 [04:01<05:02,  2.21it/s] 42%|████▏     | 474/1140 [04:02<05:03,  2.19it/s] 42%|████▏     | 475/1140 [04:02<05:02,  2.20it/s] 42%|████▏     | 476/1140 [04:02<05:02,  2.20it/s] 42%|████▏     | 477/1140 [04:03<05:16,  2.09it/s] 42%|████▏     | 478/1140 [04:03<05:03,  2.18it/s] 42%|████▏     | 479/1140 [04:04<05:02,  2.19it/s] 42%|████▏     | 480/1140 [04:04<05:16,  2.08it/s]training: tensor(0.7045, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6844, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6728, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6246, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7323, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6623, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6705, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6556, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6364, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7007, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6721, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7039, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7189, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6899, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6605, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6430, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6723, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6688, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6527, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7885, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7205, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5962, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6843, device='cuda:0')
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:01,  5.65it/s][A
+ 38%|███▊      | 3/8 [00:00<00:01,  4.31it/s][A
+ 50%|█████     | 4/8 [00:00<00:01,  3.81it/s][A
+ 62%|██████▎   | 5/8 [00:01<00:01,  2.93it/s][A
+ 75%|███████▌  | 6/8 [00:01<00:00,  2.78it/s][A
+ 88%|████████▊ | 7/8 [00:02<00:00,  2.83it/s][A
+100%|██████████| 8/8 [00:02<00:00,  3.02it/s][ATrainer is attempting to log a value of "[[70, 0], [81, 0]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                  
+                                             [A 42%|████▏     | 480/1140 [04:08<05:16,  2.08it/s]
+100%|██████████| 8/8 [00:02<00:00,  3.02it/s][A
+                                             [A 42%|████▏     | 481/1140 [04:13<32:41,  2.98s/it] 42%|████▏     | 482/1140 [04:14<24:15,  2.21s/it] 42%|████▏     | 483/1140 [04:14<18:42,  1.71s/it] 42%|████▏     | 484/1140 [04:15<14:29,  1.33s/it] 43%|████▎     | 485/1140 [04:15<11:40,  1.07s/it] 43%|████▎     | 486/1140 [04:16<09:52,  1.10it/s] 43%|████▎     | 487/1140 [04:16<08:27,  1.29it/s] 43%|████▎     | 488/1140 [04:17<07:42,  1.41it/s] 43%|████▎     | 489/1140 [04:17<06:44,  1.61it/s] 43%|████▎     | 490/1140 [04:17<06:05,  1.78it/s] 43%|████▎     | 491/1140 [04:18<05:46,  1.87it/s] 43%|████▎     | 492/1140 [04:18<05:31,  1.95it/s] 43%|████▎     | 493/1140 [04:19<05:42,  1.89it/s] 43%|████▎     | 494/1140 [04:19<05:30,  1.95it/s] 43%|████▎     | 495/1140 [04:20<05:43,  1.88it/s] 44%|████▎     | 496/1140 [04:20<05:31,  1.94it/s] 44%|████▎     | 497/1140 [04:21<05:21,  2.00it/s] 44%|████▎     | 498/1140 [04:21<05:14,  2.04it/s] 44%|████▍     | 499/1140 [04:22<04:58,  2.14it/s] 44%|████▍     | 500/1140 [04:22<04:56,  2.16it/s]                                                   44%|████▍     | 500/1140 [04:22<04:56,  2.16it/s] 44%|████▍     | 501/1140 [04:23<05:08,  2.07it/s] 44%|████▍     | 502/1140 [04:23<05:04,  2.09it/s] 44%|████▍     | 503/1140 [04:24<05:03,  2.10it/s] 44%|████▍     | 504/1140 [04:24<04:58,  2.13it/s] 44%|████▍     | 505/1140 [04:25<05:10,  2.05it/s] 44%|████▍     | 506/1140 [04:25<05:06,  2.07it/s] 44%|████▍     | 507/1140 [04:26<05:00,  2.11it/s] 45%|████▍     | 508/1140 [04:26<04:47,  2.20it/s] 45%|████▍     | 509/1140 [04:27<04:50,  2.17it/s] 45%|████▍     | 510/1140 [04:27<04:40,  2.25it/s] 45%|████▍     | 511/1140 [04:27<04:33,  2.30it/s] 45%|████▍     | 512/1140 [04:28<04:28,  2.34it/s] 45%|████▌     | 513/1140 [04:28<04:25,  2.36it/s] 45%|████▌     | 514/1140 [04:29<04:58,  2.10it/s] 45%|████▌     | 515/1140 [04:29<04:46,  2.18it/s] 45%|████▌     | 516/1140 [04:30<04:37,  2.25it/s] 45%|████▌     | 517/1140 [04:30<04:42,  2.20it/s] 45%|████▌     | 518/1140 [04:31<04:42,  2.20it/s] 46%|████▌     | 519/1140 [04:31<04:56,  2.10it/s] 46%|████▌     | 520/1140 [04:32<04:46,  2.17it/s] 46%|████▌     | 521/1140 [04:32<04:47,  2.15it/s] 46%|████▌     | 522/1140 [04:32<04:46,  2.16it/s] 46%|████▌     | 523/1140 [04:33<04:36,  2.23it/s] 46%|████▌     | 524/1140 [04:33<04:37,  2.22it/s] 46%|████▌     | 525/1140 [04:34<04:36,  2.22it/s] 46%|████▌     | 526/1140 [04:34<04:53,  2.09it/s] 46%|████▌     | 527/1140 [04:35<05:05,  2.00it/s] 46%|████▋     | 528/1140 [04:35<04:51,  2.10it/s] 46%|████▋     | 529/1140 [04:36<04:46,  2.13it/s] 46%|████▋     | 530/1140 [04:36<04:37,  2.20it/s] 47%|████▋     | 531/1140 [04:37<04:38,  2.19it/s] 47%|████▋     | 532/1140 [04:37<04:08,  2.45it/s]training: tensor(0.6868, device='cuda:0')
+training: tensor(0.7016, device='cuda:0')
+training: tensor(0.6814, device='cuda:0')
+training: tensor(0.6977, device='cuda:0')
+training: tensor(0.7720, device='cuda:0')
+training: tensor(0.6752, device='cuda:0')
+training: tensor(0.6351, device='cuda:0')
+{'eval_loss': 0.6951359510421753, 'eval_acc': 0.46357615894039733, 'eval_auc': 0.49241622574955907, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0, 'eval_confusion_matrix': [[70, 0], [81, 0]], 'eval_runtime': 3.0723, 'eval_samples_per_second': 49.149, 'eval_steps_per_second': 2.604, 'epoch': 6.32}
+training: tensor(0.6673, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7109, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7776, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6972, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6201, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6478, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6258, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6096, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7009, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7096, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6823, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6701, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5647, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7688, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6141, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6497, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6199, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6690, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6971, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6590, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+{'loss': 0.689, 'grad_norm': 0.11162284761667252, 'learning_rate': 2.2654867256637168e-05, 'epoch': 6.58}
+training: tensor(0.7406, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6684, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6856, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6585, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8044, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7115, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6496, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6901, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6294, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6901, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6870, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7288, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6966, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6899, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6875, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6554, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5855, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7203, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6191, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6713, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6864, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6676, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6637, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5910, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5868, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7153, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7205, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7151, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7706, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6895, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 47%|████▋     | 533/1140 [04:38<05:01,  2.01it/s] 47%|████▋     | 534/1140 [04:38<04:54,  2.06it/s] 47%|████▋     | 535/1140 [04:39<04:49,  2.09it/s] 47%|████▋     | 536/1140 [04:39<04:36,  2.18it/s] 47%|████▋     | 537/1140 [04:39<04:39,  2.16it/s] 47%|████▋     | 538/1140 [04:40<04:39,  2.16it/s] 47%|████▋     | 539/1140 [04:40<04:29,  2.23it/s] 47%|████▋     | 540/1140 [04:41<04:24,  2.26it/s] 47%|████▋     | 541/1140 [04:41<04:40,  2.14it/s] 48%|████▊     | 542/1140 [04:42<04:57,  2.01it/s] 48%|████▊     | 543/1140 [04:42<04:49,  2.06it/s] 48%|████▊     | 544/1140 [04:43<04:36,  2.16it/s] 48%|████▊     | 545/1140 [04:43<04:26,  2.23it/s] 48%|████▊     | 546/1140 [04:44<04:26,  2.22it/s] 48%|████▊     | 547/1140 [04:44<04:30,  2.19it/s] 48%|████▊     | 548/1140 [04:45<04:33,  2.17it/s] 48%|████▊     | 549/1140 [04:45<04:23,  2.24it/s] 48%|████▊     | 550/1140 [04:45<04:27,  2.20it/s] 48%|████▊     | 551/1140 [04:46<04:27,  2.21it/s] 48%|████▊     | 552/1140 [04:46<04:38,  2.11it/s] 49%|████▊     | 553/1140 [04:47<04:27,  2.20it/s] 49%|████▊     | 554/1140 [04:47<04:28,  2.18it/s] 49%|████▊     | 555/1140 [04:48<04:22,  2.22it/s] 49%|████▉     | 556/1140 [04:48<04:23,  2.22it/s] 49%|████▉     | 557/1140 [04:49<04:16,  2.27it/s] 49%|████▉     | 558/1140 [04:49<04:32,  2.14it/s] 49%|████▉     | 559/1140 [04:49<04:24,  2.20it/s] 49%|████▉     | 560/1140 [04:50<04:18,  2.24it/s] 49%|████▉     | 561/1140 [04:50<04:22,  2.21it/s] 49%|████▉     | 562/1140 [04:51<04:33,  2.11it/s] 49%|████▉     | 563/1140 [04:51<04:33,  2.11it/s] 49%|████▉     | 564/1140 [04:52<04:29,  2.13it/s] 50%|████▉     | 565/1140 [04:52<04:20,  2.21it/s] 50%|████▉     | 566/1140 [04:53<04:14,  2.25it/s] 50%|████▉     | 567/1140 [04:53<04:09,  2.30it/s] 50%|████▉     | 568/1140 [04:54<04:13,  2.25it/s] 50%|████▉     | 569/1140 [04:54<04:07,  2.30it/s] 50%|█████     | 570/1140 [04:54<04:03,  2.34it/s] 50%|█████     | 571/1140 [04:55<04:18,  2.20it/s] 50%|█████     | 572/1140 [04:55<04:18,  2.20it/s] 50%|█████     | 573/1140 [04:56<04:51,  1.95it/s] 50%|█████     | 574/1140 [04:57<04:51,  1.94it/s] 50%|█████     | 575/1140 [04:57<04:35,  2.05it/s] 51%|█████     | 576/1140 [04:57<04:40,  2.01it/s] 51%|█████     | 577/1140 [04:58<04:34,  2.05it/s] 51%|█████     | 578/1140 [04:58<04:29,  2.09it/s] 51%|█████     | 579/1140 [04:59<04:38,  2.02it/s] 51%|█████     | 580/1140 [04:59<04:23,  2.12it/s] 51%|█████     | 581/1140 [05:00<04:23,  2.12it/s] 51%|█████     | 582/1140 [05:00<04:31,  2.06it/s] 51%|█████     | 583/1140 [05:01<04:28,  2.08it/s] 51%|█████     | 584/1140 [05:01<04:34,  2.03it/s] 51%|█████▏    | 585/1140 [05:02<04:26,  2.08it/s] 51%|█████▏    | 586/1140 [05:02<04:14,  2.18it/s] 51%|█████▏    | 587/1140 [05:03<04:06,  2.24it/s] 52%|█████▏    | 588/1140 [05:03<04:00,  2.29it/s] 52%|█████▏    | 589/1140 [05:03<03:56,  2.33it/s] 52%|█████▏    | 590/1140 [05:04<03:59,  2.29it/s] 52%|█████▏    | 591/1140 [05:04<04:04,  2.25it/s] 52%|█████▏    | 592/1140 [05:05<04:06,  2.22it/s] 52%|█████▏    | 593/1140 [05:05<04:09,  2.19it/s] 52%|█████▏    | 594/1140 [05:06<04:19,  2.10it/s] 52%|█████▏    | 595/1140 [05:06<04:10,  2.17it/s] 52%|█████▏    | 596/1140 [05:07<04:10,  2.17it/s] 52%|█████▏    | 597/1140 [05:07<04:08,  2.18it/s] 52%|█████▏    | 598/1140 [05:08<04:02,  2.23it/s] 53%|█████▎    | 599/1140 [05:08<04:03,  2.23it/s] 53%|█████▎    | 600/1140 [05:09<04:13,  2.13it/s] 53%|█████▎    | 601/1140 [05:09<04:05,  2.19it/s] 53%|█████▎    | 602/1140 [05:09<04:17,  2.09it/s] 53%|█████▎    | 603/1140 [05:10<04:30,  1.99it/s] 53%|█████▎    | 604/1140 [05:11<04:48,  1.85it/s] 53%|█████▎    | 605/1140 [05:11<05:05,  1.75it/s] 53%|█████▎    | 606/1140 [05:12<04:45,  1.87it/s] 53%|█████▎    | 607/1140 [05:12<04:32,  1.96it/s] 53%|█████▎    | 608/1140 [05:13<04:12,  2.10it/s]training: tensor(0.6587, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6720, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6610, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6913, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6200, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6708, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6947, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7067, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6715, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5456, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6587, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6918, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6917, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7206, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6117, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6106, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6969, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6856, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7231, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6266, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6894, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6695, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7054, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7279, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6916, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5682, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7091, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7088, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7122, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6233, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6099, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6491, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6944, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7062, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6946, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6655, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6946, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6946, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6977, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7243, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6062, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8056, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7065, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6249, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6651, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6652, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6367, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6923, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6178, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6252, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6160, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8103, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6532, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6931, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6928, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6931, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7202, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6639, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7716, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6087, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6214, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7053, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6639, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6525, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7041, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7162, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6217, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7002, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5706, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6304, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7325, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6994, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7152, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6521, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.3578, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 53%|█████▎    | 609/1140 [05:13<04:44,  1.87it/s] 54%|█████▎    | 610/1140 [05:14<04:23,  2.01it/s] 54%|█████▎    | 611/1140 [05:14<04:09,  2.12it/s] 54%|█████▎    | 612/1140 [05:15<04:06,  2.14it/s] 54%|█████▍    | 613/1140 [05:15<04:07,  2.13it/s] 54%|█████▍    | 614/1140 [05:16<04:06,  2.13it/s] 54%|█████▍    | 615/1140 [05:16<04:06,  2.13it/s] 54%|█████▍    | 616/1140 [05:16<04:03,  2.15it/s] 54%|█████▍    | 617/1140 [05:17<04:04,  2.14it/s] 54%|█████▍    | 618/1140 [05:17<04:14,  2.05it/s] 54%|█████▍    | 619/1140 [05:18<04:08,  2.09it/s] 54%|█████▍    | 620/1140 [05:18<04:04,  2.12it/s] 54%|█████▍    | 621/1140 [05:19<03:57,  2.19it/s] 55%|█████▍    | 622/1140 [05:19<04:19,  2.00it/s] 55%|█████▍    | 623/1140 [05:20<04:23,  1.96it/s] 55%|█████▍    | 624/1140 [05:20<04:24,  1.95it/s] 55%|█████▍    | 625/1140 [05:21<04:15,  2.02it/s] 55%|█████▍    | 626/1140 [05:21<04:08,  2.07it/s] 55%|█████▌    | 627/1140 [05:22<04:06,  2.08it/s] 55%|█████▌    | 628/1140 [05:22<03:58,  2.15it/s] 55%|█████▌    | 629/1140 [05:23<03:58,  2.14it/s] 55%|█████▌    | 630/1140 [05:23<04:00,  2.12it/s] 55%|█████▌    | 631/1140 [05:24<03:56,  2.15it/s] 55%|█████▌    | 632/1140 [05:24<04:08,  2.04it/s] 56%|█████▌    | 633/1140 [05:25<03:58,  2.12it/s] 56%|█████▌    | 634/1140 [05:25<04:12,  2.00it/s] 56%|█████▌    | 635/1140 [05:26<04:01,  2.09it/s] 56%|█████▌    | 636/1140 [05:26<04:08,  2.03it/s] 56%|█████▌    | 637/1140 [05:27<03:58,  2.11it/s] 56%|█████▌    | 638/1140 [05:27<03:54,  2.14it/s] 56%|█████▌    | 639/1140 [05:28<04:01,  2.07it/s] 56%|█████▌    | 640/1140 [05:28<03:58,  2.10it/s]training: tensor(0.7006, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6917, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7173, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6729, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6597, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6101, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6486, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6035, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6352, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7180, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6454, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7103, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6316, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6727, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6137, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7135, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6478, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6053, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6950, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7118, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6120, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6437, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5655, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7083, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7808, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7052, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6216, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7015, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7173, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6799, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7062, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6804, device='cuda:0')
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:01,  5.64it/s][A
+ 38%|███▊      | 3/8 [00:00<00:01,  4.26it/s][A
+ 50%|█████     | 4/8 [00:00<00:01,  3.78it/s][A
+ 62%|██████▎   | 5/8 [00:01<00:01,  2.93it/s][A
+ 75%|███████▌  | 6/8 [00:01<00:00,  2.78it/s][A
+ 88%|████████▊ | 7/8 [00:02<00:00,  2.83it/s][A
+100%|██████████| 8/8 [00:02<00:00,  3.02it/s][ATrainer is attempting to log a value of "[[10, 60], [14, 67]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                  
+                                             [A 56%|█████▌    | 640/1140 [05:31<03:58,  2.10it/s]
+100%|██████████| 8/8 [00:02<00:00,  3.02it/s][A
+                                             [A 56%|█████▌    | 641/1140 [05:37<25:07,  3.02s/it] 56%|█████▋    | 642/1140 [05:37<18:34,  2.24s/it] 56%|█████▋    | 643/1140 [05:38<14:01,  1.69s/it] 56%|█████▋    | 644/1140 [05:38<10:49,  1.31s/it] 57%|█████▋    | 645/1140 [05:39<08:42,  1.06s/it] 57%|█████▋    | 646/1140 [05:39<07:15,  1.14it/s] 57%|█████▋    | 647/1140 [05:40<06:12,  1.32it/s] 57%|█████▋    | 648/1140 [05:40<05:29,  1.49it/s] 57%|█████▋    | 649/1140 [05:41<04:56,  1.65it/s] 57%|█████▋    | 650/1140 [05:41<04:36,  1.77it/s] 57%|█████▋    | 651/1140 [05:42<04:29,  1.81it/s] 57%|█████▋    | 652/1140 [05:42<04:14,  1.92it/s] 57%|█████▋    | 653/1140 [05:42<04:04,  1.99it/s] 57%|█████▋    | 654/1140 [05:43<03:59,  2.03it/s] 57%|█████▋    | 655/1140 [05:43<03:53,  2.08it/s] 58%|█████▊    | 656/1140 [05:44<03:59,  2.02it/s] 58%|█████▊    | 657/1140 [05:44<03:56,  2.04it/s] 58%|█████▊    | 658/1140 [05:45<03:50,  2.09it/s] 58%|█████▊    | 659/1140 [05:45<03:41,  2.18it/s] 58%|█████▊    | 660/1140 [05:46<03:36,  2.22it/s] 58%|█████▊    | 661/1140 [05:46<03:46,  2.12it/s] 58%|█████▊    | 662/1140 [05:47<03:37,  2.20it/s] 58%|█████▊    | 663/1140 [05:47<03:36,  2.20it/s] 58%|█████▊    | 664/1140 [05:47<03:35,  2.21it/s] 58%|█████▊    | 665/1140 [05:48<03:29,  2.27it/s] 58%|█████▊    | 666/1140 [05:48<03:32,  2.23it/s] 59%|█████▊    | 667/1140 [05:49<03:35,  2.20it/s] 59%|█████▊    | 668/1140 [05:49<03:36,  2.18it/s] 59%|█████▊    | 669/1140 [05:50<03:35,  2.19it/s] 59%|█████▉    | 670/1140 [05:50<03:43,  2.10it/s] 59%|█████▉    | 671/1140 [05:51<03:40,  2.13it/s] 59%|█████▉    | 672/1140 [05:51<03:40,  2.13it/s] 59%|█████▉    | 673/1140 [05:52<03:31,  2.20it/s] 59%|█████▉    | 674/1140 [05:52<03:42,  2.09it/s] 59%|█████▉    | 675/1140 [05:53<03:32,  2.19it/s] 59%|█████▉    | 676/1140 [05:53<03:30,  2.20it/s] 59%|█████▉    | 677/1140 [05:54<03:45,  2.05it/s] 59%|█████▉    | 678/1140 [05:54<03:39,  2.10it/s] 60%|█████▉    | 679/1140 [05:54<03:31,  2.18it/s] 60%|█████▉    | 680/1140 [05:55<03:30,  2.19it/s] 60%|█████▉    | 681/1140 [05:55<03:30,  2.18it/s] 60%|█████▉    | 682/1140 [05:56<03:39,  2.08it/s] 60%|█████▉    | 683/1140 [05:56<03:38,  2.09it/s] 60%|██████    | 684/1140 [05:57<03:12,  2.36it/s]training: tensor(0.6832, device='cuda:0')
+training: tensor(0.6920, device='cuda:0')
+training: tensor(0.6746, device='cuda:0')
+training: tensor(0.6955, device='cuda:0')
+training: tensor(0.7937, device='cuda:0')
+training: tensor(0.6581, device='cuda:0')
+training: tensor(0.6001, device='cuda:0')
+{'eval_loss': 0.6897459626197815, 'eval_acc': 0.5099337748344371, 'eval_auc': 0.49241622574955907, 'eval_precision': 0.5275590551181102, 'eval_recall': 0.8271604938271605, 'eval_f1': 0.6442307692307692, 'eval_confusion_matrix': [[10, 60], [14, 67]], 'eval_runtime': 3.08, 'eval_samples_per_second': 49.026, 'eval_steps_per_second': 2.597, 'epoch': 8.42}
+training: tensor(0.7739, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7018, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7035, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6628, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6185, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6576, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6133, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7568, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6118, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7930, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6600, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6490, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6590, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6428, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5670, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6702, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6517, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6934, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6986, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6085, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6553, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6500, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6666, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6641, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6613, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7127, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7956, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6441, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6054, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6881, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5508, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6934, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6601, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6283, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7155, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6935, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6489, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6483, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5543, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5927, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6705, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 60%|██████    | 685/1140 [05:57<03:56,  1.93it/s] 60%|██████    | 686/1140 [05:58<03:49,  1.98it/s] 60%|██████    | 687/1140 [05:58<03:38,  2.07it/s] 60%|██████    | 688/1140 [05:59<03:36,  2.09it/s] 60%|██████    | 689/1140 [05:59<03:32,  2.13it/s] 61%|██████    | 690/1140 [06:00<03:42,  2.02it/s] 61%|██████    | 691/1140 [06:00<03:36,  2.07it/s] 61%|██████    | 692/1140 [06:01<03:34,  2.09it/s] 61%|██████    | 693/1140 [06:01<03:33,  2.09it/s] 61%|██████    | 694/1140 [06:02<03:39,  2.04it/s] 61%|██████    | 695/1140 [06:02<03:34,  2.08it/s] 61%|██████    | 696/1140 [06:03<03:24,  2.17it/s] 61%|██████    | 697/1140 [06:03<03:31,  2.09it/s] 61%|██████    | 698/1140 [06:04<03:28,  2.12it/s] 61%|██████▏   | 699/1140 [06:04<03:34,  2.06it/s] 61%|██████▏   | 700/1140 [06:05<03:38,  2.02it/s] 61%|██████▏   | 701/1140 [06:05<03:34,  2.05it/s] 62%|██████▏   | 702/1140 [06:06<03:29,  2.09it/s] 62%|██████▏   | 703/1140 [06:06<03:27,  2.11it/s] 62%|██████▏   | 704/1140 [06:06<03:20,  2.17it/s] 62%|██████▏   | 705/1140 [06:07<03:13,  2.25it/s] 62%|██████▏   | 706/1140 [06:07<03:10,  2.27it/s] 62%|██████▏   | 707/1140 [06:08<03:08,  2.29it/s] 62%|██████▏   | 708/1140 [06:08<03:19,  2.17it/s] 62%|██████▏   | 709/1140 [06:09<03:18,  2.18it/s] 62%|██████▏   | 710/1140 [06:09<03:14,  2.21it/s] 62%|██████▏   | 711/1140 [06:10<03:37,  1.97it/s] 62%|██████▏   | 712/1140 [06:10<03:33,  2.01it/s] 63%|██████▎   | 713/1140 [06:11<03:35,  1.98it/s] 63%|██████▎   | 714/1140 [06:11<03:31,  2.02it/s] 63%|██████▎   | 715/1140 [06:12<03:33,  1.99it/s] 63%|██████▎   | 716/1140 [06:12<03:27,  2.04it/s] 63%|██████▎   | 717/1140 [06:13<03:19,  2.12it/s] 63%|██████▎   | 718/1140 [06:13<03:18,  2.13it/s] 63%|██████▎   | 719/1140 [06:14<03:18,  2.12it/s] 63%|██████▎   | 720/1140 [06:14<03:12,  2.18it/s] 63%|██████▎   | 721/1140 [06:15<03:30,  1.99it/s] 63%|██████▎   | 722/1140 [06:15<03:18,  2.11it/s] 63%|██████▎   | 723/1140 [06:15<03:15,  2.13it/s] 64%|██████▎   | 724/1140 [06:16<03:13,  2.15it/s] 64%|██████▎   | 725/1140 [06:16<03:06,  2.22it/s] 64%|██████▎   | 726/1140 [06:17<03:07,  2.21it/s] 64%|██████▍   | 727/1140 [06:17<03:04,  2.24it/s] 64%|██████▍   | 728/1140 [06:18<03:06,  2.20it/s] 64%|██████▍   | 729/1140 [06:18<03:06,  2.20it/s] 64%|██████▍   | 730/1140 [06:19<03:01,  2.26it/s] 64%|██████▍   | 731/1140 [06:19<03:03,  2.23it/s] 64%|██████▍   | 732/1140 [06:19<03:00,  2.26it/s] 64%|██████▍   | 733/1140 [06:20<03:11,  2.13it/s] 64%|██████▍   | 734/1140 [06:20<03:09,  2.15it/s] 64%|██████▍   | 735/1140 [06:21<03:16,  2.06it/s] 65%|██████▍   | 736/1140 [06:21<03:13,  2.08it/s] 65%|██████▍   | 737/1140 [06:22<03:12,  2.10it/s] 65%|██████▍   | 738/1140 [06:22<03:20,  2.00it/s] 65%|██████▍   | 739/1140 [06:23<03:24,  1.96it/s] 65%|██████▍   | 740/1140 [06:23<03:14,  2.06it/s] 65%|██████▌   | 741/1140 [06:24<03:09,  2.10it/s] 65%|██████▌   | 742/1140 [06:24<03:02,  2.18it/s] 65%|██████▌   | 743/1140 [06:25<03:01,  2.19it/s] 65%|██████▌   | 744/1140 [06:25<02:57,  2.23it/s] 65%|██████▌   | 745/1140 [06:26<02:52,  2.29it/s] 65%|██████▌   | 746/1140 [06:26<02:54,  2.26it/s] 66%|██████▌   | 747/1140 [06:26<02:55,  2.24it/s] 66%|██████▌   | 748/1140 [06:27<02:52,  2.27it/s] 66%|██████▌   | 749/1140 [06:27<02:54,  2.25it/s] 66%|██████▌   | 750/1140 [06:28<02:54,  2.23it/s] 66%|██████▌   | 751/1140 [06:28<02:50,  2.28it/s] 66%|██████▌   | 752/1140 [06:29<03:00,  2.14it/s] 66%|██████▌   | 753/1140 [06:29<03:01,  2.13it/s] 66%|██████▌   | 754/1140 [06:30<02:58,  2.16it/s] 66%|██████▌   | 755/1140 [06:30<02:57,  2.17it/s] 66%|██████▋   | 756/1140 [06:31<03:07,  2.05it/s] 66%|██████▋   | 757/1140 [06:31<03:04,  2.07it/s] 66%|██████▋   | 758/1140 [06:32<03:03,  2.08it/s] 67%|██████▋   | 759/1140 [06:32<03:02,  2.09it/s] 67%|██████▋   | 760/1140 [06:32<02:44,  2.31it/s]training: tensor(0.6638, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7304, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7036, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6525, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6427, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7599, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6490, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6676, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6479, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6073, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6356, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7004, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6133, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6278, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6057, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6055, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6468, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6406, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6431, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7036, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7088, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6955, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6951, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6119, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6406, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6941, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5934, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6485, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6732, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5955, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6030, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6397, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7107, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6937, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7207, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6841, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7369, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7118, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6401, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6401, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6938, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6462, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6912, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5854, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6394, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7033, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7905, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7007, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6483, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6487, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7634, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6363, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6133, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5460, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5388, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6912, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7079, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7034, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6288, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6815, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6939, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6479, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6774, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6801, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6484, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6284, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7044, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5172, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5821, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6374, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6476, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8180, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7843, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6005, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5786, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5546, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 67%|██████▋   | 761/1140 [06:33<03:18,  1.91it/s] 67%|██████▋   | 762/1140 [06:34<03:05,  2.04it/s] 67%|██████▋   | 763/1140 [06:34<03:13,  1.95it/s] 67%|██████▋   | 764/1140 [06:35<03:01,  2.07it/s] 67%|██████▋   | 765/1140 [06:35<03:05,  2.03it/s] 67%|██████▋   | 766/1140 [06:36<03:01,  2.06it/s] 67%|██████▋   | 767/1140 [06:36<03:05,  2.01it/s] 67%|██████▋   | 768/1140 [06:37<03:02,  2.04it/s] 67%|██████▋   | 769/1140 [06:37<02:53,  2.14it/s] 68%|██████▊   | 770/1140 [06:37<02:51,  2.16it/s] 68%|██████▊   | 771/1140 [06:38<02:49,  2.17it/s] 68%|██████▊   | 772/1140 [06:38<02:49,  2.17it/s] 68%|██████▊   | 773/1140 [06:39<02:43,  2.24it/s] 68%|██████▊   | 774/1140 [06:39<02:41,  2.27it/s] 68%|██████▊   | 775/1140 [06:40<02:37,  2.32it/s] 68%|██████▊   | 776/1140 [06:40<02:36,  2.32it/s] 68%|██████▊   | 777/1140 [06:40<02:39,  2.27it/s] 68%|██████▊   | 778/1140 [06:41<02:43,  2.22it/s] 68%|██████▊   | 779/1140 [06:41<02:43,  2.21it/s] 68%|██████▊   | 780/1140 [06:42<02:52,  2.09it/s] 69%|██████▊   | 781/1140 [06:42<02:44,  2.18it/s] 69%|██████▊   | 782/1140 [06:43<02:39,  2.24it/s] 69%|██████▊   | 783/1140 [06:43<02:42,  2.19it/s] 69%|██████▉   | 784/1140 [06:44<02:49,  2.10it/s] 69%|██████▉   | 785/1140 [06:44<02:46,  2.13it/s] 69%|██████▉   | 786/1140 [06:45<02:42,  2.18it/s] 69%|██████▉   | 787/1140 [06:45<02:37,  2.25it/s] 69%|██████▉   | 788/1140 [06:46<02:39,  2.21it/s] 69%|██████▉   | 789/1140 [06:46<02:47,  2.10it/s] 69%|██████▉   | 790/1140 [06:47<02:44,  2.13it/s] 69%|██████▉   | 791/1140 [06:47<02:44,  2.12it/s] 69%|██████▉   | 792/1140 [06:47<02:44,  2.12it/s] 70%|██████▉   | 793/1140 [06:48<02:39,  2.17it/s] 70%|██████▉   | 794/1140 [06:48<02:40,  2.16it/s] 70%|██████▉   | 795/1140 [06:49<02:41,  2.14it/s] 70%|██████▉   | 796/1140 [06:49<02:39,  2.16it/s] 70%|██████▉   | 797/1140 [06:50<02:45,  2.07it/s] 70%|███████   | 798/1140 [06:50<02:42,  2.11it/s] 70%|███████   | 799/1140 [06:51<02:48,  2.03it/s] 70%|███████   | 800/1140 [06:51<02:43,  2.08it/s]training: tensor(0.5781, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6829, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5343, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6827, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5842, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6191, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6763, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5628, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7067, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6093, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7084, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6280, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7338, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7003, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6946, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6861, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6130, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6043, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6357, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5172, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6947, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7087, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5865, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7970, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6185, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6873, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6661, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6536, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5501, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6611, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5685, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5681, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7034, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5820, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5964, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6306, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7787, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7135, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8145, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7257, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6782, device='cuda:0')
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:01,  5.64it/s][A
+ 38%|███▊      | 3/8 [00:00<00:01,  4.30it/s][A
+ 50%|█████     | 4/8 [00:00<00:01,  3.80it/s][A
+ 62%|██████▎   | 5/8 [00:01<00:01,  2.93it/s][A
+ 75%|███████▌  | 6/8 [00:01<00:00,  2.78it/s][A
+ 88%|████████▊ | 7/8 [00:02<00:00,  2.83it/s][A
+100%|██████████| 8/8 [00:02<00:00,  3.02it/s][ATrainer is attempting to log a value of "[[10, 60], [3, 78]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                  
+                                             [A 70%|███████   | 800/1140 [06:54<02:43,  2.08it/s]
+100%|██████████| 8/8 [00:02<00:00,  3.02it/s][A
+                                             [A 70%|███████   | 801/1140 [07:00<17:20,  3.07s/it] 70%|███████   | 802/1140 [07:01<12:52,  2.28s/it] 70%|███████   | 803/1140 [07:01<09:40,  1.72s/it] 71%|███████   | 804/1140 [07:02<07:32,  1.35s/it] 71%|███████   | 805/1140 [07:02<06:08,  1.10s/it] 71%|███████   | 806/1140 [07:03<05:02,  1.10it/s] 71%|███████   | 807/1140 [07:03<04:16,  1.30it/s] 71%|███████   | 808/1140 [07:04<03:44,  1.48it/s] 71%|███████   | 809/1140 [07:04<03:22,  1.64it/s] 71%|███████   | 810/1140 [07:05<03:03,  1.80it/s] 71%|███████   | 811/1140 [07:05<02:59,  1.84it/s] 71%|███████   | 812/1140 [07:05<02:50,  1.93it/s] 71%|███████▏  | 813/1140 [07:06<02:43,  2.00it/s] 71%|███████▏  | 814/1140 [07:06<02:39,  2.04it/s] 71%|███████▏  | 815/1140 [07:07<02:35,  2.09it/s] 72%|███████▏  | 816/1140 [07:07<02:28,  2.18it/s] 72%|███████▏  | 817/1140 [07:08<02:23,  2.25it/s] 72%|███████▏  | 818/1140 [07:08<02:30,  2.14it/s] 72%|███████▏  | 819/1140 [07:09<02:26,  2.20it/s] 72%|███████▏  | 820/1140 [07:09<02:25,  2.20it/s] 72%|███████▏  | 821/1140 [07:10<02:25,  2.19it/s] 72%|███████▏  | 822/1140 [07:10<02:22,  2.23it/s] 72%|███████▏  | 823/1140 [07:10<02:28,  2.13it/s] 72%|███████▏  | 824/1140 [07:11<02:32,  2.07it/s] 72%|███████▏  | 825/1140 [07:11<02:29,  2.11it/s] 72%|███████▏  | 826/1140 [07:12<02:26,  2.14it/s] 73%|███████▎  | 827/1140 [07:12<02:21,  2.21it/s] 73%|███████▎  | 828/1140 [07:13<02:20,  2.21it/s] 73%|███████▎  | 829/1140 [07:13<02:20,  2.21it/s] 73%|███████▎  | 830/1140 [07:14<02:38,  1.96it/s] 73%|███████▎  | 831/1140 [07:14<02:46,  1.86it/s] 73%|███████▎  | 832/1140 [07:15<02:35,  1.98it/s] 73%|███████▎  | 833/1140 [07:16<02:44,  1.87it/s] 73%|███████▎  | 834/1140 [07:16<02:44,  1.86it/s] 73%|███████▎  | 835/1140 [07:17<02:36,  1.95it/s] 73%|███████▎  | 836/1140 [07:17<02:18,  2.20it/s]training: tensor(0.6811, device='cuda:0')
+training: tensor(0.6795, device='cuda:0')
+training: tensor(0.6693, device='cuda:0')
+training: tensor(0.6900, device='cuda:0')
+training: tensor(0.7994, device='cuda:0')
+training: tensor(0.6403, device='cuda:0')
+training: tensor(0.5654, device='cuda:0')
+{'eval_loss': 0.6819627285003662, 'eval_acc': 0.5827814569536424, 'eval_auc': 0.49294532627865967, 'eval_precision': 0.5652173913043478, 'eval_recall': 0.9629629629629629, 'eval_f1': 0.7123287671232876, 'eval_confusion_matrix': [[10, 60], [3, 78]], 'eval_runtime': 3.0812, 'eval_samples_per_second': 49.006, 'eval_steps_per_second': 2.596, 'epoch': 10.53}
+training: tensor(0.6441, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6162, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7104, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6248, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6268, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6344, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6821, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6648, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6691, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6946, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5982, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6542, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6395, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7410, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6235, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6953, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7118, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6158, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7095, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6563, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6372, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6768, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7283, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8340, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6392, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6562, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6953, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6555, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6554, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5825, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5426, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6773, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7690, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5305, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6341, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5519, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 73%|███████▎  | 837/1140 [07:18<02:41,  1.87it/s] 74%|███████▎  | 838/1140 [07:18<02:40,  1.88it/s] 74%|███████▎  | 839/1140 [07:19<02:34,  1.94it/s] 74%|███████▎  | 840/1140 [07:19<02:30,  1.99it/s] 74%|███████▍  | 841/1140 [07:19<02:25,  2.05it/s] 74%|███████▍  | 842/1140 [07:20<02:19,  2.13it/s] 74%|███████▍  | 843/1140 [07:20<02:24,  2.06it/s] 74%|███████▍  | 844/1140 [07:21<02:21,  2.09it/s] 74%|███████▍  | 845/1140 [07:21<02:15,  2.18it/s] 74%|███████▍  | 846/1140 [07:22<02:10,  2.25it/s] 74%|███████▍  | 847/1140 [07:22<02:08,  2.28it/s] 74%|███████▍  | 848/1140 [07:23<02:09,  2.25it/s] 74%|███████▍  | 849/1140 [07:23<02:07,  2.28it/s] 75%|███████▍  | 850/1140 [07:23<02:05,  2.32it/s] 75%|███████▍  | 851/1140 [07:24<02:03,  2.35it/s] 75%|███████▍  | 852/1140 [07:24<02:13,  2.16it/s] 75%|███████▍  | 853/1140 [07:25<02:20,  2.05it/s] 75%|███████▍  | 854/1140 [07:25<02:18,  2.07it/s] 75%|███████▌  | 855/1140 [07:26<02:15,  2.11it/s] 75%|███████▌  | 856/1140 [07:26<02:12,  2.14it/s] 75%|███████▌  | 857/1140 [07:27<02:11,  2.14it/s] 75%|███████▌  | 858/1140 [07:27<02:10,  2.17it/s] 75%|███████▌  | 859/1140 [07:28<02:24,  1.95it/s] 75%|███████▌  | 860/1140 [07:28<02:25,  1.92it/s] 76%|███████▌  | 861/1140 [07:29<02:20,  1.99it/s] 76%|███████▌  | 862/1140 [07:29<02:12,  2.10it/s] 76%|███████▌  | 863/1140 [07:30<02:06,  2.19it/s] 76%|███████▌  | 864/1140 [07:30<02:11,  2.10it/s] 76%|███████▌  | 865/1140 [07:31<02:05,  2.19it/s] 76%|███████▌  | 866/1140 [07:31<02:04,  2.20it/s] 76%|███████▌  | 867/1140 [07:32<02:04,  2.19it/s] 76%|███████▌  | 868/1140 [07:32<02:05,  2.17it/s] 76%|███████▌  | 869/1140 [07:32<02:04,  2.18it/s] 76%|███████▋  | 870/1140 [07:33<02:03,  2.19it/s] 76%|███████▋  | 871/1140 [07:33<02:02,  2.19it/s] 76%|███████▋  | 872/1140 [07:34<01:58,  2.26it/s] 77%|███████▋  | 873/1140 [07:34<02:06,  2.11it/s] 77%|███████▋  | 874/1140 [07:35<02:05,  2.11it/s] 77%|███████▋  | 875/1140 [07:35<02:04,  2.13it/s] 77%|███████▋  | 876/1140 [07:36<02:03,  2.14it/s] 77%|███████▋  | 877/1140 [07:36<01:58,  2.22it/s] 77%|███████▋  | 878/1140 [07:37<01:55,  2.26it/s] 77%|███████▋  | 879/1140 [07:37<02:02,  2.13it/s] 77%|███████▋  | 880/1140 [07:38<02:00,  2.16it/s] 77%|███████▋  | 881/1140 [07:38<01:59,  2.17it/s] 77%|███████▋  | 882/1140 [07:38<01:59,  2.15it/s] 77%|███████▋  | 883/1140 [07:39<01:59,  2.16it/s] 78%|███████▊  | 884/1140 [07:39<01:55,  2.21it/s] 78%|███████▊  | 885/1140 [07:40<01:55,  2.20it/s] 78%|███████▊  | 886/1140 [07:40<01:52,  2.26it/s] 78%|███████▊  | 887/1140 [07:41<01:52,  2.25it/s] 78%|███████▊  | 888/1140 [07:41<01:57,  2.14it/s] 78%|███████▊  | 889/1140 [07:42<01:57,  2.13it/s] 78%|███████▊  | 890/1140 [07:42<01:55,  2.16it/s] 78%|███████▊  | 891/1140 [07:43<01:54,  2.17it/s] 78%|███████▊  | 892/1140 [07:43<01:55,  2.15it/s] 78%|███████▊  | 893/1140 [07:44<01:54,  2.16it/s] 78%|███████▊  | 894/1140 [07:44<01:54,  2.15it/s] 79%|███████▊  | 895/1140 [07:44<01:53,  2.15it/s] 79%|███████▊  | 896/1140 [07:45<01:54,  2.14it/s] 79%|███████▊  | 897/1140 [07:45<01:58,  2.06it/s] 79%|███████▉  | 898/1140 [07:46<02:01,  1.98it/s] 79%|███████▉  | 899/1140 [07:46<01:58,  2.03it/s] 79%|███████▉  | 900/1140 [07:47<01:56,  2.05it/s] 79%|███████▉  | 901/1140 [07:47<01:52,  2.13it/s] 79%|███████▉  | 902/1140 [07:48<01:51,  2.13it/s] 79%|███████▉  | 903/1140 [07:48<01:50,  2.15it/s] 79%|███████▉  | 904/1140 [07:49<01:53,  2.08it/s] 79%|███████▉  | 905/1140 [07:49<01:49,  2.15it/s] 79%|███████▉  | 906/1140 [07:50<01:45,  2.21it/s] 80%|███████▉  | 907/1140 [07:50<01:50,  2.11it/s] 80%|███████▉  | 908/1140 [07:51<01:54,  2.02it/s] 80%|███████▉  | 909/1140 [07:51<01:52,  2.05it/s] 80%|███████▉  | 910/1140 [07:52<01:49,  2.10it/s] 80%|███████▉  | 911/1140 [07:52<01:47,  2.13it/s] 80%|████████  | 912/1140 [07:52<01:36,  2.35it/s]training: tensor(0.6329, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6417, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5668, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5663, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6305, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6838, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6299, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6523, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7121, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6617, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7011, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6294, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6666, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7298, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6955, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5183, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7426, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6149, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6641, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6673, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6496, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6302, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5579, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5331, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6659, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7314, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7136, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5644, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7313, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5947, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6475, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6001, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6121, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7938, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6473, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7134, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5986, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5943, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6612, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7309, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6604, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5629, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6473, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6239, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5635, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6649, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6949, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6648, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6777, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6294, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5621, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5906, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6477, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7954, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7840, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6833, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5816, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6095, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6263, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.4779, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8015, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6274, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5623, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6758, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7470, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6553, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5789, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7133, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7131, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5842, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7539, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5829, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6296, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6100, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5959, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 80%|████████  | 913/1140 [07:53<02:02,  1.86it/s] 80%|████████  | 914/1140 [07:54<01:52,  2.00it/s] 80%|████████  | 915/1140 [07:54<01:49,  2.05it/s] 80%|████████  | 916/1140 [07:55<01:47,  2.08it/s] 80%|████████  | 917/1140 [07:55<01:45,  2.12it/s] 81%|████████  | 918/1140 [07:55<01:41,  2.18it/s] 81%|████████  | 919/1140 [07:56<01:42,  2.17it/s] 81%|████████  | 920/1140 [07:56<01:41,  2.18it/s] 81%|████████  | 921/1140 [07:57<01:38,  2.22it/s] 81%|████████  | 922/1140 [07:57<01:43,  2.11it/s] 81%|████████  | 923/1140 [07:58<01:45,  2.05it/s] 81%|████████  | 924/1140 [07:58<01:51,  1.93it/s] 81%|████████  | 925/1140 [07:59<01:48,  1.98it/s] 81%|████████  | 926/1140 [07:59<01:43,  2.07it/s] 81%|████████▏ | 927/1140 [08:00<01:42,  2.08it/s] 81%|████████▏ | 928/1140 [08:00<01:40,  2.10it/s] 81%|████████▏ | 929/1140 [08:01<01:43,  2.03it/s] 82%|████████▏ | 930/1140 [08:01<01:40,  2.08it/s] 82%|████████▏ | 931/1140 [08:02<01:43,  2.02it/s] 82%|████████▏ | 932/1140 [08:02<01:37,  2.12it/s] 82%|████████▏ | 933/1140 [08:03<01:34,  2.19it/s] 82%|████████▏ | 934/1140 [08:03<01:38,  2.09it/s] 82%|████████▏ | 935/1140 [08:04<01:36,  2.12it/s] 82%|████████▏ | 936/1140 [08:04<01:35,  2.14it/s] 82%|████████▏ | 937/1140 [08:05<01:34,  2.14it/s] 82%|████████▏ | 938/1140 [08:05<01:39,  2.03it/s] 82%|████████▏ | 939/1140 [08:06<01:43,  1.95it/s] 82%|████████▏ | 940/1140 [08:06<01:43,  1.93it/s] 83%|████████▎ | 941/1140 [08:07<01:36,  2.05it/s] 83%|████████▎ | 942/1140 [08:07<01:31,  2.15it/s] 83%|████████▎ | 943/1140 [08:07<01:30,  2.17it/s] 83%|████████▎ | 944/1140 [08:08<01:28,  2.21it/s] 83%|████████▎ | 945/1140 [08:08<01:32,  2.10it/s] 83%|████████▎ | 946/1140 [08:09<01:31,  2.12it/s] 83%|████████▎ | 947/1140 [08:09<01:34,  2.05it/s] 83%|████████▎ | 948/1140 [08:10<01:29,  2.14it/s] 83%|████████▎ | 949/1140 [08:10<01:32,  2.06it/s] 83%|████████▎ | 950/1140 [08:11<01:27,  2.16it/s] 83%|████████▎ | 951/1140 [08:11<01:25,  2.21it/s] 84%|████████▎ | 952/1140 [08:12<01:23,  2.24it/s] 84%|████████▎ | 953/1140 [08:12<01:28,  2.12it/s] 84%|████████▎ | 954/1140 [08:13<01:26,  2.15it/s] 84%|████████▍ | 955/1140 [08:13<01:23,  2.22it/s] 84%|████████▍ | 956/1140 [08:13<01:20,  2.27it/s] 84%|████████▍ | 957/1140 [08:14<01:24,  2.16it/s] 84%|████████▍ | 958/1140 [08:14<01:27,  2.07it/s] 84%|████████▍ | 959/1140 [08:15<01:29,  2.02it/s] 84%|████████▍ | 960/1140 [08:16<01:37,  1.85it/s]training: tensor(0.5531, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7552, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6266, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6465, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6087, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6951, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6650, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5890, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6377, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5303, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8206, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7691, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5863, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7147, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5670, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6462, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5109, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6480, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.4909, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6964, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6942, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7449, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6686, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5870, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5796, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.4877, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7868, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7015, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7172, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6553, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6075, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6521, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5735, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5868, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5771, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6514, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8407, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6757, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6933, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6509, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5974, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6488, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6541, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7396, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5761, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5512, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5758, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5505, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6764, device='cuda:0')
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:01,  5.57it/s][A
+ 38%|███▊      | 3/8 [00:00<00:01,  4.28it/s][A
+ 50%|█████     | 4/8 [00:00<00:01,  3.79it/s][A
+ 62%|██████▎   | 5/8 [00:01<00:01,  2.93it/s][A
+ 75%|███████▌  | 6/8 [00:01<00:00,  2.78it/s][A
+ 88%|████████▊ | 7/8 [00:02<00:00,  2.83it/s][A
+100%|██████████| 8/8 [00:02<00:00,  3.05it/s][ATrainer is attempting to log a value of "[[10, 60], [3, 78]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                  
+                                             [A 84%|████████▍ | 960/1140 [08:19<01:37,  1.85it/s]
+100%|██████████| 8/8 [00:02<00:00,  3.05it/s][A
+                                             [A 84%|████████▍ | 961/1140 [08:25<09:13,  3.09s/it] 84%|████████▍ | 962/1140 [08:25<06:47,  2.29s/it] 84%|████████▍ | 963/1140 [08:26<05:15,  1.78s/it] 85%|████████▍ | 964/1140 [08:26<04:01,  1.37s/it] 85%|████████▍ | 965/1140 [08:27<03:13,  1.10s/it] 85%|████████▍ | 966/1140 [08:27<02:35,  1.12it/s] 85%|████████▍ | 967/1140 [08:28<02:15,  1.28it/s] 85%|████████▍ | 968/1140 [08:28<01:58,  1.45it/s] 85%|████████▌ | 969/1140 [08:28<01:45,  1.62it/s] 85%|████████▌ | 970/1140 [08:29<01:36,  1.77it/s] 85%|████████▌ | 971/1140 [08:29<01:28,  1.92it/s] 85%|████████▌ | 972/1140 [08:30<01:25,  1.97it/s] 85%|████████▌ | 973/1140 [08:30<01:20,  2.07it/s] 85%|████████▌ | 974/1140 [08:31<01:18,  2.12it/s] 86%|████████▌ | 975/1140 [08:31<01:15,  2.18it/s] 86%|████████▌ | 976/1140 [08:32<01:14,  2.19it/s] 86%|████████▌ | 977/1140 [08:32<01:12,  2.24it/s] 86%|████████▌ | 978/1140 [08:32<01:10,  2.29it/s] 86%|████████▌ | 979/1140 [08:33<01:11,  2.25it/s] 86%|████████▌ | 980/1140 [08:33<01:09,  2.31it/s] 86%|████████▌ | 981/1140 [08:34<01:09,  2.28it/s] 86%|████████▌ | 982/1140 [08:34<01:10,  2.24it/s] 86%|████████▌ | 983/1140 [08:35<01:10,  2.23it/s] 86%|████████▋ | 984/1140 [08:35<01:13,  2.13it/s] 86%|████████▋ | 985/1140 [08:36<01:15,  2.05it/s] 86%|████████▋ | 986/1140 [08:36<01:11,  2.16it/s] 87%|████████▋ | 987/1140 [08:37<01:11,  2.15it/s] 87%|████████▋ | 988/1140 [08:37<01:02,  2.41it/s]training: tensor(0.6718, device='cuda:0')
+training: tensor(0.6695, device='cuda:0')
+training: tensor(0.6689, device='cuda:0')
+training: tensor(0.6863, device='cuda:0')
+training: tensor(0.7815, device='cuda:0')
+training: tensor(0.6309, device='cuda:0')
+training: tensor(0.5498, device='cuda:0')
+{'eval_loss': 0.6738760471343994, 'eval_acc': 0.5827814569536424, 'eval_auc': 0.6091710758377425, 'eval_precision': 0.5652173913043478, 'eval_recall': 0.9629629629629629, 'eval_f1': 0.7123287671232876, 'eval_confusion_matrix': [[10, 60], [3, 78]], 'eval_runtime': 3.071, 'eval_samples_per_second': 49.17, 'eval_steps_per_second': 2.605, 'epoch': 12.63}
+training: tensor(0.5985, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6535, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7004, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6715, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5758, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6750, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7476, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6409, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6720, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6498, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7196, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5580, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6700, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6726, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7152, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6950, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7151, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7197, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6226, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7195, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6049, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6005, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6658, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5970, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5312, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6971, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5958, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6675, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 87%|████████▋ | 989/1140 [08:38<01:16,  1.98it/s] 87%|████████▋ | 990/1140 [08:38<01:12,  2.07it/s] 87%|████████▋ | 991/1140 [08:38<01:08,  2.17it/s] 87%|████████▋ | 992/1140 [08:39<01:08,  2.16it/s] 87%|████████▋ | 993/1140 [08:39<01:05,  2.24it/s] 87%|████████▋ | 994/1140 [08:40<01:08,  2.12it/s] 87%|████████▋ | 995/1140 [08:40<01:07,  2.14it/s] 87%|████████▋ | 996/1140 [08:41<01:06,  2.16it/s] 87%|████████▋ | 997/1140 [08:41<01:05,  2.17it/s] 88%|████████▊ | 998/1140 [08:42<01:08,  2.09it/s] 88%|████████▊ | 999/1140 [08:42<01:07,  2.10it/s] 88%|████████▊ | 1000/1140 [08:43<01:05,  2.13it/s]                                                    88%|████████▊ | 1000/1140 [08:43<01:05,  2.13it/s] 88%|████████▊ | 1001/1140 [08:43<01:04,  2.15it/s] 88%|████████▊ | 1002/1140 [08:44<01:03,  2.17it/s] 88%|████████▊ | 1003/1140 [08:44<01:03,  2.16it/s] 88%|████████▊ | 1004/1140 [08:44<01:02,  2.18it/s] 88%|████████▊ | 1005/1140 [08:45<01:01,  2.18it/s] 88%|████████▊ | 1006/1140 [08:45<01:01,  2.16it/s] 88%|████████▊ | 1007/1140 [08:46<01:07,  1.96it/s] 88%|████████▊ | 1008/1140 [08:46<01:05,  2.02it/s] 89%|████████▊ | 1009/1140 [08:47<01:01,  2.13it/s] 89%|████████▊ | 1010/1140 [08:47<00:58,  2.21it/s] 89%|████████▊ | 1011/1140 [08:48<00:58,  2.21it/s] 89%|████████▉ | 1012/1140 [08:48<00:56,  2.27it/s] 89%|████████▉ | 1013/1140 [08:49<00:59,  2.14it/s] 89%|████████▉ | 1014/1140 [08:49<00:57,  2.19it/s] 89%|████████▉ | 1015/1140 [08:50<00:55,  2.24it/s] 89%|████████▉ | 1016/1140 [08:50<00:54,  2.29it/s] 89%|████████▉ | 1017/1140 [08:50<00:54,  2.26it/s] 89%|████████▉ | 1018/1140 [08:51<01:01,  2.00it/s] 89%|████████▉ | 1019/1140 [08:51<00:57,  2.11it/s] 89%|████████▉ | 1020/1140 [08:52<00:56,  2.11it/s] 90%|████████▉ | 1021/1140 [08:52<00:54,  2.20it/s] 90%|████████▉ | 1022/1140 [08:53<00:57,  2.05it/s] 90%|████████▉ | 1023/1140 [08:53<00:56,  2.06it/s] 90%|████████▉ | 1024/1140 [08:54<00:55,  2.10it/s] 90%|████████▉ | 1025/1140 [08:54<00:54,  2.11it/s] 90%|█████████ | 1026/1140 [08:55<00:52,  2.19it/s] 90%|█████████ | 1027/1140 [08:55<00:56,  2.00it/s] 90%|█████████ | 1028/1140 [08:56<00:58,  1.90it/s] 90%|█████████ | 1029/1140 [08:56<00:58,  1.91it/s] 90%|█████████ | 1030/1140 [08:57<00:53,  2.04it/s] 90%|█████████ | 1031/1140 [08:57<00:51,  2.14it/s] 91%|█████████ | 1032/1140 [08:58<00:48,  2.22it/s] 91%|█████████ | 1033/1140 [08:58<00:48,  2.21it/s] 91%|█████████ | 1034/1140 [08:59<00:51,  2.08it/s] 91%|█████████ | 1035/1140 [08:59<00:52,  2.01it/s] 91%|█████████ | 1036/1140 [09:00<00:49,  2.12it/s] 91%|█████████ | 1037/1140 [09:00<00:51,  2.02it/s] 91%|█████████ | 1038/1140 [09:01<00:49,  2.06it/s] 91%|█████████ | 1039/1140 [09:01<00:50,  2.01it/s] 91%|█████████ | 1040/1140 [09:02<00:48,  2.05it/s] 91%|█████████▏| 1041/1140 [09:02<00:47,  2.09it/s] 91%|█████████▏| 1042/1140 [09:02<00:45,  2.18it/s] 91%|█████████▏| 1043/1140 [09:03<00:46,  2.09it/s] 92%|█████████▏| 1044/1140 [09:03<00:43,  2.18it/s] 92%|█████████▏| 1045/1140 [09:04<00:43,  2.16it/s] 92%|█████████▏| 1046/1140 [09:04<00:43,  2.16it/s] 92%|█████████▏| 1047/1140 [09:05<00:42,  2.16it/s] 92%|█████████▏| 1048/1140 [09:05<00:41,  2.21it/s] 92%|█████████▏| 1049/1140 [09:06<00:41,  2.19it/s] 92%|█████████▏| 1050/1140 [09:06<00:41,  2.18it/s] 92%|█████████▏| 1051/1140 [09:07<00:41,  2.16it/s] 92%|█████████▏| 1052/1140 [09:07<00:43,  2.00it/s] 92%|█████████▏| 1053/1140 [09:08<00:41,  2.12it/s] 92%|█████████▏| 1054/1140 [09:08<00:39,  2.18it/s] 93%|█████████▎| 1055/1140 [09:09<00:39,  2.16it/s] 93%|█████████▎| 1056/1140 [09:09<00:40,  2.07it/s] 93%|█████████▎| 1057/1140 [09:10<00:41,  1.99it/s] 93%|█████████▎| 1058/1140 [09:10<00:38,  2.11it/s] 93%|█████████▎| 1059/1140 [09:10<00:37,  2.18it/s] 93%|█████████▎| 1060/1140 [09:11<00:36,  2.18it/s] 93%|█████████▎| 1061/1140 [09:11<00:36,  2.17it/s] 93%|█████████▎| 1062/1140 [09:12<00:34,  2.25it/s] 93%|█████████▎| 1063/1140 [09:12<00:34,  2.21it/s] 93%|█████████▎| 1064/1140 [09:13<00:30,  2.46it/s]training: tensor(0.6222, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6927, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7194, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6664, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6527, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.4856, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6710, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6265, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6215, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5067, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5330, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6485, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+{'loss': 0.6587, 'grad_norm': 0.2546066641807556, 'learning_rate': 4.955752212389381e-06, 'epoch': 13.16}
+training: tensor(0.6660, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6036, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5988, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6259, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6258, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6167, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8961, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6210, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6973, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7204, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6258, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6511, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5674, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6925, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6457, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6974, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6870, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6353, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6975, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6021, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6740, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6106, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6255, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6265, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6618, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7442, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.4015, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7144, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8218, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7443, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6740, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6741, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7193, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7247, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5052, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6743, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.4769, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5972, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5255, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6586, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6256, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7443, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5716, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6275, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6003, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6201, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5498, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6452, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5495, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6199, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6004, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7242, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7451, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6919, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6005, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5042, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6401, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6738, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6445, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6436, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6577, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7454, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7567, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7932, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+ 93%|█████████▎| 1065/1140 [09:13<00:37,  2.00it/s] 94%|█████████▎| 1066/1140 [09:14<00:37,  1.97it/s] 94%|█████████▎| 1067/1140 [09:14<00:35,  2.07it/s] 94%|█████████▎| 1068/1140 [09:15<00:34,  2.08it/s] 94%|█████████▍| 1069/1140 [09:15<00:32,  2.15it/s] 94%|█████████▍| 1070/1140 [09:16<00:32,  2.15it/s] 94%|█████████▍| 1071/1140 [09:16<00:33,  2.08it/s] 94%|█████████▍| 1072/1140 [09:17<00:35,  1.93it/s] 94%|█████████▍| 1073/1140 [09:17<00:33,  2.00it/s] 94%|█████████▍| 1074/1140 [09:18<00:33,  1.96it/s] 94%|█████████▍| 1075/1140 [09:18<00:31,  2.06it/s] 94%|█████████▍| 1076/1140 [09:19<00:31,  2.01it/s] 94%|█████████▍| 1077/1140 [09:19<00:30,  2.06it/s] 95%|█████████▍| 1078/1140 [09:20<00:29,  2.10it/s] 95%|█████████▍| 1079/1140 [09:20<00:30,  2.01it/s] 95%|█████████▍| 1080/1140 [09:21<00:28,  2.12it/s] 95%|█████████▍| 1081/1140 [09:21<00:27,  2.14it/s] 95%|█████████▍| 1082/1140 [09:21<00:27,  2.13it/s] 95%|█████████▌| 1083/1140 [09:22<00:26,  2.14it/s] 95%|█████████▌| 1084/1140 [09:22<00:25,  2.21it/s] 95%|█████████▌| 1085/1140 [09:23<00:25,  2.19it/s] 95%|█████████▌| 1086/1140 [09:23<00:24,  2.18it/s] 95%|█████████▌| 1087/1140 [09:24<00:25,  2.06it/s] 95%|█████████▌| 1088/1140 [09:24<00:25,  2.08it/s] 96%|█████████▌| 1089/1140 [09:25<00:24,  2.10it/s] 96%|█████████▌| 1090/1140 [09:25<00:23,  2.11it/s] 96%|█████████▌| 1091/1140 [09:26<00:22,  2.20it/s] 96%|█████████▌| 1092/1140 [09:26<00:21,  2.20it/s] 96%|█████████▌| 1093/1140 [09:26<00:20,  2.26it/s] 96%|█████████▌| 1094/1140 [09:27<00:20,  2.24it/s] 96%|█████████▌| 1095/1140 [09:27<00:20,  2.23it/s] 96%|█████████▌| 1096/1140 [09:28<00:19,  2.21it/s] 96%|█████████▌| 1097/1140 [09:28<00:18,  2.27it/s] 96%|█████████▋| 1098/1140 [09:29<00:18,  2.25it/s] 96%|█████████▋| 1099/1140 [09:29<00:18,  2.20it/s] 96%|█████████▋| 1100/1140 [09:30<00:18,  2.17it/s] 97%|█████████▋| 1101/1140 [09:30<00:17,  2.18it/s] 97%|█████████▋| 1102/1140 [09:31<00:17,  2.19it/s] 97%|█████████▋| 1103/1140 [09:31<00:16,  2.19it/s] 97%|█████████▋| 1104/1140 [09:32<00:16,  2.16it/s] 97%|█████████▋| 1105/1140 [09:32<00:16,  2.08it/s] 97%|█████████▋| 1106/1140 [09:33<00:16,  2.10it/s] 97%|█████████▋| 1107/1140 [09:33<00:15,  2.18it/s] 97%|█████████▋| 1108/1140 [09:34<00:15,  2.01it/s] 97%|█████████▋| 1109/1140 [09:34<00:15,  1.97it/s] 97%|█████████▋| 1110/1140 [09:34<00:14,  2.09it/s] 97%|█████████▋| 1111/1140 [09:35<00:15,  1.91it/s] 98%|█████████▊| 1112/1140 [09:36<00:14,  1.89it/s] 98%|█████████▊| 1113/1140 [09:36<00:13,  1.96it/s] 98%|█████████▊| 1114/1140 [09:37<00:12,  2.02it/s] 98%|█████████▊| 1115/1140 [09:37<00:11,  2.11it/s] 98%|█████████▊| 1116/1140 [09:37<00:11,  2.13it/s] 98%|█████████▊| 1117/1140 [09:38<00:10,  2.19it/s] 98%|█████████▊| 1118/1140 [09:38<00:10,  2.19it/s] 98%|█████████▊| 1119/1140 [09:39<00:09,  2.19it/s] 98%|█████████▊| 1120/1140 [09:39<00:09,  2.20it/s]training: tensor(0.6139, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5842, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7157, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5898, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7154, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6196, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5716, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7013, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6970, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5065, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6677, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8436, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6497, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6732, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.4768, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7211, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8031, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5542, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6196, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6975, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6197, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6664, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5227, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6367, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6663, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6559, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6741, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6490, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6742, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6253, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6154, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6192, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6742, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6253, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5530, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5899, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6018, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6017, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6252, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5293, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5467, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7998, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7212, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.4014, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8163, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6740, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6163, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.8440, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5957, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6251, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6444, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6485, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6917, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5777, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6250, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6012, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6759, device='cuda:0')
+
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 25%|██▌       | 2/8 [00:00<00:01,  5.58it/s][A
+ 38%|███▊      | 3/8 [00:00<00:01,  4.29it/s][A
+ 50%|█████     | 4/8 [00:00<00:01,  3.80it/s][A
+ 62%|██████▎   | 5/8 [00:01<00:01,  2.93it/s][A
+ 75%|███████▌  | 6/8 [00:01<00:00,  2.78it/s][A
+ 88%|████████▊ | 7/8 [00:02<00:00,  2.83it/s][A
+100%|██████████| 8/8 [00:02<00:00,  3.02it/s][ATrainer is attempting to log a value of "[[10, 60], [3, 78]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+                                                   
+                                             [A 98%|█████████▊| 1120/1140 [09:42<00:09,  2.20it/s]
+100%|██████████| 8/8 [00:02<00:00,  3.02it/s][A
+                                             [A 98%|█████████▊| 1121/1140 [09:48<00:56,  2.99s/it] 98%|█████████▊| 1122/1140 [09:49<00:39,  2.21s/it] 99%|█████████▊| 1123/1140 [09:49<00:29,  1.73s/it] 99%|█████████▊| 1124/1140 [09:50<00:21,  1.35s/it] 99%|█████████▊| 1125/1140 [09:50<00:16,  1.10s/it] 99%|█████████▉| 1126/1140 [09:51<00:12,  1.11it/s] 99%|█████████▉| 1127/1140 [09:51<00:09,  1.30it/s] 99%|█████████▉| 1128/1140 [09:51<00:08,  1.48it/s] 99%|█████████▉| 1129/1140 [09:52<00:07,  1.57it/s] 99%|█████████▉| 1130/1140 [09:52<00:05,  1.71it/s] 99%|█████████▉| 1131/1140 [09:53<00:04,  1.82it/s] 99%|█████████▉| 1132/1140 [09:53<00:04,  1.89it/s] 99%|█████████▉| 1133/1140 [09:54<00:03,  1.89it/s] 99%|█████████▉| 1134/1140 [09:54<00:03,  1.97it/s]100%|█████████▉| 1135/1140 [09:55<00:02,  2.04it/s]100%|█████████▉| 1136/1140 [09:55<00:01,  2.09it/s]100%|█████████▉| 1137/1140 [09:56<00:01,  2.16it/s]100%|█████████▉| 1138/1140 [09:56<00:00,  2.23it/s]100%|█████████▉| 1139/1140 [09:57<00:00,  2.12it/s]100%|██████████| 1140/1140 [09:57<00:00,  2.33it/s]                                                   100%|██████████| 1140/1140 [10:03<00:00,  2.33it/s]100%|██████████| 1140/1140 [10:03<00:00,  1.89it/s]
+Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+training: tensor(0.6697, device='cuda:0')
+training: tensor(0.6667, device='cuda:0')
+training: tensor(0.6686, device='cuda:0')
+training: tensor(0.6862, device='cuda:0')
+training: tensor(0.7806, device='cuda:0')
+training: tensor(0.6276, device='cuda:0')
+training: tensor(0.5433, device='cuda:0')
+{'eval_loss': 0.6720561981201172, 'eval_acc': 0.5827814569536424, 'eval_auc': 0.6091710758377425, 'eval_precision': 0.5652173913043478, 'eval_recall': 0.9629629629629629, 'eval_f1': 0.7123287671232876, 'eval_confusion_matrix': [[10, 60], [3, 78]], 'eval_runtime': 3.0838, 'eval_samples_per_second': 48.965, 'eval_steps_per_second': 2.594, 'epoch': 14.74}
+training: tensor(0.6620, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7451, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7451, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6190, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5701, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6680, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6250, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6251, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6546, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5953, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6427, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5762, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7963, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6728, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5776, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6488, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.6915, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.7214, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.5878, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+training: tensor(0.4724, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
+{'train_runtime': 603.198, 'train_samples_per_second': 14.995, 'train_steps_per_second': 1.89, 'train_loss': 0.6703552179169237, 'epoch': 15.0}
+Data has been loaded successfully for testing!
+Start testing!
+training: tensor(0.7513, device='cuda:0')
+  0%|          | 0/20 [00:00<?, ?it/s] 10%|█         | 2/20 [00:00<00:03,  5.86it/s] 15%|█▌        | 3/20 [00:00<00:04,  4.06it/s] 20%|██        | 4/20 [00:01<00:04,  3.64it/s] 25%|██▌       | 5/20 [00:01<00:05,  2.57it/s] 30%|███       | 6/20 [00:02<00:05,  2.41it/s] 35%|███▌      | 7/20 [00:02<00:04,  2.61it/s] 40%|████      | 8/20 [00:02<00:04,  2.65it/s] 45%|████▌     | 9/20 [00:03<00:03,  2.78it/s] 50%|█████     | 10/20 [00:03<00:04,  2.44it/s] 55%|█████▌    | 11/20 [00:03<00:03,  2.48it/s] 60%|██████    | 12/20 [00:04<00:03,  2.30it/s] 65%|██████▌   | 13/20 [00:04<00:02,  2.43it/s] 70%|███████   | 14/20 [00:05<00:02,  2.46it/s] 75%|███████▌  | 15/20 [00:05<00:01,  2.50it/s] 80%|████████  | 16/20 [00:05<00:01,  2.66it/s] 85%|████████▌ | 17/20 [00:06<00:01,  2.70it/s] 90%|█████████ | 18/20 [00:06<00:00,  2.73it/s] 95%|█████████▌| 19/20 [00:06<00:00,  2.84it/s]100%|██████████| 20/20 [00:07<00:00,  3.20it/s]Trainer is attempting to log a value of "[[62, 223], [11, 92]]" of type <class 'list'> for key "eval/confusion_matrix" as a scalar. This invocation of Tensorboard's writer.add_scalar() is incorrect so we dropped this attribute.
+100%|██████████| 20/20 [00:07<00:00,  2.77it/s]
+training: tensor(0.6481, device='cuda:0')
+training: tensor(0.6905, device='cuda:0')
+training: tensor(0.6453, device='cuda:0')
+training: tensor(0.9144, device='cuda:0')
+training: tensor(0.8285, device='cuda:0')
+training: tensor(0.7303, device='cuda:0')
+training: tensor(0.6274, device='cuda:0')
+training: tensor(0.7046, device='cuda:0')
+training: tensor(0.5711, device='cuda:0')
+training: tensor(0.6017, device='cuda:0')
+training: tensor(0.5455, device='cuda:0')
+training: tensor(0.6531, device='cuda:0')
+training: tensor(0.5503, device='cuda:0')
+training: tensor(0.6017, device='cuda:0')
+training: tensor(0.7046, device='cuda:0')
+training: tensor(0.6531, device='cuda:0')
+training: tensor(0.6531, device='cuda:0')
+training: tensor(0.7046, device='cuda:0')
+training: tensor(0.7560, device='cuda:0')
+{'eval_loss': 0.6743161082267761, 'eval_acc': 0.39690721649484534, 'eval_auc': 0.46964741951967304, 'eval_precision': 0.2920634920634921, 'eval_recall': 0.8932038834951457, 'eval_f1': 0.44019138755980863, 'eval_confusion_matrix': [[62, 223], [11, 92]]}
+   eval_loss  eval_acc  eval_auc  ...  eval_recall   eval_f1  eval_confusion_matrix
+0   0.674316  0.396907  0.469647  ...     0.893204  0.440191  [[62, 223], [11, 92]]
+
+[1 rows x 7 columns]
+The Activiti results have been saved successfully!
