@@ -16,9 +16,9 @@ class BAAI_model(nn.Module):
         #        param.requires_grad = False
         
         # 只冻结word embedding层，待测试
-        if freeze:
-            for param in self.model.embeddings.parameters():
-               param.requires_grad = False
+        # if freeze:
+        #     for param in self.model.embeddings.parameters():
+        #        param.requires_grad = False
         
         # 这里待测试
         if not self.with_knowledge:
