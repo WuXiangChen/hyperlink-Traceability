@@ -71,8 +71,8 @@ def main(root_Repo:str, device:int):
     results = []
     i = 0
     for train_index, test_index in kf.split(posHyperlink.T):  # Transpose to get samples as rows
-        if i!=0:
-            continue
+        # if i!=0:
+        #     continue
         i+=1
         # Generate train data and labels
         shutil.copytree(f"../text_LM_model/{LM_model_selected}/", fine_tune_model_path, dirs_exist_ok=True)
@@ -87,7 +87,7 @@ def main(root_Repo:str, device:int):
         else:
             print(f"文件夹 '{saved_model_safetensor}' 不存在。")
         # 以半精度的方式加载 attn_implementation attention的计算方法
-        embedding_model = AutoModel.from_pretrained(fine_tune_model_path, torch_dtype=torch.float16, attn_implementation="sdpa")
+        embedding_model = AutoModel.from_pretrained(fine_tune_model_path,  attn_implementation="sdpa")
         # ====================== 构建训练与测试数据集 ===================
         train_pos_set, train_neg_set = posHyperlink[:, train_index], negHyperlink[:, train_index]
         train_set = np.concatenate([train_pos_set, train_neg_set], axis=1)
@@ -142,7 +142,7 @@ if __name__ == '__main__':
     parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
     # 增加三个对比实验参数，冻结-非冻结，自带知识-无自带知识，cat-非cat
     # 增加三个对比实验参数，初始值设置为True
-    parser.add_argument('--freeze', type=str, default="true", help='Frozening The LLM when Training or not.')
+    parser.add_argument('--freeze', type=str, default="false", help='Frozening The LLM when Training or not.')
     parser.add_argument('--with_knowledge', type=str, default="true", help='Take the prior-knowledge into training or not.')
     parser.add_argument('--cat', type=str, default="true", help='Using the cat module for the input information or not.')
 
