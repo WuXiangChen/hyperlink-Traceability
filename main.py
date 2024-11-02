@@ -4,6 +4,7 @@
     导包区
 '''
 import argparse
+import glob
 import os
 import numpy as np
 import pandas as pd
@@ -18,6 +19,7 @@ from model._0_GroundTruthGraph import GroundTruthGraph
 import shutil
 import torch
 import random
+from utils import Utils
 seed = 43
 torch.random.initial_seed()  
 torch.manual_seed(seed) # 为CPU设置随机种子
@@ -30,8 +32,6 @@ torch.use_deterministic_algorithms(True)
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 from torch.utils.tensorboard import SummaryWriter
-import os
-import os
 import os 
 #os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  #（保证程序cuda序号与实际cuda序号对应）
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
@@ -40,7 +40,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
 # 这部分代码片段用于将train+test Artifacts转化成all Artifacts
 
-def main(root_Repo:str, device:int):
+def main_prepareData(root_Repo:str, repoName:str):
     # 读取数据
     data = np.load(root_Repo, allow_pickle=True)
     posHyperlink, negHyperlink = data['positive'], data['negative']
@@ -60,34 +60,22 @@ def main(root_Repo:str, device:int):
 
     groundTruthGraph = GroundTruthGraph(repo_connect_info)
     gG = groundTruthGraph.build_groundtruth_graph() # 二阶段的匹配过程
-    # groundTruthGraph.plot()
-    LM_model_selected = "BAAI_bge-m3_small"
 
-    fine_tune_model_path = f"model/{LM_model_selected}/"
     artifacts = Artifacts(fine_tune_model_path)
     artifacts.registerArtifacts(repo_artifact_info)
     # ==============Training and Testing================
     kf = KFold(n_splits=num_folds, shuffle=True, random_state=42)
-    results = []
     i = 0
+    repo_dict = {}
     for train_index, test_index in kf.split(posHyperlink.T):  # Transpose to get samples as rows
-        # if i!=0:
-        #     continue
         i+=1
-        # Generate train data and labels
-        shutil.copytree(f"../text_LM_model/{LM_model_selected}/", fine_tune_model_path, dirs_exist_ok=True)
-        # 在冻结LLM有效的情况下 这里就不用进行替换了
-        # 删除CHESHIRE路径下的reponame文件
         saved_model_safetensor = f"CHESHIRE/{running_type}/{repoName}"
         # 检查文件夹是否存在
         if os.path.exists(saved_model_safetensor):
             # 删除文件夹及其内容
             shutil.rmtree(saved_model_safetensor)
             print(f"文件夹 '{saved_model_safetensor}' 已成功删除。")
-        else:
-            print(f"文件夹 '{saved_model_safetensor}' 不存在。")
-        # 以半精度的方式加载 attn_implementation attention的计算方法
-        embedding_model = AutoModel.from_pretrained(fine_tune_model_path,  attn_implementation="sdpa")
+        
         # ====================== 构建训练与测试数据集 ===================
         train_pos_set, train_neg_set = posHyperlink[:, train_index], negHyperlink[:, train_index]
         train_set = np.concatenate([train_pos_set, train_neg_set], axis=1)
@@ -104,33 +92,11 @@ def main(root_Repo:str, device:int):
         test_pos_set = np.concatenate([test_pos_set, full_posHyperlink], axis=1)
         test_set = np.concatenate([test_pos_set, test_neg_set], axis=1)
         test_labels = np.concatenate([np.ones(test_pos_set.shape[1]), np.zeros(test_neg_set.shape[1])])
-
-        train_pos_index = np.where(train_labels == 1)[0]
-        writer_tb_log_dir='logsAndResults/logs/original_NSplited_node_LLM_Linear_Structure/'
-
-        '''BAAI-bge'''
-        pro = processer_(embedding_type=LM_model_selected, repoName=repoName, artifacts=artifacts,artifact_dict=artifact_dict, freeze=freeze, with_knowledge=with_knowledge, cat=cat,
-                        tokenizer=artifacts.tokenizer_NL, device=device, embedding_model=embedding_model,writer_tb_log_dir=writer_tb_log_dir)
-        # 这里转换一下数据，适配语义为基础的训练过程
-        # 创建 TensorBoard 的 SummaryWriter
         train_hyperlink = Utils.getValidIndexFromList(train_set, artifact_dict)
-        result = pro.train((train_hyperlink, train_labels))
-
         test_hyperlink = Utils.getValidIndexFromList(test_set, artifact_dict)
-        result = pro.test((test_hyperlink, test_labels), checkpoint_path=None)
-        print(result)
-        results.append(result)
+        repo_dict[i] = [train_hyperlink, train_labels, test_hyperlink, test_labels]
 
-    # ==============Save the results================
-    output_dir = f"logsAndResults/saved_results/{running_type}/"
-    # 检查目录是否存在，如果不存在则创建
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-    df = pd.DataFrame(results)
-    df.to_csv(f"{output_dir}/{repoName}_results_{str(freeze)}_{str(with_knowledge)}_{str(cat)}.csv", index=False)
-    print(df)
-    print(f"The {repoName} results have been saved successfully!")
-
+    return repo_dict, artifacts
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='The arguments set for GraphLinker')
@@ -147,16 +113,62 @@ if __name__ == '__main__':
     parser.add_argument('--cat', type=str, default="true", help='Using the cat module for the input information or not.')
 
     args = parser.parse_args()
-    repoName = args.repoName
+    # repoName = args.repoName
     device = Utils.get_cuda_device(0)
-    root_path = "../dataset/hyperlink_npz"
-    repopath = root_path + "/"+ repoName + ".npz"
     num_folds = args.num_folds
     test_ratio = args.test_ratio
     running_type = args.running_type
-
+    root_path = "../dataset/hyperlink_npz/*.npz"
+    files_path = glob.glob(root_path)
     freeze = args.freeze
     with_knowledge = args.with_knowledge
     cat = args.cat
+    LM_model_selected = "BAAI_bge-m3_small"
+    fine_tune_model_path = f"model/{LM_model_selected}/"
+    writer_tb_log_dir='logsAndResults/logs/original_NSplited_node_LLM_Linear_Structure/'
     print(freeze,with_knowledge,cat)
-    main(root_Repo=repopath, device=device)
+
+    for num in range(1, num_folds+1):
+        all_train, all_TrainLabels, all_test, all_TestLabels = [], [], [], []
+        index_changes = {"train_index":[],"test_index":[]}  # 用于记录下标变化
+        all_artifacts = []
+        results = []
+        shutil.copytree(f"../text_LM_model/{LM_model_selected}/", fine_tune_model_path, dirs_exist_ok=True)
+        for filePath in files_path[:10]:
+            repoName = filePath.split("/")[-1].split(".")[0]
+            repo_dict, artifacts = main_prepareData(filePath, repoName)
+            # 按照num_fold取训练集与测试集
+            train_hyperlink, train_labels, test_hyperlink, test_labels = repo_dict[num]
+            all_train.extend(train_hyperlink.values())
+            all_TrainLabels.extend(train_labels)
+            all_test.extend(test_hyperlink.values())
+            all_TestLabels.extend(test_labels)
+    
+            all_artifacts.append(artifacts)
+            # 记录当前项目的下标变化
+            index_changes["train_index"].append(len(all_train) - 1)
+            index_changes["test_index"].append(len(all_test) - 1)
+
+        all_train = Utils.pad_list(train_data = all_train, index_changes=index_changes)
+        all_train = np.array(all_train)
+        all_TrainLabels = np.array(all_TrainLabels)
+        all_test = Utils.pad_list(all_test, index_changes=index_changes)
+        all_test = np.array(all_test)
+        all_TestLabels = np.array(all_TestLabels)
+        embedding_model = AutoModel.from_pretrained(fine_tune_model_path,  attn_implementation="sdpa")
+        pro = processer_(embedding_type=LM_model_selected, repoName="FullRepos", artifacts=all_artifacts, freeze=freeze, with_knowledge=with_knowledge, cat=cat,
+                         tokenizer=artifacts.tokenizer_NL, device=device, embedding_model=embedding_model,writer_tb_log_dir=writer_tb_log_dir)
+
+        result = pro.train((all_train, all_TrainLabels))
+        result = pro.test((all_test, all_TestLabels), checkpoint_path=None)
+        print(result)
+        results.append(result)
+
+    output_dir = f"logsAndResults/saved_results/{running_type}/"
+    # 检查目录是否存在，如果不存在则创建
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    df = pd.DataFrame(results)
+    df.to_csv(f"{output_dir}/{repoName}_results_{str(freeze)}_{str(with_knowledge)}_{str(cat)}.csv", index=False)
+    print(df)
+    print(f"The {repoName} results have been saved successfully!")

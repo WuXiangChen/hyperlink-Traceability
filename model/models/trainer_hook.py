@@ -1,6 +1,7 @@
 import pandas as pd
 import torch
 from torch import nn
+from utils import Utils
 from transformers import AutoModelForSequenceClassification, Trainer, TrainingArguments, AutoTokenizer, EarlyStoppingCallback
 from datasets import load_dataset, Features, Value, Sequence, Dataset
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, accuracy_score
@@ -37,10 +38,7 @@ def compute_metrics(p):
         "confusion_matrix": cm.tolist()
     }
 
-def pad_list(train_data, fill_value=-1):
-    max_length = max(len(inner) for inner in train_data)  # 找到最长的子列表
-    padded_data = [inner + [fill_value] * (max_length - len(inner)) for inner in train_data]  # 填补
-    return padded_data
+
 
 class ModelFineTuner:
     def __init__(self, model,  device,  num_labels=2, writer_tb_log_dir=None):
@@ -61,9 +59,7 @@ class ModelFineTuner:
 
     def loadData(self, train_data_and_label, type="train"):
         train_data, labels = train_data_and_label
-        train_data = list(train_data.values())
-        padded_train_data = pad_list(train_data)
-        dataset_ = Dataset.from_dict({"labels": labels,"edges": padded_train_data})
+        dataset_ = Dataset.from_dict({"labels": labels,"edges": train_data})
         dataset_.set_format(type='torch', columns=['labels', 'edges'])
         if type == "train":
             split_datasets = dataset_.train_test_split(test_size=0.2, seed=42)
@@ -86,7 +82,7 @@ class ModelFineTuner:
             if "embeddings" in name:  # 假设我们要冻结 encoder 层
                 param.requires_grad = False
 
-    def set_training_args(self, repoName, learning_rate=9E-6, weight_decay=4E-5, epochs=15, batch_size=20):
+    def set_training_args(self, repoName, learning_rate=1E-3, weight_decay=4E-5, epochs=15, batch_size=12):
         output_dir = f"./CHESHIRE/{repoName}/"
         total_steps = (epochs * (len(self.train_dataset) // batch_size))  # 计算总步数
         eval_steps = total_steps // (epochs // 2)  # 每 10 个 epoch 评估一次

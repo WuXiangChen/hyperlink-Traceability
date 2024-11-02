@@ -307,11 +307,6 @@ class Utils:
 
         return valid_index
 
-    @staticmethod
-    def pad_list(train_data, fill_value=-1):
-        max_length = max(len(inner) for inner in train_data)  # 找到最长的子列表
-        padded_data = [inner + [fill_value] * (max_length - len(inner)) for inner in train_data]  # 填补
-        return padded_data
 
     @staticmethod
     def process_edges_data(artifacts, edges):
@@ -319,15 +314,24 @@ class Utils:
         nodes_list = []
         node_sentence_list = []
         for edge in edges:
+            art_index = edge[-1].item()
+            edge = edge[:-1]
+            arts = artifacts[art_index]
             edge_sentence = []
             for node_id in edge:
                 node_id = node_id.item()
                 if node_id == -1:
                     continue
-                node_sen = artifacts.artifact_dict[node_id]
+                
+                if node_id not in list(arts.artifact_dict.keys()):
+                    raise ValueError(f"repo id {art_index} not completed!")
+
+                node_sen = arts.artifact_dict[node_id]
                 nodes_list.append(node_id)
                 if 'desc' not in node_sen.keys() or node_sen['desc'] is None:
                     node_sen['desc'] = ''
+                elif 'title' not in node_sen.keys() or node_sen['title'] is None:
+                    node_sen['title'] = ''
                 # node_word = node_sen["title"] + "\n" + node_sen["desc"]
                 node_word = node_sen["title"]
                 node_cleaned_word = dataClean(node_word).clean_data()
@@ -345,3 +349,18 @@ class Utils:
         return connected_graph
 
 
+    @staticmethod
+    def pad_list(train_data, fill_value=-1, index_changes=[], train=True):
+        if train:
+            repo_index = index_changes["train_index"]
+        else:
+            repo_index = index_changes["test_index"]
+        max_length = max(len(inner) for inner in train_data)  # 找到最长的子列表
+        data = []
+        j = 0
+        for k, inner in enumerate(train_data):
+            if k>repo_index[j]:
+                j+=1
+            padded_data = inner + [fill_value] * (max_length - len(inner)) + [j]  # 填补
+            data.append(padded_data)
+        return data
