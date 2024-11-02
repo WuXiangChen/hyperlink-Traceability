@@ -1,6 +1,7 @@
 import dgl
 import torch
 import torch.nn as nn
+from model.models.CHESHIRE.BAAI_Decoder import TransformerDecoder
 from model.models.CHESHIRE.GAT_ResNet import GAT_Res
 from model.models.CHESHIRE.GCN_ResNet import GCN_Res
 from utils import Utils
@@ -20,9 +21,8 @@ class BAAI_model(nn.Module):
         self.freeze = freeze
         self.with_knowledge = with_knowledge
 
-        if freeze:
-            for param in self.model.parameters():
-               param.requires_grad = False
+        for param in self.model.embeddings.parameters():
+            param.requires_grad = False
         
         # 这里待测试
         if not self.with_knowledge:
@@ -32,6 +32,7 @@ class BAAI_model(nn.Module):
                 elif module_[0].startswith("encoder") and hasattr(module_[1], "weight"):
                     module_[1].bias.data.zero_()
                 
+        self.trans_decoder = TransformerDecoder(input_dim=in_dim, output_dim=in_dim)
 
         self.artifacts = artifacts
         self.tokenizer = tokenizer
@@ -87,8 +88,14 @@ class BAAI_model(nn.Module):
                 attention_masks.append(encoded['attention_mask'])
         inputs = torch.cat(inputs, dim=0).to(self.model.device)
         attention_masks = torch.cat(attention_masks, dim=0).to(self.model.device)
-        x = self.model(inputs,attention_masks).pooler_output
-        #x = self.linear(x)
+        model_output = self.model(inputs, attention_masks, output_hidden_states=True)
+        x = model_output.pooler_output
+
+        uns_input = model_output.pooler_output.detach()
+        w_emb = model_output.hidden_states[0].detach()  # 第0层是嵌入层输出
+        reconstructed_embedding = self.trans_decoder(w_emb, uns_input)
+        loss_rec = self.trans_decoder.compute_loss(reconstructed_embedding, w_emb)
+
         # 这里接graph 
         all_connected_graph = Utils.get_fully_network(edges)
         # 接着 为这里每个graph赋值
@@ -110,13 +117,14 @@ class BAAI_model(nn.Module):
         x = self.neck_gconv_layers(x, edge_index)
         x = self.tail_gconv_layers(x, edge_index)
         x = self.norm2(x)
-        
+
         # # Global pooling
         outputs = global_mean_pool(x, data.batch)  # Use global mean pooling
         outputs = self.classify1(outputs)
         outputs = nn.Sigmoid()(outputs).squeeze(1)
-        # 计算loss
+
         if labels is not None:
             loss = self.loss_fn(outputs, labels)
-            print("training:", loss)
-            return [loss, outputs]
+            loss_all = loss_rec + loss
+            print("training:", loss_all)
+            return [loss_all, outputs]

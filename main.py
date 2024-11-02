@@ -58,6 +58,8 @@ def main(root_Repo:str, device:int):
     posHyperlink = posHyperlink[:, indices]
     indices = np.random.permutation(negHyperlink.shape[1])
     negHyperlink = negHyperlink[:, indices]
+
+
     # 在这里需要注册Artifact和GroundTruth Graph的信息
     repos_connnect_info_path = "../dataset/other_repo_connect_info"
     repos_artifact_info_path = "../dataset/other_repos_artifact_info"
@@ -97,7 +99,11 @@ def main(root_Repo:str, device:int):
         embedding_model = AutoModel.from_pretrained(fine_tune_model_path)
         # ====================== 构建训练与测试数据集 ===================
         train_pos_set, train_neg_set = posHyperlink[:, train_index], negHyperlink[:, train_index]
+        # 改变训练集时的正负样本比例
+        another_neg_set_incidence_matrix = Utils.getAnotherNegSet(train_pos_set)[:, :train_neg_set.shape[1]//5]
+        train_neg_set = np.concatenate([train_neg_set, another_neg_set_incidence_matrix], axis=1)
         train_set = np.concatenate([train_pos_set, train_neg_set], axis=1)
+
         train_labels = np.concatenate([np.ones(train_pos_set.shape[1]), np.zeros(train_neg_set.shape[1])])
         # 随机打乱
         indices = np.random.permutation(train_set.shape[1])
@@ -158,9 +164,9 @@ if __name__ == '__main__':
     parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
     # 增加三个对比实验参数，冻结-非冻结，自带知识-无自带知识，cat-非cat
     # 增加三个对比实验参数，初始值设置为True
-    parser.add_argument('--freeze', type=str, default="false", help='Frozening The LLM when Training or not.')
+    parser.add_argument('--freeze', type=str, default="true", help='Frozening The LLM when Training or not.')
     parser.add_argument('--with_knowledge', type=str, default="true", help='Take the prior-knowledge into training or not.')
-    parser.add_argument('--gat', type=str, default="false", help='Using the gat module for the input information or not.')
+    parser.add_argument('--gat', type=str, default="true", help='Using the gat module for the input information or not.')
 
     args = parser.parse_args()
     repoName = args.repoName
