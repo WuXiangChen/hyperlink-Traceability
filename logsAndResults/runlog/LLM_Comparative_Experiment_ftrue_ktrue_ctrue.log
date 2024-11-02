@@ -1,83 +1,0 @@
-Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-当前正在使用的GPU： 0
-True True True
-文件夹 'CHESHIRE/LLM_Comparative_Experiment_2/Activiti' 不存在。
-Data has been loaded successfully for training!
-Start training!
-  0%|          | 0/1140 [00:00<?, ?it/s]  0%|          | 1/1140 [00:01<19:53,  1.05s/it]  0%|          | 2/1140 [00:01<10:52,  1.74it/s]  0%|          | 3/1140 [00:01<08:15,  2.29it/s]  0%|          | 4/1140 [00:01<06:49,  2.77it/s]  0%|          | 5/1140 [00:02<06:01,  3.14it/s]  1%|          | 6/1140 [00:02<05:46,  3.27it/s]  1%|          | 7/1140 [00:02<05:22,  3.52it/s]  1%|          | 8/1140 [00:02<05:11,  3.64it/s]  1%|          | 9/1140 [00:03<05:11,  3.64it/s]  1%|          | 10/1140 [00:03<05:02,  3.74it/s]  1%|          | 11/1140 [00:03<04:55,  3.82it/s]  1%|          | 12/1140 [00:03<04:48,  3.91it/s]  1%|          | 13/1140 [00:04<04:41,  4.01it/s]  1%|          | 14/1140 [00:04<04:40,  4.01it/s]  1%|▏         | 15/1140 [00:04<04:40,  4.01it/s]  1%|▏         | 16/1140 [00:04<04:51,  3.86it/s]  1%|▏         | 17/1140 [00:05<04:49,  3.88it/s]  2%|▏         | 18/1140 [00:05<04:43,  3.96it/s]  2%|▏         | 19/1140 [00:05<04:55,  3.80it/s]  2%|▏         | 20/1140 [00:05<04:51,  3.85it/s]  2%|▏         | 21/1140 [00:06<04:45,  3.92it/s]  2%|▏         | 22/1140 [00:06<04:41,  3.98it/s]  2%|▏         | 23/1140 [00:06<04:39,  3.99it/s]  2%|▏         | 24/1140 [00:06<04:34,  4.07it/s]  2%|▏         | 25/1140 [00:07<04:34,  4.06it/s]  2%|▏         | 26/1140 [00:07<04:46,  3.89it/s]  2%|▏         | 27/1140 [00:07<04:43,  3.92it/s]  2%|▏         | 28/1140 [00:07<04:37,  4.01it/s]  3%|▎         | 29/1140 [00:08<04:36,  4.02it/s]  3%|▎         | 30/1140 [00:08<04:36,  4.02it/s]  3%|▎         | 31/1140 [00:08<04:36,  4.01it/s]  3%|▎         | 32/1140 [00:08<04:45,  3.88it/s]  3%|▎         | 33/1140 [00:09<04:37,  3.99it/s]  3%|▎         | 34/1140 [00:09<04:33,  4.05it/s]  3%|▎         | 35/1140 [00:09<04:34,  4.03it/s]  3%|▎         | 36/1140 [00:09<04:43,  3.90it/s]  3%|▎         | 37/1140 [00:10<04:49,  3.80it/s]  3%|▎         | 38/1140 [00:10<04:45,  3.86it/s]  3%|▎         | 39/1140 [00:10<04:42,  3.90it/s]  4%|▎         | 40/1140 [00:10<04:40,  3.92it/s]  4%|▎         | 41/1140 [00:11<04:38,  3.94it/s]  4%|▎         | 42/1140 [00:11<04:42,  3.88it/s]  4%|▍         | 43/1140 [00:11<04:36,  3.97it/s]  4%|▍         | 44/1140 [00:11<04:31,  4.04it/s]  4%|▍         | 45/1140 [00:12<04:31,  4.03it/s]  4%|▍         | 46/1140 [00:12<04:25,  4.12it/s]  4%|▍         | 47/1140 [00:12<04:40,  3.90it/s]  4%|▍         | 48/1140 [00:12<04:40,  3.90it/s]  4%|▍         | 49/1140 [00:13<04:38,  3.91it/s]  4%|▍         | 50/1140 [00:13<04:33,  3.99it/s]  4%|▍         | 51/1140 [00:13<04:32,  4.00it/s]  5%|▍         | 52/1140 [00:13<04:33,  3.98it/s]  5%|▍         | 53/1140 [00:14<04:41,  3.86it/s]  5%|▍         | 54/1140 [00:14<04:33,  3.97it/s]  5%|▍         | 55/1140 [00:14<04:33,  3.97it/s]  5%|▍         | 56/1140 [00:14<04:43,  3.83it/s]  5%|▌         | 57/1140 [00:15<04:51,  3.72it/s]  5%|▌         | 58/1140 [00:15<04:45,  3.80it/s]  5%|▌         | 59/1140 [00:15<04:34,  3.93it/s]  5%|▌         | 60/1140 [00:16<05:19,  3.39it/s]  5%|▌         | 61/1140 [00:16<04:58,  3.62it/s]  5%|▌         | 62/1140 [00:16<04:44,  3.79it/s]  6%|▌         | 63/1140 [00:16<04:39,  3.86it/s]  6%|▌         | 64/1140 [00:17<04:35,  3.91it/s]  6%|▌         | 65/1140 [00:17<04:32,  3.94it/s]  6%|▌         | 66/1140 [00:17<04:39,  3.84it/s]  6%|▌         | 67/1140 [00:17<04:35,  3.89it/s]  6%|▌         | 68/1140 [00:18<04:32,  3.94it/s]  6%|▌         | 69/1140 [00:18<04:29,  3.97it/s]  6%|▌         | 70/1140 [00:18<04:30,  3.96it/s]  6%|▌         | 71/1140 [00:18<04:29,  3.97it/s]  6%|▋         | 72/1140 [00:19<04:23,  4.05it/s]  6%|▋         | 73/1140 [00:19<04:20,  4.10it/s]  6%|▋         | 74/1140 [00:19<04:21,  4.08it/s]  7%|▋         | 75/1140 [00:19<04:33,  3.89it/s]  7%|▋         | 76/1140 [00:20<04:19,  4.10it/s]training: tensor(0.6101, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7480, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6959, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5123, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6717, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6439, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5811, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7604, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6618, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.8185, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7196, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7089, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7002, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5706, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5814, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6277, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7054, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7086, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7268, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7213, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.8092, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6968, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6753, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5855, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6601, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7448, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.8828, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6772, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.8247, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.8259, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.4166, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7413, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.4785, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6086, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5844, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(1.0093, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7678, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7005, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.4264, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7874, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.8868, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.8561, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7807, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6037, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6148, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6382, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.4758, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5161, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5936, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6861, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5626, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7246, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5878, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7273, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6211, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6493, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(1.0005, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.8610, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7885, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.9478, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6508, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7899, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.9532, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.4732, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5971, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.9069, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7851, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5919, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(1.0142, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7248, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.9674, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.5579, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6810, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.7218, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.6543, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-training: tensor(0.3559, device='cuda:0', grad_fn=<BinaryCrossEntropyBackward0>)
-  7%|▋         | 77/1140 [00:20<05:34,  3.18it/s]  7%|▋         | 78/1140 [00:20<05:12,  3.40it/s]  7%|▋         | 79/1140 [00:21<04:58,  3.56it/s]  7%|▋         | 80/1140 [00:21<04:47,  3.68it/s]  7%|▋         | 81/1140 [00:21<04:38,  3.81it/s]  7%|▋         | 82/1140 [00:21<04:30,  3.92it/s]  7%|▋         | 83/1140 [00:22<04:27,  3.95it/s]  7%|▋         | 84/1140 [00:22<04:34,  3.85it/s]  7%|▋         | 85/1140 [00:22<04:44,  3.70it/s]  8%|▊         | 86/1140 [00:22<04:38,  3.79it/s]  8%|▊         | 87/1140 [00:23<04:29,  3.90it/s]  8%|▊         | 88/1140 [00:23<04:25,  3.97it/s]  8%|▊         | 89/1140 [00:23<04:20,  4.04it/s]  8%|▊         | 90/1140 [00:23<04:20,  4.03it/s]  8%|▊         | 91/1140 [00:24<04:20,  4.03it/s]  8%|▊         | 92/1140 [00:24<04:20,  4.02it/s]  8%|▊         | 93/1140 [00:24<04:21,  4.01it/s]  8%|▊         | 94/1140 [00:24<04:20,  4.01it/s]  8%|▊         | 95/1140 [00:25<04:19,  4.02it/s]  8%|▊         | 96/1140 [00:25<04:40,  3.72it/s]  9%|▊         | 97/1140 [00:25<04:34,  3.80it/s]  9%|▊         | 98/1140 [00:25<04:30,  3.86it/s]  9%|▊         | 99/1140 [00:26<04:27,  3.90it/s]  9%|▉         | 100/1140 [00:26<04:21,  3.98it/s]  9%|▉         | 101/1140 [00:26<04:31,  3.83it/s]  9%|▉         | 102/1140 [00:26<04:28,  3.86it/s]  9%|▉         | 103/1140 [00:27<04:25,  3.91it/s]  9%|▉         | 104/1140 [00:27<04:19,  3.99it/s]  9%|▉         | 105/1140 [00:27<04:37,  3.73it/s]  9%|▉         | 106/1140 [00:28<04:40,  3.68it/s]  9%|▉         | 107/1140 [00:28<04:28,  3.84it/s]  9%|▉         | 108/1140 [00:28<04:39,  3.69it/s] 10%|▉         | 109/1140 [00:28<04:33,  3.77it/s] 10%|▉         | 110/1140 [00:29<04:28,  3.83it/s] 10%|▉         | 111/1140 [00:29<04:34,  3.75it/s] 10%|▉         | 112/1140 [00:29<04:25,  3.88it/s] 10%|▉         | 113/1140 [00:29<04:22,  3.91it/s] 10%|█         | 114/1140 [00:30<04:20,  3.94it/s] 10%|█         | 115/1140 [00:30<04:18,  3.97it/s]

@@ -104,7 +104,7 @@ class ModelFineTuner:
             load_best_model_at_end=True,  # 在训练结束时加载最佳模型
             metric_for_best_model="eval_f1",  # 或使用 "f1" 等其他指标
             greater_is_better=True,  # 如果使用 "f1"，则设置为 True
-            save_total_limit=2,  # 只保存最近的 3 个模型
+            save_total_limit=1,  # 只保存最近的 3 个模型
             dataloader_num_workers=4,
             dataloader_pin_memory=True,
             warmup_steps=10,
