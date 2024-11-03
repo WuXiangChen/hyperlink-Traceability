@@ -81,8 +81,8 @@ def main(root_Repo:str, device:int):
     results = []
     i = 0
     for train_index, test_index in kf.split(posHyperlink.T):  # Transpose to get samples as rows
-        if i!=0:
-            continue
+        # if i!=0:
+        #     continue
         i+=1
         # Generate train data and labels
         shutil.copytree(f"../text_LM_model/{LM_model_selected}/", fine_tune_model_path, dirs_exist_ok=True)
@@ -140,7 +140,7 @@ def main(root_Repo:str, device:int):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     df = pd.DataFrame(results)
-    df.to_csv(f"{output_dir}/{repoName}_results_f{str(freeze)}_k{str(with_knowledge)}_c{str(cat)}.csv", index=False)
+    df.to_csv(f"{output_dir}/{repoName}_results.csv", index=False)
     print(df)
     print(f"The {repoName} results have been saved successfully!")
 
@@ -154,7 +154,7 @@ if __name__ == '__main__':
     parser.add_argument('-t', '--test_ratio', type=float, default=0.2, help='The ratio of the test set. Default is 0.2.')
     parser.add_argument('-type', '--running_type', type=str, default="semantic", help='The running choice for the whole project. Default is structure.')
     # 增加三个对比实验参数，初始值设置为True
-    parser.add_argument('--freeze', type=str, default="true", help='Frozening The LLM when Training or not.')
+    parser.add_argument('--freeze', type=str, default="false", help='Frozening The LLM when Training or not.')
     parser.add_argument('--with_knowledge', type=str, default="true", help='Take the prior-knowledge into training or not.')
     parser.add_argument('--cat', type=str, default="true", help='Using the cat module for the input information or not.')
 

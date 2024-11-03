@@ -1,9 +1,3 @@
 nohup: ignoring input
-Running with freeze=false, with_knowledge=true, cat=true. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_ffalse_ktrue_ctrue.log
-Running with freeze=false, with_knowledge=true, cat=false. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_ffalse_ktrue_cfalse.log
-Running with freeze=false, with_knowledge=false, cat=true. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_ffalse_kfalse_ctrue.log
-Running with freeze=false, with_knowledge=false, cat=false. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_ffalse_kfalse_cfalse.log
-Running with freeze=true, with_knowledge=true, cat=true. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_ftrue_ktrue_ctrue.log
-Running with freeze=true, with_knowledge=true, cat=false. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_ftrue_ktrue_cfalse.log
-Running with freeze=true, with_knowledge=false, cat=true. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_ftrue_kfalse_ctrue.log
-Running with freeze=true, with_knowledge=false, cat=false. Log file: logsAndResults/runlog/LLM_Comparative_Experiment_ftrue_kfalse_cfalse.log
+Processing type: LLM_FULLCONTENT
+Running with Activiti. Log file: ./logsAndResults/runlog/LLM_FULLCONTENT_Activiti_results.log

@@ -1,23 +1,36 @@
 #!/bin/bash
-source  activate mmseg
+
+# 设置根目录路径
+root_path="../dataset/hyperlink_npz/"
 max_jobs=1  # 最大并发任务数
-export CUDA_VISIBLE_DEVICES=2  # 指定使用的GPU编号
-# 定义参数组合
-# 
-for freeze in false true; do
-    for with_knowledge in true false; do
-        for cat in true false; do
-            # 创建日志文件名
-            log_file="logsAndResults/runlog/LLM_Comparative_Experiment_f${freeze}_k${with_knowledge}_c${cat}.log"
-            
-            # 执行 Python 脚本
-            nohup bash -c "CUDA_VISIBLE_DEVICES=2 python main.py --freeze $freeze --with_knowledge $with_knowledge --cat $cat -c 0 -n 5 -t 0.2 -type 'LLM_Comparative_Experiment'" > "$log_file" 2>&1 &
-            
-            # 输出当前执行的参数组合
-            echo "Running with freeze=$freeze, with_knowledge=$with_knowledge, cat=$cat. Log file: $log_file"
-            while (( $(pgrep -f "python main" | wc -l) >= max_jobs )); do
-                sleep 30  # 等待30秒再检查
-            done
-        done
+source activate mmseg
+
+# 定义类型数组
+types=("LLM_FULLCONTENT")
+# 遍历每种类型
+for type_ in "${types[@]}"
+do
+  echo "Processing type: $type_"
+  # 遍历目录下的所有文件
+  for file in "$root_path"*
+  do
+    #cp BAAI_bge-m3_small/* model/BAAI_bge-m3_small
+    # 获取文件名（不包括路径）
+    filename=$(basename "$file")
+    
+    # 去掉文件扩展名
+    filename_without_extension="${filename%.*}"
+    
+    # 构建日志文件名
+    log_file="./logsAndResults/runlog/${type_}_${filename_without_extension}_results.log"
+    
+    # 执行 Python 脚本
+    nohup bash -c "CUDA_VISIBLE_DEVICES=3 python main.py  -c 0 -n 5 -t 0.2 -type $type_" > "$log_file" 2>&1 &
+    
+    # 输出当前执行的参数组合
+    echo "Running with $filename_without_extension. Log file: $log_file"
+    wait
+
     done
 done
+wait

@@ -86,7 +86,7 @@ class ModelFineTuner:
             if "embeddings" in name:  # 假设我们要冻结 encoder 层
                 param.requires_grad = False
 
-    def set_training_args(self, repoName, learning_rate=4E-5, weight_decay=4E-5, epochs=15, batch_size=8):
+    def set_training_args(self, repoName, learning_rate=9E-6, weight_decay=4E-5, epochs=15, batch_size=14):
         output_dir = f"./CHESHIRE/{repoName}/"
         total_steps = (epochs * (len(self.train_dataset) // batch_size))  # 计算总步数
         eval_steps = total_steps // (epochs // 2)  # 每 10 个 epoch 评估一次

@@ -328,8 +328,10 @@ class Utils:
                 nodes_list.append(node_id)
                 if 'desc' not in node_sen.keys() or node_sen['desc'] is None:
                     node_sen['desc'] = ''
-                # node_word = node_sen["title"] + "\n" + node_sen["desc"]
-                node_word = node_sen["title"]
+                if 'title' not in node_sen.keys() or node_sen['title'] is None:
+                    node_sen['title'] = ''
+                node_word = node_sen["title"] + "\n" + node_sen["desc"]
+                # node_word = node_sen["title"]
                 node_cleaned_word = dataClean(node_word).clean_data()
                 edge_sentence.append(node_cleaned_word)
             node_sentence_list.append(edge_sentence)
