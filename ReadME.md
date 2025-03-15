@@ -51,7 +51,7 @@
     ```
   - Results visualization:
     <div style="text-align: center;">
-      <img src="Results/Tab3.png" alt="HP Prediction Results" style="width:50%;">
+      <img src="Results/Tab3.png" alt="HP Prediction Results" style="width:30%;">
     </div>
 
 - **Reproducing P2P Prediction Results**  
@@ -62,7 +62,7 @@
     ```
   - Results visualization:
     <div style="text-align: center;">
-      <img src="Results/Tab4.png" alt="P2P Prediction Results" style="width:50%;">
+      <img src="Results/Tab4.png" alt="P2P Prediction Results" style="width:30%;">
     </div>
 
 
@@ -71,5 +71,5 @@
 #### **3.1 Double-Blind Validation Tool**
 The **MongoDB_CheckImp** package includes a **CheckGUI** tool for double-blind validation. The validation process is illustrated below:
 <div style="text-align: center;">
-  <img src="Results/ValidationTools.png" alt="Validation Process" style="width:70%;">
+  <img src="Results/ValidationTools.png" alt="Validation Process" style="width:50%;">
 </div>
