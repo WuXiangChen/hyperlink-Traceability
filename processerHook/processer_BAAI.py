@@ -126,7 +126,7 @@ class processer_:
             return HPResult, None
         
         # 这里是验证missing true有多少
-        pre_true_index = np.where(preds > 0.0)
+        pre_true_index = np.where(preds > 0.5)
         missed_HP = np.setdiff1d(np.where(label_ids_ > 0.5)[0], pre_true_index)
         mP2PDatasets = test_repo_index[missed_HP]
         _, mP2PLabels = Utils.P2P_Expanded(mP2PDatasets, gTG.getEdges(), addTwoComORNot=True, testFlag=True)
