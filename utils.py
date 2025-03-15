@@ -4,6 +4,8 @@
     导包区
 '''
 import glob
+from itertools import chain
+import itertools
 import json
 import math
 import os.path
@@ -16,7 +18,10 @@ import numpy as np
 import pandas as pd
 from torch_geometric.data import Data
 import torch
-from model._0_dataClean import DataCleaner
+from GraphLinker._0_dataClean import DataCleaner
+from torch_geometric.data import Data,Batch
+from torch_geometric.utils import from_networkx
+import numpy as np
 seed = 43
 random.seed(seed)
 np.random.seed(seed)
@@ -104,11 +109,7 @@ class Utils:
 
     @staticmethod
     def create_hyperedge_index(incidence_matrix):
-        # 转置关联矩阵，并找到非零元素的索引
         row, col = torch.where(incidence_matrix.T)
-        # 将列索引和行索引连接起来形成超边索引
-        # 结果是一个二维张量，其中第一行包含列索引（原始行索引），
-        # 第二行包含行索引（原始列索引）
         hyperedge_index = torch.cat((col.view(1, -1), row.view(1, -1)), dim=0)
         # 返回创建的超边索引
         return hyperedge_index
@@ -236,13 +237,9 @@ class Utils:
         # 读取停用词文件并去掉换行符
         with open(stopwords_path, 'r', encoding='utf-8') as file:
             stopwords = file.read().splitlines()
-        # 去掉停用词中的空白字符
         stopwords = [word.strip() for word in stopwords]
-        # 将输入字符串按空格分割成单词
         words = input_text.split(" ")
-        # 去除停用词
         filtered_words = [word for word in words if word not in stopwords]
-        # 返回去除停用词后的字符串
         return " ".join(filtered_words)
 
     @staticmethod
@@ -272,8 +269,19 @@ class Utils:
     def getnearsetFile(reponame: str, artifactFilePaths: str, style: str):
         files = glob.glob(artifactFilePaths+f"/*.{style}")
         for file in files:
-            if reponame in file:
+            filename = file.split("/")[-1]
+            if filename.startswith(reponame):
                 return Utils.loadJson(file)
+            if filename.startswith("graph_"+reponame):
+                return Utils.loadJson(file)
+        return None
+    
+    @staticmethod
+    def getnearsetFileDf(reponame: str, artifactFilePaths: str, style: str):
+        files = glob.glob(artifactFilePaths+f"/*.{style}")
+        for file in files:
+            if reponame in file:
+                return pd.read_json(file)
         return None
 
     @staticmethod
@@ -304,14 +312,7 @@ class Utils:
             if row not in valid_index.keys():
                 valid_index[row] = []
             valid_index[row].append(artifact_dict_T[col])
-
         return valid_index
-
-    @staticmethod
-    def pad_list(train_data, fill_value=-1):
-        max_length = max(len(inner) for inner in train_data)  # 找到最长的子列表
-        padded_data = [inner + [fill_value] * (max_length - len(inner)) for inner in train_data]  # 填补
-        return padded_data
 
     @staticmethod
     def process_edges_data(artifacts, edges):
@@ -319,31 +320,201 @@ class Utils:
         nodes_list = []
         node_sentence_list = []
         for edge in edges:
+            art_index = edge[-1].item()
+            edge = edge[:-1]
+            arts = artifacts[art_index]
             edge_sentence = []
             for node_id in edge:
                 node_id = node_id.item()
                 if node_id == -1:
                     continue
-                node_sen = artifacts.artifact_dict[node_id]
+                if node_id not in list(arts.artifact_dict.keys()):
+                    print(ValueError(f"node_id {node_id} not in repo id {arts.pName} not completed!"))
+                    continue
+                node_sen = arts.artifact_dict[node_id]
                 nodes_list.append(node_id)
                 if 'desc' not in node_sen.keys() or node_sen['desc'] is None:
                     node_sen['desc'] = ''
                 if 'title' not in node_sen.keys() or node_sen['title'] is None:
                     node_sen['title'] = ''
-                node_word = node_sen["title"] + "\n" + node_sen["desc"]
-                # node_word = node_sen["title"]
+                #node_word = node_sen["title"] + "\n" + node_sen["desc"]
+                node_word = node_sen["title"]
                 node_cleaned_word = dataClean(node_word).clean_data()
                 edge_sentence.append(node_cleaned_word)
             node_sentence_list.append(edge_sentence)
         return node_sentence_list, nodes_list
+    
+    @staticmethod
+    def get_structure_fea(artifacts, edges, stru_max_len):
+        torch_cgs = []
+        for k, edge in enumerate(edges):
+            # 这里直接建图， 下面就是对图节点赋值的过程
+            art_index = edge[-1].item()
+            edge = edge[:-1]
+            art = artifacts[art_index]
+            ## 先获取所有的有效节点
+            node_varified = []
+            for node_id in edge:
+                if node_id == -1:
+                    continue
+                node_varified.append(node_id.item())
+            cg = Utils.get_fully_network([node_varified])[0]
+            for node_id in node_varified:
+                if node_id not in list(art.indexToArtId.keys()):
+                    print(ValueError(f"node_id {node_id} not in repo id {art.pName} not completed!"))
+                    continue
+                index = art.indexToArtId[node_id]
+                stru_fea = art.struFea[index] # 这里要做padding，将所有的节点的结构特征补充到最长的状态
+                stru_fea_padded = np.pad(stru_fea, (0, stru_max_len - len(stru_fea)), mode='constant', constant_values=0)
+                if node_id in cg.nodes:  # 检查节点是否在 cg 中
+                    cg.nodes[node_id]["stru_fea"] = stru_fea_padded
+                    cg.nodes[node_id]["batch"] = k # 将 stru_fea 赋值给对应节点
+            cg = from_networkx(cg, group_node_attrs=["stru_fea", "batch"])
+            torch_cgs.append(cg)
+        data = Batch.from_data_list(torch_cgs)
+        return data
 
     @staticmethod
-    def get_fully_network(edges):
+    def get_fully_network(edges, tensor=False):
         connected_graph = []
         for edge in edges:
-            points = [node.item() for node in edge if node!=-1]
+            if not tensor:
+                points = [node for node in edge if node!=-1]
+            else:
+                points = [node.item() for node in edge[:-1] if node!=-1]
             graph = nx.complete_graph(points)
             connected_graph.append(graph)
         return connected_graph
 
 
+    @staticmethod
+    def pad_list(train_data, test_data, fill_value=-1):
+        if len(train_data[0])!=0:
+            max_length_1 = max(len(inner) for inner in chain(*train_data))  # 找到最长的子列表
+        else:
+            max_length_1 = 0
+        max_length_2 = max(len(inner) for inner in chain(*test_data))  # 找到最长的子列表
+        max_length = max(max_length_1, max_length_2)
+        train_data_ = []
+        test_data_ = []
+        for j, data in enumerate(train_data):
+            for k, inner in enumerate(list(data)):
+                padded_data = inner + [fill_value] * (max_length - len(inner)) + [j]  # 填补
+                train_data_.append(padded_data)
+
+        for j, data in enumerate(test_data):
+            for k, inner in enumerate(list(data)):
+                padded_data = inner + [fill_value] * (max_length - len(inner)) + [j]  # 填补
+                test_data_.append(padded_data)
+        return train_data_, test_data_, max_length
+
+    @staticmethod
+    def P2P_Expanded(selected_data, edges, addTwoComORNot=False, testFlag=False):
+        P2PDatasets = []
+        P2PLabels = []
+        all_index = len(selected_data)
+        if all_index==0:
+            return None,None
+        for hpLink in selected_data:
+            if len(hpLink)!=2 and (-1 in hpLink or hpLink[-1]==0):
+                # 如果包含 -1，则去除 -1 和最后一个元素
+                hpLink = hpLink[hpLink != -1][:-1]                
+            if len(hpLink)<2:
+                continue
+            combinations = list(itertools.combinations(hpLink, 2))
+            for com in combinations:
+                inverse_com = com[::-1]
+                if (com in edges) or (inverse_com in edges):
+                    P2PDatasets.append(list(com))
+                    P2PLabels.append(1)
+                else:
+                    P2PDatasets.append(list(com))
+                    P2PLabels.append(0)
+                all_index+=1
+        # 加个方法对正负样本进行平衡
+        if not testFlag:
+            P2PDatasets, P2PLabels = Utils.balance_samples(P2PDatasets, P2PLabels)
+        return P2PDatasets, P2PLabels
+    
+    @staticmethod
+    def balance_samples(P2PDatasets, P2PLabels):
+        """
+        平衡正负样本数量，使其数量相同。
+        """
+        positive_samples = [i for i, label in enumerate(P2PLabels) if label == 1]
+        negative_samples = [i for i, label in enumerate(P2PLabels) if label == 0]
+
+        # 取较少的样本数量来平衡
+        if len(positive_samples) > len(negative_samples):
+            return P2PDatasets, P2PLabels
+        else:
+            num_samples = len(positive_samples)
+            # 随机选择样本，使得正负样本数量相同
+            balanced_pos = random.choices(positive_samples, k=num_samples)
+            balanced_neg = random.sample(negative_samples, num_samples)
+
+            # 更新 P2PDatasets 和 P2PLabels
+            balanced_indices = balanced_pos + balanced_neg
+            random.shuffle(balanced_indices)
+
+            # 返回平衡后的数据和标签
+            P2PDatasets = [P2PDatasets[i] for i in balanced_indices]
+            P2PLabels = [P2PLabels[i] for i in balanced_indices]
+            return P2PDatasets, P2PLabels
+
+    @staticmethod
+    def calculate_metrics(conf_matrix):
+        # 提取混淆矩阵的元素
+        TN = conf_matrix[0, 0]  # 真负例
+        FP = conf_matrix[0, 1]  # 假正例
+        FN = conf_matrix[1, 0]  # 假负例
+        TP = conf_matrix[1, 1]  # 真正例
+
+        # 计算 Accuracy
+        accuracy = (TP + TN) / (TP + TN + FP + FN) if (TP + TN + FP + FN) > 0 else 0
+
+        # 计算 Precision
+        precision = TP / (TP + FP) if (TP + FP) > 0 else 0
+
+        # 计算 Recall
+        recall = TP / (TP + FN) if (TP + FN) > 0 else 0
+
+        # 计算 F1-Score
+        f1_score = (2 * precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+
+        # 返回结果字典
+        return {
+            'accuracy': accuracy,
+            'precision': precision,
+            'recall': recall,
+            'f1_score': f1_score
+        }
+
+    def print_args(args):
+        """打印参数的方法"""
+        print("===============================")
+        print("Parameters:")
+        print(f"Repo Name: {args.saveName}")
+        print(f"CUDA Number: {args.cudaN}")
+        print(f"Number of Folds: {args.num_folds}")
+        # print(f"Test Ratio: {args.test_ratio}")
+        # print(f"Running Type: {args.running_type}")
+        # print(f"Freeze: {args.freeze}")
+        # print(f"With Knowledge: {args.with_knowledge}")
+        # print(f"Cat: {args.cat}")
+        print(f"Training Type: {args.training_type}")
+        print(f"Training_with_gnn: {args.training_with_gnn}")
+        print("===============================")
+
+def getCheckPointFilePath(finetuneFolder, cur_repoName, k):
+    if k==0:
+        root_checkpoint = f'../CHESHIRE/{cur_repoName}/'
+    else:
+        root_checkpoint = finetuneFolder + f"/{k}/"
+    files = os.listdir(root_checkpoint)
+    file_paths = [os.path.join(root_checkpoint, file) for file in files]
+    # 按照文件的创建时间排序
+    sorted_files = sorted(file_paths, key=os.path.getctime)
+    checkpointPath = sorted_files[-1]
+    save_checkpoint = checkpointPath
+    return save_checkpoint

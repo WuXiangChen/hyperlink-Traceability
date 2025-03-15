@@ -1,18 +1,75 @@
-# 关于LLM的对比实验设计
 
-本仓库的主要目的是执行，飞书中 “纯语义Hyperlink prediction 过程”中 对比实验方案总结的第一节：1. 关于大模型的对比实验方案设计。其基本实验组织如下：
-| 实验编号 | 冻结 | 自带知识 | Cat | 不冻结 | 无自带知识 | Non-Cat | 实验结果 |
-|----------|------|----------|-----|--------|------------|---------|----------|
-| 1        | √    | √        | √   |        |            |         | 好       |
-| 2        | √    |          | √   |        |    √        |         |          |
-| 3        | √    |   √       |     |        |            |   √      |          |
-| 4        | √    |          |     |        |      √      |    √     |          |
-| 5        |      | √        |     |   √     |            |   √      |          |
-| 6        |      |  √        | √    |  √      |            |         |          |
-| 7        |      |          |     |    √    |      √      |   √      |          |
-| 8        |      |          |   √  |    √    |   √         |         |          |
-从表中可见，这里主要就是三个变量的全组合。因此，只需要在控制端main的逻辑中包含这三个控制变量，并进行全组合即可实现此处的对比实验。
-可以分类讨论这里的三个变量：
-- 冻结： 指的是LLM参数是否参与到后续的训练过程中
-- 自带知识：指的是延用预训练的参数 （否，则进行随机初始化，以torch.nn.init.xavier_uniform_(layer.weight)的方式对LLM进行随机初始化）
-- Cat：指的是对输入数据是否组织成一段文本然后输入
+# Repository Overview: Code and Data for "Coherent and Traceable Issue and Pull Request Link Recovery with Hyperlink Prediction"
+
+### 1. Repository Structure
+
+- **DataStructure Package**  
+  Defines main data types for:  
+  - **Artifacts** (e.g., PR and Issue)  
+  - **Hyperlinks** (collections of artifacts)  
+
+- **GraphLinker Package**  
+  Implements the **GraphLinker** model with two modules:  
+  - **HP Module**:  
+    - Extracts high-order structure-semantic features  
+    - Combines hybrid LLM (BAAI) with GAT strategies  
+    - Performs hyperlink prediction  
+  - **P2P Module**:  
+    - Uses **metapath-aggregation** strategy to convert path features into link-level predictions  
+    - Performs link prediction  
+
+- **MongoDB_CheckImp Package**  
+  Provides tools for **double-blind sampling verification**:  
+  - Visualization interface  
+  - Data warehouse  
+  - Partially verified experimental results  
+
+- **ProcessesHooK Package**  
+  Contains:  
+  - Experimental process control tools  
+  - Implementation of **EarlyStopping** techniques  
+
+- **Other Files**  
+  - `requirements.txt`: Lists dependencies  
+  - `run_main.sh`: Commands for experiments on 11 repositories  
+  - `main.py`: Main experimental workflow implementation  
+
+
+
+### 2. Reproducing Experimental Results
+
+- **Reproducing HP Prediction Results**  
+  - Use `-tt` and `-l` parameters in `main.py`:
+    - `-tt` controls feature types:
+      - `1`: Semantic features
+      - `2`: Structural features  
+      - `3`: Combined features
+    - `-l`: Enables LOPO strategy
+  - Example command:
+    ```bash
+    nohup bash -c "CUDA_VISIBLE_DEVICES=$num_GPU python -u main.py -r $repoName -tt 3" > "./runlog_training_main/${repoName}.log" 2>&1 &
+    ```
+  - Results visualization:
+    <div style="text-align: center;">
+      <img src="Results/Tab3.png" alt="HP Prediction Results" style="width:50%;">
+    </div>
+
+- **Reproducing P2P Prediction Results**  
+  - Use `-hp` parameter in `main.py` for P2P mode
+  - Example command:
+    ```bash
+    nohup bash -c "CUDA_VISIBLE_DEVICES=$num_GPU python -u main.py -r $repoName -tt 3 -hp" > "./runlog_training_main/${repoName}.log" 2>&1 &
+    ```
+  - Results visualization:
+    <div style="text-align: center;">
+      <img src="Results/Tab4.png" alt="P2P Prediction Results" style="width:50%;">
+    </div>
+
+
+### 3. Data Preprocessing Module
+
+#### **3.1 Double-Blind Validation Tool**
+The **MongoDB_CheckImp** package includes a **CheckGUI** tool for double-blind validation. The validation process is illustrated below:
+<div style="text-align: center;">
+  <img src="Results/ValidationTools.png" alt="Validation Process" style="width:70%;">
+</div>

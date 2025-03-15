@@ -43,10 +43,8 @@ class generateHyperLinkDataset:
                         partition_pos_set.append(set_)
         # 这样可以衍生出一系列不完整的正样本集合
         positive_set = partition_pos_set
-        # 取大于4的正样本集合作为测试集合
         full_pos_set = [pos_set for pos_set in positive_set if len(pos_set) > 4]
         negative_set, negative_adjacents = self.generate_negative_samples(positive_set, num_samples=5)
-        # 将positive_set和negative_set转化进一个矩阵中
         pos_artiHyper = ArtifactHyperLink(self.artifactIdList, positive_set, artifact_index)
         neg_artiHyper = ArtifactHyperLink(self.artifactIdList, negative_set, artifact_index)
         full_pos_artiHyper = ArtifactHyperLink(self.artifactIdList, full_pos_set, artifact_index)
@@ -58,7 +56,6 @@ class generateHyperLinkDataset:
         return posHyperlink, negHyperlink, negative_adjacents, full_posHyperlink
 
     def default_probabilities(self):
-        # 默认概率设置
         probabilities = {
             2: 0.6,
             3: 0.1,
@@ -75,7 +72,6 @@ class generateHyperLinkDataset:
         weights = list(self.probabilities.values())
         return random.choices(sample_sizes, weights=weights, seed=43)[0]
 
-    # 核心问题是什么？ 完整性，
     def generate_negative_samples(self, positive_set, num_samples=5, num_folds=5):
         negative_set = []
         neg_graph = self.initialize_negative_graph()
@@ -132,15 +128,7 @@ class generateHyperLinkDataset:
         # 随机排列节点以生成一个生成树
         shuffled_nodes = nodes[:]
         random.shuffle(shuffled_nodes)
-        # 连接所有节点以确保图的连通性
         for i in range(len(shuffled_nodes) - 1):
             node1 = shuffled_nodes[i]
             node2 = shuffled_nodes[i + 1]
-            graph.add_edge(node1, node2)
-        # 添加更多随机边
-        # additional_edges = random.randint(len(nodes) - 1, (len(nodes) - 1) * 2)
-        # while graph.number_of_edges() < additional_edges:
-        #     node1, node2 = random.sample(nodes, 2)
-        #     if not graph.has_edge(node1, node2):
-        #         graph.add_edge(node1, node2)
         return graph

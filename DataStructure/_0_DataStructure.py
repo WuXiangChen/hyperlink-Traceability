@@ -1,5 +1,4 @@
-# 构造最基本的数据结构
-# 数据结构的基本表示是一个节点的集合
+
 from typing import List
 import numpy as np
 

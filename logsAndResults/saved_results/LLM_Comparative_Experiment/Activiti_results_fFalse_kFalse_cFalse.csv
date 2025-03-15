@@ -1,2 +1,0 @@
-eval_loss,eval_acc,eval_auc,eval_precision,eval_recall,eval_f1,eval_confusion_matrix
-0.6933915615081787,0.2654639175257732,0.5323624595469255,0.2654639175257732,1.0,0.4195519348268839,"[[0, 285], [0, 103]]"
