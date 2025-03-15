@@ -7,12 +7,13 @@ from GraphLinker.generateHyperLinkFeature import generateHyperLinkFeature
 from GraphLinker.models.AMHEN.GAT_Multiplex import MultiGaT
 
 class BAAI_model(nn.Module):
-    def __init__(self, artifacts, tokenizer, model,  in_dim, latent_dim=1024, training_type=1, max_length = None, test_k_index=0, hp_hiddenDList=[]):
+    def __init__(self, artifacts, tokenizer, model,  in_dim, latent_dim=1024, training_type=1, max_length = None, test_k_index=0, hp_hiddenDList=[], hp=False):
         super(BAAI_model, self).__init__()
         self.model = model
         self.latent_dim = latent_dim
         self.gHPFea = generateHyperLinkFeature()
         self.test_k_index = test_k_index
+        self.hp = hp
                     
         self.artifacts = artifacts
         # 这里还有一个需求，就是找出artifacts中的max_length
@@ -34,6 +35,19 @@ class BAAI_model(nn.Module):
         self.trans_decoder = TransformerDecoder(input_dim=in_dim, seq_length=128, output_dim=in_dim)
         self.loss_fn = torch.nn.BCELoss()
         self.multihead_attn = nn.MultiheadAttention(embed_dim=final_out_dim, num_heads=8)
+
+    def setP2PInfo(self, p2pModelTrain, P2Pdatasets, P2PLabels, reponame=None, k=None):
+        self.p2pModelTrain = p2pModelTrain
+        self.P2Pdatasets = P2Pdatasets
+        self.P2PLabels = P2PLabels
+        self.reponame = reponame
+        self.k = k
+    
+    def getArt_adj(self):
+        return self.art_adj
+
+    def setArt_adj(self, art_adj):
+        self.art_adj = art_adj
 
     def reparameterize(self, mu, log_var):
         std = torch.exp(0.5 * log_var)
@@ -94,11 +108,20 @@ class BAAI_model(nn.Module):
         outputs = self.linear(all_output)
         outputs = nn.Sigmoid()(outputs).squeeze(1)
         
+
+        # 进行P2P的预测
+        p2p_loss = None
+        if not self.hp:
+            art_adj, p2p_loss = art_adj = self.p2pModelTrain(self.P2Pdatasets, self.P2PLabels, reponame=self.repoName, k=self.k)
+            self.setArt_adj(art_adj)
+
         # 计算loss
         if labels is not None:
             loss_all = self.loss_fn(outputs, labels)
             # kl_loss = -0.5 * torch.sum(1 + log_var - mu.pow(2) - log_var.exp())
             if self.training_type!=2:
                 loss_all = loss_all + loss_rec
+                if p2p_loss != None:
+                    loss_all = 0.5*loss_all + 0.5*p2p_loss
             return [loss_all, outputs]
         return outputs

@@ -7,7 +7,7 @@ from GraphLinker.models.P2PModule.P2PModule import run_process_for_p2pMoudle
 from utils import Utils
 
 class processer_:
-    def __init__(self, embedding_type, repoName, artifacts, tokenizer, device, embedding_model, writer_tb_log_dir, training_type, training_with_gnn, max_length, epoch_size_set, test_k_index, hp_hiddenDList, lopo):
+    def __init__(self, embedding_type, repoName, artifacts, tokenizer, device, embedding_model, writer_tb_log_dir, training_type, training_with_gnn, max_length, epoch_size_set, test_k_index, hp_hiddenDList, lopo,hp=False):
         self.repoName = repoName
         if embedding_type=="BAAI_bge-m3_small":
             in_dim = 512
@@ -23,7 +23,7 @@ class processer_:
         from GraphLinker.models.HPModule.BAAI_Model import BAAI_model
         self.model = BAAI_model(artifacts=artifacts, model=embedding_model, tokenizer=tokenizer,in_dim=in_dim, 
                                 training_type=training_type, max_length=max_length, 
-                                latent_dim=latent_dim, test_k_index=test_k_index,hp_hiddenDList=hp_hiddenDList)
+                                latent_dim=latent_dim, test_k_index=test_k_index,hp_hiddenDList=hp_hiddenDList, hp=hp)
         self.p2pModelProcess = run_process_for_p2pMoudle
         self.trainer = ModelFineTuner(self.model, device, num_labels=2, writer_tb_log_dir=writer_tb_log_dir,lopo=lopo)
         self.artifacts = artifacts
@@ -34,10 +34,10 @@ class processer_:
         data = (all_train, all_TrainLabels)
         self.trainer.loadData(data, type="train")
         self.trainer.set_training_args(self.repoName, epochs=self.epoch_size_set, k=k, training_type=self.training_type)
-        # self.model.train() # 设置为训练模式
-        # self.trainer.train()
-        art_adj = self.p2pModelProcess(P2Pdatasets, P2PLabels, reponame=self.repoName, k=self.k)
-        self.P2Part_adj = art_adj
+        self.model.setP2PInfo(self.p2pModelProcess, P2Pdatasets, P2PLabels, reponame=self.repoName, k=self.k)
+        self.model.train() # 设置为训练模式
+        self.trainer.train()
+        self.P2Part_adj = self.model.getArt_adj()
 
     def prepare_and_evaluate(self, data, checkpoint_path):
         """
