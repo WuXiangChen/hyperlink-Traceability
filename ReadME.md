@@ -71,5 +71,5 @@
 #### **3.1 Double-Blind Validation Tool**
 The **MongoDB_CheckImp** package includes a **CheckGUI** tool for double-blind validation. The validation process is illustrated below:
 <div style="text-align: center;">
-  <img src="Results/ValidationTools.png" alt="Validation Process" style="width:50%;">
+  <img src="Results/ValidationTools.png" alt="Validation Process" style="width:40%;">
 </div>
