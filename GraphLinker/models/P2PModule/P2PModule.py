@@ -30,71 +30,6 @@ etypes_lists = [[[0], [1, 1], []],
                 [[4, 4], [4,4], []]]
 os.chdir(os.getcwd())
 
-def evaluate_and_clean_models(netModelPath, art_adj, pos_, neg_, adjlists_ip, edge_metapath_indices_list_ip, features_list, type_mask, neighbor_samples, device, partial_offsets):
-    """
-    Evaluate trained models and remove underperforming files.
-
-    Parameters:
-        netModelPath (str): Path to the trained model files.
-        file_len (int): Number of files to iterate through.
-        art_adj, pos_, neg_, adjlists_ip, edge_metapath_indices_list_ip: Inputs required for testing.
-        features_list (list): Features for the model.
-        type_mask (Tensor): Type mask for nodes.
-        neighbor_samples (int): Number of neighbor samples.
-        device (torch.device): Device to run the model on.
-        partial_offsets (list): Offset values for data.
-        y_true_test (list or array): Ground truth labels for testing.
-
-    Returns:
-        tuple: (best_f1_score, best_model_path, deleted_files)
-    """
-    f1 = 0
-    locate_ = None
-    deleted_fileList = []
-    file_len = len(os.listdir(netModelPath))-1
-    y_true_test = np.array([1] * len(pos_) + [0] * len(neg_))
-    cm = [[0,0],[0,0]]
-
-    for i in range(file_len, 0, -1):
-        loaded_net, filePath = loadTrainedModel(netModelPath, i=i)
-        if loaded_net is not None:
-            net = loaded_net
-
-        # Perform testing
-        y_proba_test = test_process(
-            net, art_adj, pos_, neg_, adjlists_ip, edge_metapath_indices_list_ip,
-            features_list, type_mask, neighbor_samples, device, partial_offsets, valFlag=False)
-
-        y_proba_test = np.where(y_proba_test >= 0.5, 1, 0)
-        cm = confusion_matrix(y_true_test, y_proba_test)
-        externalLinkResult = Utils.calculate_metrics(cm)
-        f1_ = externalLinkResult["f1_score"]
-
-        if f1_ > f1:
-            f1 = f1_
-            locate_ = filePath
-
-        if f1_ < 0.6:
-            deleted_fileList.append(filePath)
-            print(filePath)
-            print(externalLinkResult)
-            print(cm)
-        else:
-            print(filePath)
-            print(externalLinkResult)
-            print(cm)
-
-    # Remove underperforming files
-    for file in deleted_fileList:
-        if os.path.exists(file):
-            try:
-                os.remove(file)
-                print(f"Deleted: {file}")
-            except Exception as e:
-                print(f"Error deleting file {file}: {e}")
-
-    return cm, locate_
-
 def test_process(net, art_adj, test_pos, test_neg, 
                  adjlists_ip, edge_metapath_indices_list_ip, 
                  features_list, type_mask, neighbor_samples, 
@@ -126,70 +61,31 @@ def test_process(net, art_adj, test_pos, test_neg,
             return y_proba_test
     
 def train_process(net, art_adj, train_pos, train_neg, adjlists_ip, edge_metapath_indices_list_ip,
-                       features_list, type_mask, neighbor_samples,  device, optimizer,
-                       early_stopping,  val_pos, val_neg, num_epochs, train_pos_idx_generator, offsets):
-    dur1 = []
-    dur2 = []
-    dur3 = []
-    for epoch in range(num_epochs):
-        t_start = time.time()
-        net.train()
-        for iteration in range(train_pos_idx_generator.num_iterations()):
-            t0 = time.time()
-            train_pos_idx_batch = train_pos_idx_generator.next()
-            train_pos_idx_batch.sort()
-            train_pos_batch = train_pos[train_pos_idx_batch].tolist()
+                       features_list, type_mask, neighbor_samples,  device, train_pos_idx_generator, offsets):
+    net.train()
+    train_pos_idx_batch = train_pos_idx_generator.next()
+    train_pos_idx_batch.sort()
+    train_pos_batch = train_pos[train_pos_idx_batch].tolist()
 
-            train_neg_idx_batch = np.random.choice(len(train_neg), len(train_pos_idx_batch))
-            train_neg_idx_batch.sort()
-            train_neg_batch = train_neg[train_neg_idx_batch].tolist()
-            train_pos_g_lists, train_pos_indices_lists, val_pos_idx_batch_mapped_lists = parse_minibatch_LastFM(art_adj, adjlists_ip, edge_metapath_indices_list_ip,
-                                                                                         train_pos_batch, device, neighbor_samples, offsets) 
+    train_neg_idx_batch = np.random.choice(len(train_neg), len(train_pos_idx_batch))
+    train_neg_idx_batch.sort()
+    train_neg_batch = train_neg[train_neg_idx_batch].tolist()
+    train_pos_g_lists, train_pos_indices_lists, val_pos_idx_batch_mapped_lists = parse_minibatch_LastFM(art_adj, adjlists_ip, edge_metapath_indices_list_ip,
+                                                                                    train_pos_batch, device, neighbor_samples, offsets) 
 
-            train_neg_g_lists, train_neg_indices_lists, val_neg_idx_batch_mapped_lists = parse_minibatch_LastFM(art_adj, adjlists_ip, edge_metapath_indices_list_ip,
-                                                                                         train_neg_batch, device, neighbor_samples, offsets)
-            t1 = time.time()
-            dur1.append(t1 - t0)
-            
-            Logits_neg_linkORNot = net((train_neg_g_lists, features_list, type_mask, train_neg_indices_lists, val_neg_idx_batch_mapped_lists))
-            Logits_pos_linkORNot = net((train_pos_g_lists, features_list, type_mask, train_pos_indices_lists, val_pos_idx_batch_mapped_lists))
-            
-            pos_out = F.sigmoid(Logits_pos_linkORNot)
-            neg_out = F.sigmoid(Logits_neg_linkORNot)
-            all_pre_label = torch.cat([pos_out, neg_out])
-            all_true_label = torch.cat([torch.ones(pos_out.shape).to(device), torch.zeros(neg_out.shape).to(device)])
-            loss_A = nn.BCELoss()(all_pre_label, all_true_label)
-            train_loss = torch.mean(loss_A)
-
-            t2 = time.time()
-            dur2.append(t2 - t1)
-            # autograd
-            optimizer.zero_grad()
-            train_loss.backward()
-            optimizer.step()
-
-            t3 = time.time()
-            dur3.append(t3 - t2)
-
-            # print training info
-            if iteration % 10 == 0 and epoch % 1 == 0: 
-                print('Epoch {:05d} | Iteration {:05d} | Train_Loss {:.4f} | Time1(s) {:.4f} | Time2(s) {:.4f} | Time3(s) {:.4f}'.format(
-                    epoch, iteration, train_loss.item(), np.mean(dur1), np.mean(dur2), np.mean(dur3)))
-
-        # validation
-        if epoch % 1 == 0:
-            val_loss = test_process(net, art_adj,  val_pos, val_neg, adjlists_ip,  
-                                    edge_metapath_indices_list_ip, features_list, 
-                                    type_mask, neighbor_samples, device, offsets)
-            t_end = time.time()
-            # print validation info
-            if epoch % 1 == 0:
-                print('Epoch {:05d} | Val_Loss {:.4f} | Time(s) {:.4f}'.format(epoch, val_loss.item(), t_end - t_start))
-            # early stopping
-            early_stopping(val_loss, net)
-            if early_stopping.early_stop:
-                print('Early stopping!')
-                break
+    train_neg_g_lists, train_neg_indices_lists, val_neg_idx_batch_mapped_lists = parse_minibatch_LastFM(art_adj, adjlists_ip, edge_metapath_indices_list_ip,
+                                                                                    train_neg_batch, device, neighbor_samples, offsets)
+    
+    Logits_neg_linkORNot = net((train_neg_g_lists, features_list, type_mask, train_neg_indices_lists, val_neg_idx_batch_mapped_lists))
+    Logits_pos_linkORNot = net((train_pos_g_lists, features_list, type_mask, train_pos_indices_lists, val_pos_idx_batch_mapped_lists))
+    
+    pos_out = F.sigmoid(Logits_pos_linkORNot)
+    neg_out = F.sigmoid(Logits_neg_linkORNot)
+    all_pre_label = torch.cat([pos_out, neg_out])
+    all_true_label = torch.cat([torch.ones(pos_out.shape).to(device), torch.zeros(neg_out.shape).to(device)])
+    loss_A = nn.BCELoss()(all_pre_label, all_true_label)
+    train_loss = torch.mean(loss_A)
+    return train_loss
 
 def loadTrainedModel(netModelPath, name=None, i=1):
     net = None
@@ -212,7 +108,7 @@ def loadTrainedSpecificModel(netModelPath, name=None, i=1):
     return net
 
 def run_model(repoName, feats_type, hidden_dim, out_dim, num_heads,
-                     attn_vec_dim, rnn_type, num_epochs, patience, batch_size, 
+                     attn_vec_dim, rnn_type, batch_size, 
                      neighbor_samples, save_postfix, cudaN, deepSchema=False, 
                      num_users=None, num_repos=None, num_issues=None, num_prs=None, lr=0.03,
                      dataset=None, TestFlag=False, art_adj=None, k=1):
@@ -242,25 +138,21 @@ def run_model(repoName, feats_type, hidden_dim, out_dim, num_heads,
         train_pos, train_neg, valid_pos, valid_neg = split_train_validation(pos_, neg_)
         net = MAGNN_lp([3,3],  6, etypes_lists, in_dims, hidden_dim, out_dim, num_heads, attn_vec_dim, rnn_type, dropout_rate, deepSchema)
         initialize_weights(net)
-        optimizer = torch.optim.Adam(net.parameters(), lr=lr, weight_decay=weight_decay)
         net.train()
 
         if not os.path.exists(netModelPath):
             os.makedirs(netModelPath)
-        early_stopping = EarlyStopping(patience=patience, verbose=True, save_path=netModelPath)
         train_pos_idx_generator = index_generator(batch_size=batch_size, num_data=len(train_pos))
 
         print(train_pos_idx_generator.num_iterations())
         net.to(device)
-        train_process(net, art_adj, train_pos, train_neg, adjlists_ip, edge_metapath_indices_list_ip,
-                      features_list, type_mask, neighbor_samples,  device, optimizer, early_stopping,  valid_pos, valid_neg, num_epochs, train_pos_idx_generator, partial_offsets)
-        return art_adj
+        train_loss = train_process(net, art_adj, train_pos, train_neg, adjlists_ip, edge_metapath_indices_list_ip,
+                      features_list, type_mask, neighbor_samples,  device, train_pos_idx_generator, partial_offsets)
+        return art_adj, train_loss
     else:
-        cm, locate_ = evaluate_and_clean_models(netModelPath, art_adj, pos_, neg_, adjlists_ip, edge_metapath_indices_list_ip, features_list, type_mask, neighbor_samples, device, partial_offsets)
         try:
             # loaded_net = loadTrainedSpecificModel(netModelPath=locate_)
-            print("locate_ selected:",locate_)
-            loaded_net, _ = loadTrainedModel(netModelPath=netModelPath, name=locate_)
+            loaded_net, _ = loadTrainedModel(netModelPath=netModelPath, i=-1)
         except Exception as e:
             print(e)
             return [[0, 0], [0, 0]]
@@ -290,9 +182,6 @@ def parse_args():
         'num_heads': 2,
         'attn_vec_dim': 64,
         'rnn_type': 'RotatE0',
-        'epoch': 1200,
-        'patience': 50,
-        'batch_size': 1028,
         'samples': 10,
         'repeat': 1,
         'save_postfix': 'checkpoint',
@@ -324,7 +213,7 @@ def run_process_for_p2pMoudle(P2Pdatasets, P2PLabels, testFlag=False, reponame="
     num_repos = len(repos)
     num_issues = len(issues)
     num_prs = len(prs)
-    # lr = 0.008
+    lr = 0.008
     if not isinstance(P2Pdatasets, list):
         P2Pdatasets = P2Pdatasets.values()
     ## 这里需要插入一个方法 将原始的ArtId转换为index 再转换为adjM中的相应序位
@@ -341,7 +230,6 @@ def run_process_for_p2pMoudle(P2Pdatasets, P2PLabels, testFlag=False, reponame="
     # Call the model running function with the arguments
     return run_model(
         reponame, args.feats_type, args.hidden_dim, args.out_dim, args.num_heads,
-        args.attn_vec_dim, args.rnn_type, args.epoch, args.patience, args.batch_size,
-        args.samples, args.save_postfix, args.cudaN, args.deepSchema, num_users, 
+        args.attn_vec_dim, args.rnn_type, args.samples, args.save_postfix, args.cudaN, args.deepSchema, num_users, 
         num_repos, num_issues, num_prs, lr, dataset, TestFlag=testFlag,art_adj=art_adj, k=k
     )

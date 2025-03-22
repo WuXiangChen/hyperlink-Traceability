@@ -250,7 +250,7 @@ if __name__ == '__main__':
             
             pro = processer_(embedding_type=LM_model_selected, repoName=cur_repoName, artifacts=all_artifacts, 
                             tokenizer=cur_artifacts.tokenizer_NL, device=device, embedding_model=embedding_model,writer_tb_log_dir=writer_tb_log_dir, training_type=training_type,
-                            training_with_gnn=training_with_gnn, max_length=max_length,epoch_size_set=epoch_size_set, test_k_index=k, hp_hiddenDList=hp_hiddenDList, lopo=lopo)
+                            training_with_gnn=training_with_gnn, max_length=max_length,epoch_size_set=epoch_size_set, test_k_index=k, hp_hiddenDList=hp_hiddenDList, lopo=lopo, hp=hp_only)
             
             if k!=0:
                 result = pro.train(all_train, all_TrainLabels, writer=writer, P2Pdatasets=P2Pdatasets, P2PLabels=P2PLabels, k=k)
