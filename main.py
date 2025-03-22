@@ -24,8 +24,7 @@ import torch
 import random
 from utils import Utils
 from safetensors.torch import load_file
-#seed = 43
-seed = 1314
+seed = 43
 torch.random.initial_seed()  
 torch.manual_seed(seed) # 为CPU设置随机种子
 torch.cuda.manual_seed(seed) # 为当前GPU设置随机种子
